@@ -3,6 +3,6 @@
 
 ------
 
-https://steamcommunity.com/dev?l=schinese
-https://partner.steamgames.com/doc/webapi_overview?l=schinese
-https://partner.steamgames.com/doc/webapi/IGameInventory?l=schinese
+- https://steamcommunity.com/dev?l=schinese
+- https://partner.steamgames.com/doc/webapi_overview?l=schinese
+- https://partner.steamgames.com/doc/webapi/IGameInventory?l=schinese
