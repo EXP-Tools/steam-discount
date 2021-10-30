@@ -1,7 +1,44 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Author : EXP
+# -----------------------------------------------
+
+import sqlite3
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
+
+from pypdm.builder import build
+from src.cfg import env
+from pypdm.dbc._sqlite import SqliteDBC
+from src.utils import log
+
+
 num = 0
+
+
+
+class SteamCrawler :
+
+    def __init__(self, url) :
+        # https://store.steampowered.com/search/?cc=CN&filter=globaltopsellers&page=1&os=win" + str("&page=" + str(i))
+        pass
+
+    def headers(self):
+        return {
+            'Accept' : '*/*',
+            'Accept-Encoding' : 'gzip, deflate',
+            'Accept-Language' : 'zh-CN,zh;q=0.9',
+            'Connection' : 'keep-alive',
+            'User-Agent' : 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36',
+        }
+
+    
+
+    
+
+
+
 
 
 def get_text(url):
@@ -61,12 +98,24 @@ def save_data(game_info):
     print("文件保存成功！")
 
 
+
+
+def init():
+    log.init()
+    sdbc = SqliteDBC(env.DB_PATH)
+    sdbc.exec_script(env.SQL_PATH)
+
+
+
 if __name__ == "__main__":
-    Game_info = []          # 游戏全部信息
-    Turn_link = []          # 翻页链接
-    Jump_link = []          # 游戏详情页面链接
-    Game_evaluation = []    # 游戏好评率和评价
-    for i in range(1, 11):
-        Turn_link.append("https://store.steampowered.com/search/?filter=globaltopsellers&page=1&os=win" + str("&page=" + str(i)))
-        run(Game_info, Jump_link, Game_evaluation, get_text(Turn_link[i-1]))
-    save_data(Game_info)
+    init()
+    
+
+    # Game_info = []          # 游戏全部信息
+    # Turn_link = []          # 翻页链接
+    # Jump_link = []          # 游戏详情页面链接
+    # Game_evaluation = []    # 游戏好评率和评价
+    # for i in range(1, 11):
+    #     Turn_link.append("https://store.steampowered.com/search/?cc=CN&filter=globaltopsellers&page=1&os=win" + str("&page=" + str(i)))
+    #     run(Game_info, Jump_link, Game_evaluation, get_text(Turn_link[i-1]))
+    # save_data(Game_info)

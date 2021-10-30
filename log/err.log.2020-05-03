@@ -1,0 +1,384 @@
+2020-05-02 21:18:39 [ERROR] : [邮件] 推送威胁情报失败
+Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\notice\mail.py", line 38, in to_mail
+    smtpObj.sendmail(sender, receivers, email.as_string())
+  File "S:\04_work\python\python27\lib\smtplib.py", line 752, in sendmail
+    raise SMTPDataError(code, resp)
+SMTPDataError: (554, 'DT:SPM 126 smtp8,NORpCgDX+vuYc61eB2LLCQ--.324S2 1588425635,please see http://mail.163.com/help/help_spam_16.htm?ip=27.38.40.47&hostid=smtp8&time=1588425635')
+2020-05-02 21:18:39 [ERROR] : Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\notice\mail.py", line 38, in to_mail
+    smtpObj.sendmail(sender, receivers, email.as_string())
+  File "S:\04_work\python\python27\lib\smtplib.py", line 752, in sendmail
+    raise SMTPDataError(code, resp)
+SMTPDataError: (554, 'DT:SPM 126 smtp8,NORpCgDX+vuYc61eB2LLCQ--.324S2 1588425635,please see http://mail.163.com/help/help_spam_16.htm?ip=27.38.40.47&hostid=smtp8&time=1588425635')
+Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\notice\mail.py", line 38, in to_mail
+    smtpObj.sendmail(sender, receivers, email.as_string())
+  File "S:\04_work\python\python27\lib\smtplib.py", line 752, in sendmail
+    raise SMTPDataError(code, resp)
+SMTPDataError: (554, 'DT:SPM 126 smtp8,NORpCgDX+vuYc61eB2LLCQ--.324S2 1588425635,please see http://mail.163.com/help/help_spam_16.htm?ip=27.38.40.47&hostid=smtp8&time=1588425635')
+2020-05-02 21:31:34 [ERROR] : [邮件] 推送威胁情报失败
+Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\notice\mail.py", line 37, in to_mail
+    smtpObj.login(sender, password)
+  File "S:\04_work\python\python27\lib\smtplib.py", line 623, in login
+    raise SMTPAuthenticationError(code, resp)
+SMTPAuthenticationError: (535, 'Error: authentication failed')
+2020-05-02 21:31:34 [ERROR] : Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\notice\mail.py", line 37, in to_mail
+    smtpObj.login(sender, password)
+  File "S:\04_work\python\python27\lib\smtplib.py", line 623, in login
+    raise SMTPAuthenticationError(code, resp)
+SMTPAuthenticationError: (535, 'Error: authentication failed')
+Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\notice\mail.py", line 37, in to_mail
+    smtpObj.login(sender, password)
+  File "S:\04_work\python\python27\lib\smtplib.py", line 623, in login
+    raise SMTPAuthenticationError(code, resp)
+SMTPAuthenticationError: (535, 'Error: authentication failed')
+2020-05-02 21:32:34 [ERROR] : [邮件] 推送威胁情报失败
+Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\notice\mail.py", line 38, in to_mail
+    smtpObj.sendmail(sender, receivers, email.as_string())
+  File "S:\04_work\python\python27\lib\smtplib.py", line 752, in sendmail
+    raise SMTPDataError(code, resp)
+SMTPDataError: (554, 'DT:SPM 126 smtp8,NORpCgDng9vWdq1epQ7OCQ--.329S2 1588426470,please see http://mail.163.com/help/help_spam_16.htm?ip=27.38.40.47&hostid=smtp8&time=1588426470')
+2020-05-02 21:32:34 [ERROR] : Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\notice\mail.py", line 38, in to_mail
+    smtpObj.sendmail(sender, receivers, email.as_string())
+  File "S:\04_work\python\python27\lib\smtplib.py", line 752, in sendmail
+    raise SMTPDataError(code, resp)
+SMTPDataError: (554, 'DT:SPM 126 smtp8,NORpCgDng9vWdq1epQ7OCQ--.329S2 1588426470,please see http://mail.163.com/help/help_spam_16.htm?ip=27.38.40.47&hostid=smtp8&time=1588426470')
+Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\notice\mail.py", line 38, in to_mail
+    smtpObj.sendmail(sender, receivers, email.as_string())
+  File "S:\04_work\python\python27\lib\smtplib.py", line 752, in sendmail
+    raise SMTPDataError(code, resp)
+SMTPDataError: (554, 'DT:SPM 126 smtp8,NORpCgDng9vWdq1epQ7OCQ--.329S2 1588426470,please see http://mail.163.com/help/help_spam_16.htm?ip=27.38.40.47&hostid=smtp8&time=1588426470')
+2020-05-02 21:37:02 [ERROR] : [邮件] 推送威胁情报失败
+Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\notice\mail.py", line 39, in to_mail
+    smtpObj.sendmail(sender, receivers, email.as_string())
+  File "S:\04_work\python\python27\lib\smtplib.py", line 752, in sendmail
+    raise SMTPDataError(code, resp)
+SMTPDataError: (554, 'DT:SPM 126 smtp8,NORpCgCnVNLkd61ehPzOCQ--.351S2 1588426738,please see http://mail.163.com/help/help_spam_16.htm?ip=27.38.40.47&hostid=smtp8&time=1588426738')
+2020-05-02 21:37:02 [ERROR] : Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\notice\mail.py", line 39, in to_mail
+    smtpObj.sendmail(sender, receivers, email.as_string())
+  File "S:\04_work\python\python27\lib\smtplib.py", line 752, in sendmail
+    raise SMTPDataError(code, resp)
+SMTPDataError: (554, 'DT:SPM 126 smtp8,NORpCgCnVNLkd61ehPzOCQ--.351S2 1588426738,please see http://mail.163.com/help/help_spam_16.htm?ip=27.38.40.47&hostid=smtp8&time=1588426738')
+Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\notice\mail.py", line 39, in to_mail
+    smtpObj.sendmail(sender, receivers, email.as_string())
+  File "S:\04_work\python\python27\lib\smtplib.py", line 752, in sendmail
+    raise SMTPDataError(code, resp)
+SMTPDataError: (554, 'DT:SPM 126 smtp8,NORpCgCnVNLkd61ehPzOCQ--.351S2 1588426738,please see http://mail.163.com/help/help_spam_16.htm?ip=27.38.40.47&hostid=smtp8&time=1588426738')
+2020-05-02 21:45:14 [ERROR] : [邮件] 推送威胁情报失败
+Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\notice\mail.py", line 40, in to_mail
+    smtpObj.sendmail(sender, receivers, email.as_string())
+  File "S:\04_work\python\python27\lib\smtplib.py", line 752, in sendmail
+    raise SMTPDataError(code, resp)
+SMTPDataError: (554, 'DT:SPM 126 smtp9,NeRpCgBHwmDTea1ebZX8MQ--.392S2 1588427230,please see http://mail.163.com/help/help_spam_16.htm?ip=27.38.40.47&hostid=smtp9&time=1588427230')
+2020-05-02 21:45:14 [ERROR] : Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\notice\mail.py", line 40, in to_mail
+    smtpObj.sendmail(sender, receivers, email.as_string())
+  File "S:\04_work\python\python27\lib\smtplib.py", line 752, in sendmail
+    raise SMTPDataError(code, resp)
+SMTPDataError: (554, 'DT:SPM 126 smtp9,NeRpCgBHwmDTea1ebZX8MQ--.392S2 1588427230,please see http://mail.163.com/help/help_spam_16.htm?ip=27.38.40.47&hostid=smtp9&time=1588427230')
+Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\notice\mail.py", line 40, in to_mail
+    smtpObj.sendmail(sender, receivers, email.as_string())
+  File "S:\04_work\python\python27\lib\smtplib.py", line 752, in sendmail
+    raise SMTPDataError(code, resp)
+SMTPDataError: (554, 'DT:SPM 126 smtp9,NeRpCgBHwmDTea1ebZX8MQ--.392S2 1588427230,please see http://mail.163.com/help/help_spam_16.htm?ip=27.38.40.47&hostid=smtp9&time=1588427230')
+2020-05-02 21:46:07 [ERROR] : [邮件] 推送威胁情报失败
+Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\notice\mail.py", line 40, in to_mail
+    smtpObj.sendmail(sender, receivers, email.as_string())
+  File "S:\04_work\python\python27\lib\smtplib.py", line 752, in sendmail
+    raise SMTPDataError(code, resp)
+SMTPDataError: (554, 'DT:SPM 126 smtp9,NeRpCgCnKs8Jeq1earj8MQ--.428S2 1588427283,please see http://mail.163.com/help/help_spam_16.htm?ip=27.38.40.47&hostid=smtp9&time=1588427283')
+2020-05-02 21:46:07 [ERROR] : Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\notice\mail.py", line 40, in to_mail
+    smtpObj.sendmail(sender, receivers, email.as_string())
+  File "S:\04_work\python\python27\lib\smtplib.py", line 752, in sendmail
+    raise SMTPDataError(code, resp)
+SMTPDataError: (554, 'DT:SPM 126 smtp9,NeRpCgCnKs8Jeq1earj8MQ--.428S2 1588427283,please see http://mail.163.com/help/help_spam_16.htm?ip=27.38.40.47&hostid=smtp9&time=1588427283')
+Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\notice\mail.py", line 40, in to_mail
+    smtpObj.sendmail(sender, receivers, email.as_string())
+  File "S:\04_work\python\python27\lib\smtplib.py", line 752, in sendmail
+    raise SMTPDataError(code, resp)
+SMTPDataError: (554, 'DT:SPM 126 smtp9,NeRpCgCnKs8Jeq1earj8MQ--.428S2 1588427283,please see http://mail.163.com/help/help_spam_16.htm?ip=27.38.40.47&hostid=smtp9&time=1588427283')
+2020-05-02 21:48:39 [ERROR] : [邮件] 推送威胁情报失败
+Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\notice\mail.py", line 38, in to_mail
+    smtpObj.login(sender, password)
+  File "S:\04_work\python\python27\lib\smtplib.py", line 623, in login
+    raise SMTPAuthenticationError(code, resp)
+SMTPAuthenticationError: (535, 'Login Fail. Please enter your authorization code to login. More information in http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256')
+2020-05-02 21:48:39 [ERROR] : Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\notice\mail.py", line 38, in to_mail
+    smtpObj.login(sender, password)
+  File "S:\04_work\python\python27\lib\smtplib.py", line 623, in login
+    raise SMTPAuthenticationError(code, resp)
+SMTPAuthenticationError: (535, 'Login Fail. Please enter your authorization code to login. More information in http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256')
+Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\notice\mail.py", line 38, in to_mail
+    smtpObj.login(sender, password)
+  File "S:\04_work\python\python27\lib\smtplib.py", line 623, in login
+    raise SMTPAuthenticationError(code, resp)
+SMTPAuthenticationError: (535, 'Login Fail. Please enter your authorization code to login. More information in http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256')
+2020-05-03 18:25:03 [ERROR] : 获取 [绿盟] 威胁情报异常
+Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\crawler\_base_crawler.py", line 57, in cves
+    new_cves = self.get_cves()
+  File "D:\workspace\Github\threat-broadcast\src\crawler\nsfocus.py", line 46, in get_cves
+    timeout = self.timeout
+  File "S:\04_work\python\python27\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\adapters.py", line 529, in send
+    raise ReadTimeout(e, request=request)
+ReadTimeout: HTTPConnectionPool(host='www.nsfocus.net', port=80): Read timed out. (read timeout=60)
+2020-05-03 18:25:03 [ERROR] : Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\crawler\_base_crawler.py", line 57, in cves
+    new_cves = self.get_cves()
+  File "D:\workspace\Github\threat-broadcast\src\crawler\nsfocus.py", line 46, in get_cves
+    timeout = self.timeout
+  File "S:\04_work\python\python27\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\adapters.py", line 529, in send
+    raise ReadTimeout(e, request=request)
+ReadTimeout: HTTPConnectionPool(host='www.nsfocus.net', port=80): Read timed out. (read timeout=60)
+Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\crawler\_base_crawler.py", line 57, in cves
+    new_cves = self.get_cves()
+  File "D:\workspace\Github\threat-broadcast\src\crawler\nsfocus.py", line 46, in get_cves
+    timeout = self.timeout
+  File "S:\04_work\python\python27\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\adapters.py", line 529, in send
+    raise ReadTimeout(e, request=request)
+ReadTimeout: HTTPConnectionPool(host='www.nsfocus.net', port=80): Read timed out. (read timeout=60)
+2020-05-03 18:25:24 [ERROR] : [邮件] 推送威胁情报失败
+Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\notice\mail.py", line 38, in to_mail
+    smtpObj.sendmail(sender, receivers, email.as_string())
+  File "S:\04_work\python\python27\lib\email\message.py", line 137, in as_string
+    g.flatten(self, unixfrom=unixfrom)
+  File "S:\04_work\python\python27\lib\email\generator.py", line 83, in flatten
+    self._write(msg)
+  File "S:\04_work\python\python27\lib\email\generator.py", line 115, in _write
+    self._write_headers(msg)
+  File "S:\04_work\python\python27\lib\email\generator.py", line 164, in _write_headers
+    v, maxlinelen=self._maxheaderlen, header_name=h).encode()
+  File "S:\04_work\python\python27\lib\email\header.py", line 410, in encode
+    value = self._encode_chunks(newchunks, maxlinelen)
+  File "S:\04_work\python\python27\lib\email\header.py", line 370, in _encode_chunks
+    _max_append(chunks, s, maxlinelen, extra)
+  File "S:\04_work\python\python27\lib\email\quoprimime.py", line 97, in _max_append
+    L.append(s.lstrip())
+AttributeError: 'list' object has no attribute 'lstrip'
+2020-05-03 18:25:24 [ERROR] : Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\notice\mail.py", line 38, in to_mail
+    smtpObj.sendmail(sender, receivers, email.as_string())
+  File "S:\04_work\python\python27\lib\email\message.py", line 137, in as_string
+    g.flatten(self, unixfrom=unixfrom)
+  File "S:\04_work\python\python27\lib\email\generator.py", line 83, in flatten
+    self._write(msg)
+  File "S:\04_work\python\python27\lib\email\generator.py", line 115, in _write
+    self._write_headers(msg)
+  File "S:\04_work\python\python27\lib\email\generator.py", line 164, in _write_headers
+    v, maxlinelen=self._maxheaderlen, header_name=h).encode()
+  File "S:\04_work\python\python27\lib\email\header.py", line 410, in encode
+    value = self._encode_chunks(newchunks, maxlinelen)
+  File "S:\04_work\python\python27\lib\email\header.py", line 370, in _encode_chunks
+    _max_append(chunks, s, maxlinelen, extra)
+  File "S:\04_work\python\python27\lib\email\quoprimime.py", line 97, in _max_append
+    L.append(s.lstrip())
+AttributeError: 'list' object has no attribute 'lstrip'
+Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\notice\mail.py", line 38, in to_mail
+    smtpObj.sendmail(sender, receivers, email.as_string())
+  File "S:\04_work\python\python27\lib\email\message.py", line 137, in as_string
+    g.flatten(self, unixfrom=unixfrom)
+  File "S:\04_work\python\python27\lib\email\generator.py", line 83, in flatten
+    self._write(msg)
+  File "S:\04_work\python\python27\lib\email\generator.py", line 115, in _write
+    self._write_headers(msg)
+  File "S:\04_work\python\python27\lib\email\generator.py", line 164, in _write_headers
+    v, maxlinelen=self._maxheaderlen, header_name=h).encode()
+  File "S:\04_work\python\python27\lib\email\header.py", line 410, in encode
+    value = self._encode_chunks(newchunks, maxlinelen)
+  File "S:\04_work\python\python27\lib\email\header.py", line 370, in _encode_chunks
+    _max_append(chunks, s, maxlinelen, extra)
+  File "S:\04_work\python\python27\lib\email\quoprimime.py", line 97, in _max_append
+    L.append(s.lstrip())
+AttributeError: 'list' object has no attribute 'lstrip'
+2020-05-03 18:29:54 [ERROR] : 获取 [绿盟] 威胁情报异常
+Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\crawler\_base_crawler.py", line 57, in cves
+    new_cves = self.get_cves()
+  File "D:\workspace\Github\threat-broadcast\src\crawler\nsfocus.py", line 46, in get_cves
+    timeout = self.timeout
+  File "S:\04_work\python\python27\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\adapters.py", line 529, in send
+    raise ReadTimeout(e, request=request)
+ReadTimeout: HTTPConnectionPool(host='www.nsfocus.net', port=80): Read timed out. (read timeout=60)
+2020-05-03 18:29:54 [ERROR] : Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\crawler\_base_crawler.py", line 57, in cves
+    new_cves = self.get_cves()
+  File "D:\workspace\Github\threat-broadcast\src\crawler\nsfocus.py", line 46, in get_cves
+    timeout = self.timeout
+  File "S:\04_work\python\python27\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\adapters.py", line 529, in send
+    raise ReadTimeout(e, request=request)
+ReadTimeout: HTTPConnectionPool(host='www.nsfocus.net', port=80): Read timed out. (read timeout=60)
+Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\crawler\_base_crawler.py", line 57, in cves
+    new_cves = self.get_cves()
+  File "D:\workspace\Github\threat-broadcast\src\crawler\nsfocus.py", line 46, in get_cves
+    timeout = self.timeout
+  File "S:\04_work\python\python27\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\adapters.py", line 529, in send
+    raise ReadTimeout(e, request=request)
+ReadTimeout: HTTPConnectionPool(host='www.nsfocus.net', port=80): Read timed out. (read timeout=60)
+2020-05-03 18:31:33 [ERROR] : 获取 [绿盟] 威胁情报异常
+Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\crawler\_base_crawler.py", line 57, in cves
+    new_cves = self.get_cves()
+  File "D:\workspace\Github\threat-broadcast\src\crawler\nsfocus.py", line 46, in get_cves
+    timeout = self.timeout
+  File "S:\04_work\python\python27\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\adapters.py", line 529, in send
+    raise ReadTimeout(e, request=request)
+ReadTimeout: HTTPConnectionPool(host='www.nsfocus.net', port=80): Read timed out. (read timeout=60)
+2020-05-03 18:31:33 [ERROR] : Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\crawler\_base_crawler.py", line 57, in cves
+    new_cves = self.get_cves()
+  File "D:\workspace\Github\threat-broadcast\src\crawler\nsfocus.py", line 46, in get_cves
+    timeout = self.timeout
+  File "S:\04_work\python\python27\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\adapters.py", line 529, in send
+    raise ReadTimeout(e, request=request)
+ReadTimeout: HTTPConnectionPool(host='www.nsfocus.net', port=80): Read timed out. (read timeout=60)
+Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\crawler\_base_crawler.py", line 57, in cves
+    new_cves = self.get_cves()
+  File "D:\workspace\Github\threat-broadcast\src\crawler\nsfocus.py", line 46, in get_cves
+    timeout = self.timeout
+  File "S:\04_work\python\python27\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\adapters.py", line 529, in send
+    raise ReadTimeout(e, request=request)
+ReadTimeout: HTTPConnectionPool(host='www.nsfocus.net', port=80): Read timed out. (read timeout=60)
+2020-05-03 18:33:22 [ERROR] : 获取 [绿盟] 威胁情报异常
+Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\crawler\_base_crawler.py", line 57, in cves
+    new_cves = self.get_cves()
+  File "D:\workspace\Github\threat-broadcast\src\crawler\nsfocus.py", line 46, in get_cves
+    timeout = self.timeout
+  File "S:\04_work\python\python27\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\adapters.py", line 529, in send
+    raise ReadTimeout(e, request=request)
+ReadTimeout: HTTPConnectionPool(host='www.nsfocus.net', port=80): Read timed out. (read timeout=60)
+2020-05-03 18:33:22 [ERROR] : Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\crawler\_base_crawler.py", line 57, in cves
+    new_cves = self.get_cves()
+  File "D:\workspace\Github\threat-broadcast\src\crawler\nsfocus.py", line 46, in get_cves
+    timeout = self.timeout
+  File "S:\04_work\python\python27\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\adapters.py", line 529, in send
+    raise ReadTimeout(e, request=request)
+ReadTimeout: HTTPConnectionPool(host='www.nsfocus.net', port=80): Read timed out. (read timeout=60)
+Traceback (most recent call last):
+  File "D:\workspace\Github\threat-broadcast\src\crawler\_base_crawler.py", line 57, in cves
+    new_cves = self.get_cves()
+  File "D:\workspace\Github\threat-broadcast\src\crawler\nsfocus.py", line 46, in get_cves
+    timeout = self.timeout
+  File "S:\04_work\python\python27\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "S:\04_work\python\python27\lib\site-packages\requests\adapters.py", line 529, in send
+    raise ReadTimeout(e, request=request)
+ReadTimeout: HTTPConnectionPool(host='www.nsfocus.net', port=80): Read timed out. (read timeout=60)

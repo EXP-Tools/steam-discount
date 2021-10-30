@@ -1,4 +1,4 @@
-# steam-offers
+# steam-discount
 > steam 游戏优惠一览
 
 ------
