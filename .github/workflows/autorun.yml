@@ -1,4 +1,4 @@
-name: Automatically crawl CVEs 
+name: Automatically Crawl Steam Discount 
 on:
   pull_request:
     branches:
