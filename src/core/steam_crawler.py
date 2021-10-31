@@ -68,14 +68,20 @@ class SteamCrawler :
         items = soup.find_all(class_="search_result_row ds_collapse_flag")
         for item in items :
             tsg = TSteamGame()
-            tsg.shop_url = item.get('href')
+            tsg.game_name = self._to_str(item.find('span', class_='title').text)
+            tsg.shop_url = self._to_str(item.get('href'))
             self._prase_id(tsg, item)
-            tsg.name = item.find('span', class_='title').text
             self._parse_price(tsg, item)
             self._parse_evaluation(tsg, item)
-            tsgs[tsg.id] = (tsg)
+            tsgs[tsg.game_id] = (tsg)
         return tsgs
 
+    
+    def _to_str(self, value) :
+        if isinstance(value, bytes) :
+            value = bytes.decode(value)
+        return value
+        
 
     def _prase_id(self, tsg, item) :
         '''
@@ -85,11 +91,11 @@ class SteamCrawler :
             bundle: 捆绑包
         '''
         # 赋值顺序不能变
-        id = item.get('data-ds-packageid') or \
-             item.get('data-ds-appid') or \
-             item.get('data-ds-bundleid') or \
-             re.search(r'/(\d+)', tsg.shop_url).group(1)
-        tsg.id = int(id)
+        game_id = item.get('data-ds-packageid') or \
+                  item.get('data-ds-appid') or \
+                  item.get('data-ds-bundleid') or \
+                  re.search(r'/(\d+)', tsg.shop_url).group(1)
+        tsg.game_id = int(self._to_str(id))
 
 
     def _parse_price(self, tsg, item) :
@@ -117,6 +123,7 @@ class SteamCrawler :
 
 
     def _free(self, price) :
+        price = self._to_str(price)
         if price.lower() in enum.FREES :
             price = '0'
         return price
@@ -131,13 +138,13 @@ class SteamCrawler :
             tsg.evaluation_info = ''
             tsg.evaluation = '暂无评价'
         else :
-            info = span.get('data-tooltip-html').strip().split('<br>')
+            info = self._to_str(span.get('data-tooltip-html')).strip().split('<br>')
             tsg.evaluation_info = info[1]
             tsg.evaluation = info[0]
         tsg.evaluation_id = enum.EVALUATIONS.get(tsg.evaluation, -1)
 
 
-    def parse_stat(self, html) :
+    def parse_rank(self, html) :
         tsgs = {}
         rank = 0
 
@@ -149,15 +156,15 @@ class SteamCrawler :
             tsg.rank_id = rank
 
             a = item.find('a', class_='gameLink')
-            tsg.shop_url = a.get('href')
-            tsg.id = int(re.search(r'/(\d+)', tsg.shop_url).group(1))
-            tsg.name = re.sub(r'\s+', ' ', a.text, re.M).strip()
+            tsg.shop_url = self._to_str(a.get('href'))
+            tsg.game_id = int(re.search(r'/(\d+)', tsg.shop_url).group(1))
+            tsg.game_name = re.sub(r'\s+', ' ', self._to_str(a.text), re.M).strip()
 
             spans = item.find_all('span', class_='currentServers')
-            tsg.cur_player_num = int(spans[0].text.strip().replace(',', ''))
-            tsg.today_max_player_num = int(spans[1].text.strip().replace(',', ''))
+            tsg.cur_player_num = int(self._to_str(spans[0].text).strip().replace(',', ''))
+            tsg.today_max_player_num = int(self._to_str(spans[1].text).strip().replace(',', ''))
 
-            tsgs[tsg.id] = (tsg)
+            tsgs[tsg.game_id] = (tsg)
         return tsgs
 
 

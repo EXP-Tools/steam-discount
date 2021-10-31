@@ -7,7 +7,8 @@
 class TSteamGame :
     table_name = 't_steam_game'
     i_id = "i_id"
-    s_name = "s_name"
+    i_game_id = "i_game_id"
+    s_game_name = "s_game_name"
     s_original_price = "s_original_price"
     s_lowest_price = "s_lowest_price"
     i_discount_rate = "i_discount_rate"
@@ -23,7 +24,8 @@ class TSteamGame :
 
     def __init__(self) :
         self.id = None
-        self.name = None
+        self.game_id = None
+        self.game_name = None
         self.original_price = None
         self.lowest_price = None
         self.discount_rate = None
@@ -39,7 +41,8 @@ class TSteamGame :
 
     def params(self) :
         return (
-            self.name,
+            self.game_id,
+            self.game_name,
             self.original_price,
             self.lowest_price,
             self.discount_rate,
@@ -59,7 +62,8 @@ class TSteamGame :
             (
                 '%s: {' % self.table_name,
                 "    %s = %s" % (self.i_id, self.id),
-                "    %s = %s" % (self.s_name, self.name),
+                "    %s = %s" % (self.i_game_id, self.game_id),
+                "    %s = %s" % (self.s_game_name, self.game_name),
                 "    %s = %s" % (self.s_original_price, self.original_price),
                 "    %s = %s" % (self.s_lowest_price, self.lowest_price),
                 "    %s = %s" % (self.i_discount_rate, self.discount_rate),

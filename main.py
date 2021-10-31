@@ -7,89 +7,62 @@ import sys
 import time
 from pypdm.dbc._sqlite import SqliteDBC
 from src.core.steam_crawler import SteamCrawler
-from src.dao.t_steam_game import TSteamGameDao
 from src.cfg import env
+from src.core import saver
 from src.utils import log
 
 
 
-def main(is_help, pages, cc, specials, filter) :
-    tsgs = {}
+def main(is_help, pages, zone, specials, filter) :
+    if is_help :
+        log.info(help_info())
+
+    log.info('+++++++++++++++++++++++++++++++++++++++')
+    # update_discount(pages, zone, specials, filter)  # 更新游戏折扣信息
+    update_rank()                                   # 更新游戏排名
+    log.info('---------------------------------------')
+
+
+def help_info() :
+    return '''
+    
+'''
+
+
+def update_discount(pages, zone, specials, filter) :
     for page in range(1, pages + 1) :
-        sc = SteamCrawler(env.STEAM_GAME_PRICE_URL, page, options={
-            'cc': cc,
-            'specials': 1 if specials else 0,
-            'filter': filter
-        })
-        html = sc.get_html()
-        _tsgs = sc.parse_game(html)
-        tsgs = { **tsgs, **_tsgs }
         time.sleep(1)
-    to_db(tsgs, True)
+        try :
+            sc = SteamCrawler(env.STEAM_GAME_PRICE_URL, page, options={
+                'cc': zone,
+                'specials': 1 if specials else 0,
+                'filter': filter
+            })
 
-    sc = SteamCrawler(env.STEAM_GAME_STATS_URL)
-    html = sc.get_html()
-    tsgs = sc.parse_stat(html)
-    to_db(tsgs, False)
+            log.info('正在抓取第 [%i/%i] 页的游戏折扣数据 ...' % (page, pages))
+            html = sc.get_html()
+            tsgs = sc.parse_game(html)
 
-
-
-def to_db(new_tsgs, rank, discount) :
-    '''
-    创建或更新记录到数据库
-    '''
-    sdbc = SqliteDBC(env.DB_PATH)
-    conn = sdbc.conn()
-
-    dao = TSteamGameDao()
-    old_tsgs = dao.query_all()
-
-    # 重置排名
-    if rank :
-        for old_tsg in old_tsgs :
-            old_tsg.rank_id = None
-            old_tsg.cur_player_num = None
-            old_tsg.today_max_player_num = None
-            dao.update(conn, old_tsg)
-
-    # 更新游戏信息
-    for old_tsg in old_tsgs :
-        new_tsg = new_tsgs.get(old_tsg.id)
-        if new_tsg is not None :
-            compare(old_tsg, new_tsg, rank, discount)
-            dao.update(conn, old_tsg)
-            new_tsgs.pop(old_tsg.id)
-
-    # 插入新游戏
-    for id, tsg in new_tsgs.items() :
-        dao.insert(conn, tsg)
-
-    sdbc.commit()
-    sdbc.close()
+            log.info('正在更新第 [%i/%i] 页的游戏折扣数据 ...' % (page, pages))
+            saver.to_db(tsgs, False, True)
+            
+        except :
+            log.error('更新第 [%i/%i] 页的游戏折扣数据失败' % (page, pages))
 
 
-def compare(old, new, rank, discount) :
-    old.name = old.name or new.name
-    old.shop_url = old.shop_url or new.shop_url
 
-    # 更新测评
-    old.evaluation_id = new.evaluation_id or old.evaluation_id
-    old.evaluation = new.evaluation or old.evaluation
-    old.evaluation_info = new.evaluation_info or old.evaluation_info
+def update_rank() :
+    try :
+        sc = SteamCrawler(env.STEAM_GAME_STATS_URL)
 
-    # 更新排名
-    if rank :
-        old.rank_id = new.rank_id
-        old.cur_player_num = new.cur_player_num
-        old.today_max_player_num = new.cur_player_num
+        log.error('正在抓取游戏排名数据 ...')
+        html = sc.get_html()
+        tsgs = sc.parse_rank(html)
 
-    # 更新价格
-    if discount :
-        old.original_price = new.original_price or old.original_price
-        old.discount_rate = new.discount_rate
-
-        old.lowest_price = None
-        old.discount_price = None
+        log.error('正在更新游戏排名数据 ...')
+        saver.to_db(tsgs, True, False)
+    except :
+        log.error('更新游戏排名数据失败')
 
 
 def init() :
@@ -100,8 +73,8 @@ def init() :
 
 def sys_args(sys_args) :
     is_help = False
-    pages = 10          # 爬取页数
-    cc = 'CN'           # 价格区域
+    pages = 10          # 最大爬取页数
+    zone = 'CN'         # 价格区域
     specials = False    # 仅特惠游戏
     filter = 'globaltopsellers'    # 全球热销游戏
     
@@ -113,26 +86,26 @@ def sys_args(sys_args) :
                 is_help = True
                 break
 
-            elif sys_args[idx] == '-p' :
+            elif sys_args[idx] == '-p' or sys_args[idx] == '--pages' :
                 idx += 1
                 pages = int(sys_args[idx])
 
-            elif sys_args[idx] == '-z' :
+            elif sys_args[idx] == '-z' or sys_args[idx] == '--zone' :
                 idx += 1
-                cc = int(sys_args[idx])
+                zone = int(sys_args[idx])
 
             elif sys_args[idx] == '-s' or sys_args[idx] == '--specials' :
                 idx += 1
                 specials = sys_args[idx]
 
-            elif sys_args[idx] == '-f' :
+            elif sys_args[idx] == '-f' or sys_args[idx] == '--filter' :
                 idx += 1
                 filter = sys_args[idx]
 
         except :
             pass
         idx += 1
-    return is_help, pages, cc, specials, filter
+    return is_help, pages, zone, specials, filter
 
 
 if __name__ == "__main__" :
@@ -141,73 +114,3 @@ if __name__ == "__main__" :
         main(*sys_args(sys.argv))
     except :
         log.error('未知异常')
-
-
-    # Game_info = []          # 游戏全部信息
-    # Turn_link = []          # 翻页链接
-    # Jump_link = []          # 游戏详情页面链接
-    # Game_evaluation = []    # 游戏好评率和评价
-    # for i in range(1, 11):
-    #     Turn_link.append("https://store.steampowered.com/search/?cc=CN&filter=globaltopsellers&page=1&os=win" + str("&page=" + str(i)))
-    #     run(Game_info, Jump_link, Game_evaluation, get_text(Turn_link[i-1]))
-    # save_data(Game_info)
-
-
-
-# num = 0
-
-# def get_text(url):
-#     try:
-#         headers = {
-    
-#             "User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
-#                           'Chrome/85.0.4183.102 Safari/537.36', 'Accept-Language': 'zh-CN '
-#         }
-#         r = requests.get(url, headers=headers)
-#         r.raise_for_status()
-#         r.encoding = r.apparent_encoding
-#         return r.text
-#     except:
-#         return "爬取网站失败！"
-
-
-# def run(game_info, jump_link, game_evaluation, text):
-#     soup = BeautifulSoup(text, "html.parser")
-
-#     # 游戏评价
-#     w = soup.find_all(class_="col search_reviewscore responsive_secondrow")
-#     for u in w:
-#         if u.span is not None:
-#             game_evaluation.append(
-#                 u.span["data-tooltip-html"].split("<br>")[0] + "," + u.span["data-tooltip-html"].split("<br>")[-1])
-#         else:
-#             game_evaluation.append("暂无评价！")
-
-#     # 游戏详情页面链接
-#     link_text = soup.find_all("div", id="search_resultsRows")
-#     for k in link_text:
-#         b = k.find_all('a')
-#     for j in b:
-#         jump_link.append(j['href'])
-
-#     # 名字和价格
-#     global num
-#     name_text = soup.find_all('div', class_="responsive_search_name_combined")
-#     for z in name_text:
-#         # 每个游戏的价格
-#         name = z.find(class_="title").string.strip()
-#         # 判断折扣是否为None，提取价格
-#         if z.find(class_="col search_discount responsive_secondrow").string is None:
-#             price = z.find(class_="col search_price discounted responsive_secondrow").text.strip().split("¥")
-#             game_info.append([num + 1, name, price[2].strip(), game_evaluation[num], jump_link[num]])
-#         else:
-#             price = z.find(class_="col search_price responsive_secondrow").string.strip().split("¥")
-#             game_info.append([num + 1, name, price[1], game_evaluation[num], jump_link[num]])
-#         num = num + 1
-
-
-# def save_data(game_info):
-#     save_path = "./Steam.csv"
-#     df = pd.DataFrame(game_info, columns=['排行榜', '游戏名字', '目前游戏价格¥', '游戏评价', '游戏页面链接'])
-#     df.to_csv(save_path, index=0)
-#     print("文件保存成功！")
