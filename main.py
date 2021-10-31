@@ -6,13 +6,15 @@
 import sys
 import time
 from pypdm.dbc._sqlite import SqliteDBC
+from src.core.steam_crawler import SteamCrawler
+from src.dao.t_steam_game import TSteamGameDao
 from src.cfg import env
-from src.crawler.steam_crawler import SteamCrawler
 from src.utils import log
 
 
 
 def main(is_help, pages, cc, specials, filter) :
+    tsgs = {}
     for page in range(1, pages + 1) :
         sc = SteamCrawler(env.STEAM_GAME_PRICE_URL, page, options={
             'cc': cc,
@@ -20,15 +22,74 @@ def main(is_help, pages, cc, specials, filter) :
             'filter': filter
         })
         html = sc.get_html()
-        tsgs = sc.parse(html)
-
-        for tsg in tsgs.values() :
-            print('=========================')
-            print(tsg)
+        _tsgs = sc.parse_game(html)
+        tsgs = { **tsgs, **_tsgs }
         time.sleep(1)
+    to_db(tsgs, True)
 
-    
+    sc = SteamCrawler(env.STEAM_GAME_STATS_URL)
+    html = sc.get_html()
+    tsgs = sc.parse_stat(html)
+    to_db(tsgs, False)
 
+
+
+def to_db(new_tsgs, rank, discount) :
+    '''
+    创建或更新记录到数据库
+    '''
+    sdbc = SqliteDBC(env.DB_PATH)
+    conn = sdbc.conn()
+
+    dao = TSteamGameDao()
+    old_tsgs = dao.query_all()
+
+    # 重置排名
+    if rank :
+        for old_tsg in old_tsgs :
+            old_tsg.sort_id = None
+            old_tsg.cur_player_num = None
+            old_tsg.today_max_player_num = None
+            dao.update(conn, old_tsg)
+
+    # 更新游戏信息
+    for old_tsg in old_tsgs :
+        new_tsg = new_tsgs.get(old_tsg.id)
+        if new_tsg is not None :
+            compare(old_tsg, new_tsg, rank, discount)
+            dao.update(conn, old_tsg)
+            new_tsgs.pop(old_tsg.id)
+
+    # 插入新游戏
+    for id, tsg in new_tsgs.items() :
+        dao.insert(conn, tsg)
+
+    sdbc.commit()
+    sdbc.close()
+
+
+def compare(old, new, rank, discount) :
+    old.name = old.name or new.name
+    old.shop_url = old.shop_url or new.shop_url
+
+    # 更新测评
+    old.evaluation_id = new.evaluation_id or old.evaluation_id
+    old.evaluation = new.evaluation or old.evaluation
+    old.evaluation_info = new.evaluation_info or old.evaluation_info
+
+    # 更新排名
+    if rank :
+        old.sort_id = new.sort_id
+        old.cur_player_num = new.cur_player_num
+        old.today_max_player_num = new.cur_player_num
+
+    # 更新价格
+    if discount :
+        old.original_price = new.original_price or old.original_price
+        old.discount_rate = new.discount_rate
+
+        old.lowest_price = None
+        old.discount_price = None
 
 
 def init() :

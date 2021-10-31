@@ -3,6 +3,7 @@
 # @Author : EXP
 # -----------------------------------------------
 
+import re
 import requests
 from urllib.parse import quote
 from bs4 import BeautifulSoup
@@ -15,9 +16,11 @@ from src.utils import log
 
 class SteamCrawler :
 
-    def __init__(self, url, page, options={}) :
+    def __init__(self, url, page=None, options={}) :
+        self.url = url
         kvs = self._concat_kvs(page, options)
-        self.url = '%s?%s' % (url, kvs)
+        if len(kvs) > 0 :
+            self.url = '%s?%s' % (url, kvs)
 
 
     def _concat_kvs(self, page, options) :
@@ -59,17 +62,17 @@ class SteamCrawler :
         return html
 
 
-    def parse(self, html) :
+    def parse_game(self, html) :
         tsgs = {}
         soup = BeautifulSoup(html, "html.parser")
         items = soup.find_all(class_="search_result_row ds_collapse_flag")
         for item in items :
             tsg = TSteamGame()
+            tsg.shop_url = item.get('href')
             self._prase_id(tsg, item)
             tsg.name = item.find('span', class_='title').text
             self._parse_price(tsg, item)
             self._parse_evaluation(tsg, item)
-            tsg.shop_url = item.get('href')
             tsgs[tsg.id] = (tsg)
         return tsgs
 
@@ -84,7 +87,8 @@ class SteamCrawler :
         # 赋值顺序不能变
         id = item.get('data-ds-packageid') or \
              item.get('data-ds-appid') or \
-             item.get('data-ds-bundleid')
+             item.get('data-ds-bundleid') or \
+             re.search(r'/(\d+)', tsg.shop_url).group(1)
         tsg.id = int(id)
 
 
@@ -105,7 +109,7 @@ class SteamCrawler :
             tsg.discount_rate = int(div.span.text.replace('-', '').replace('%', '').strip())
             div = item.find('div', class_='col search_price discounted responsive_secondrow')
             tsg.original_price = div.strike.text.strip()
-            tsg.discount_price = div.text.strip().split('\n')[-1].strip()
+            tsg.discount_price = re.search(r'<br/>(.+)</div>', div.__repr__(), re.I).group(1).strip()
             
 
     def _parse_evaluation(self, tsg, item) :
@@ -121,5 +125,30 @@ class SteamCrawler :
             tsg.evaluation_info = info[1]
             tsg.evaluation = info[0]
         tsg.evaluation_id = EVALUATION.get(tsg.evaluation, -1)
+
+
+    def parse_stat(self, html) :
+        tsgs = {}
+        sort = 0
+
+        soup = BeautifulSoup(html, "html.parser")
+        items = soup.find_all(class_="player_count_row")
+        for item in items :
+            sort += 1
+            tsg = TSteamGame()
+            tsg.sort_id = sort
+
+            a = item.find('a', class_='gameLink')
+            tsg.shop_url = a.get('href')
+            tsg.id = int(re.search(r'/(\d+)', tsg.shop_url).group(1))
+            tsg.name = re.sub(r'\s+', ' ', a.text, re.M).strip()
+
+            spans = item.find_all('span', class_='currentServers')
+            tsg.cur_player_num = int(spans[0].text.strip().replace(',', ''))
+            tsg.today_max_player_num = int(spans[1].text.strip().replace(',', ''))
+
+            tsgs[tsg.id] = (tsg)
+        return tsgs
+
 
 
