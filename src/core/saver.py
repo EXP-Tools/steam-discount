@@ -61,6 +61,7 @@ def to_db(new_tsgs, rank, discount) :
 def compare(old, new, rank, discount) :
     old.game_name = old.game_name or new.game_name
     old.shop_url = old.shop_url or new.shop_url
+    old.img_url = old.img_url or new.img_url
 
     # 更新排名
     if rank :

@@ -10,20 +10,8 @@ from pypdm.dbc._sqlite import SqliteDBC
 from src.core.steam_crawler import SteamCrawler
 from src.cfg import env
 from src.core import saver
+from src.core import page
 from src.utils import log
-
-
-
-def main(is_help, pages, zone, specials, filter) :
-    if is_help :
-        log.info(help_info())
-        return
-
-    log.info('+++++++++++++++++++++++++++++++++++++++')
-    update_rank()                                       # 更新游戏排名
-    update_top_discount(pages, zone, specials, filter)  # 更新销售 top 的游戏的折扣信息
-    update_random_discount(pages, zone, filter)         # 更新随机游戏的折扣信息（主要为了扩充数据库）
-    log.info('---------------------------------------')
 
 
 def help_info() :
@@ -33,7 +21,22 @@ def help_info() :
 -z <zone>    指定 steam 商城的地区，会影响售价单位，默认 CN （RMB）
 -s           是否只爬取正在打折的游戏，默认不指定
 -f <filter>  其他过滤参数，默认 globaltopsellers
+-l <limit>   最终界面展示的游戏数量，默认 100
 '''
+
+
+def main(is_help, pages, zone, specials, filter, limit) :
+    if is_help :
+        log.info(help_info())
+        return
+
+    log.info('+++++++++++++++++++++++++++++++++++++++')
+    update_rank()                                       # 更新游戏排名
+    update_top_discount(pages, zone, specials, filter)  # 更新销售 top 的游戏的折扣信息
+    # update_random_discount(pages, zone, filter)         # 更新随机游戏的折扣信息（主要为了扩充数据库）
+    page.to_page(limit)
+    log.info('---------------------------------------')
+
 
 
 def update_rank() :
@@ -70,14 +73,14 @@ def _update_discount(page, zone, specials, filter) :
             'filter': filter
         })
 
-        log.info('正在抓取第 [%i] 页的游戏折扣数据 ...' % page)
+        log.info('正在抓取第 [%i] 页的游戏数据 ...' % page)
         html = sc.get_html()
         tsgs = sc.parse_game(html)
 
-        log.info('正在更新第 [%i] 页的游戏折扣数据 ...' % page)
+        log.info('正在更新第 [%i] 页的游戏数据 ...' % page)
         saver.to_db(tsgs, False, True)
     except :
-        log.error('更新第 [%i] 页的游戏折扣数据失败' % page)
+        log.error('更新第 [%i] 页的游戏数据失败' % page)
 
 
 def init() :
@@ -92,7 +95,8 @@ def sys_args(sys_args) :
     zone = 'CN'         # 价格区域
     specials = False    # 仅特惠游戏
     filter = 'globaltopsellers'    # 全球热销游戏
-    
+    limit = 100         # 页面限制展示数
+
     idx = 1
     size = len(sys_args)
     while idx < size :
@@ -115,10 +119,14 @@ def sys_args(sys_args) :
             elif sys_args[idx] == '-f' or sys_args[idx] == '--filter' :
                 idx += 1
                 filter = sys_args[idx]
+
+            elif sys_args[idx] == '-l' or sys_args[idx] == '--limit' :
+                idx += 1
+                limit = int(sys_args[idx])
         except :
             pass
         idx += 1
-    return is_help, pages, zone, specials, filter
+    return is_help, pages, zone, specials, filter, limit
 
 
 if __name__ == "__main__" :

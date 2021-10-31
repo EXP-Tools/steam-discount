@@ -33,7 +33,7 @@ EVALUATIONS = {
     '差评如潮': 1, 
     'Overwhelmingly Negative': 1, 
 
-    '暂无评价': 0, 
-    'Unknown': 0, 
+    '暂无评价': None, 
+    'Unknown': None, 
 }
 
