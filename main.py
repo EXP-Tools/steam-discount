@@ -5,6 +5,7 @@
 
 import sys
 import time
+import random
 from pypdm.dbc._sqlite import SqliteDBC
 from src.core.steam_crawler import SteamCrawler
 from src.cfg import env
@@ -16,53 +17,67 @@ from src.utils import log
 def main(is_help, pages, zone, specials, filter) :
     if is_help :
         log.info(help_info())
+        return
 
     log.info('+++++++++++++++++++++++++++++++++++++++')
-    # update_discount(pages, zone, specials, filter)  # 更新游戏折扣信息
-    update_rank()                                   # 更新游戏排名
+    update_rank()                                       # 更新游戏排名
+    update_top_discount(pages, zone, specials, filter)  # 更新销售 top 的游戏的折扣信息
+    update_random_discount(pages, zone, filter)         # 更新随机游戏的折扣信息（主要为了扩充数据库）
     log.info('---------------------------------------')
 
 
 def help_info() :
     return '''
-    
+-h           查看帮助信息
+-p <pages>   爬取 steam 商城的游戏页数，默认 10
+-z <zone>    指定 steam 商城的地区，会影响售价单位，默认 CN （RMB）
+-s           是否只爬取正在打折的游戏，默认不指定
+-f <filter>  其他过滤参数，默认 globaltopsellers
 '''
-
-
-def update_discount(pages, zone, specials, filter) :
-    for page in range(1, pages + 1) :
-        time.sleep(1)
-        try :
-            sc = SteamCrawler(env.STEAM_GAME_PRICE_URL, page, options={
-                'cc': zone,
-                'specials': 1 if specials else 0,
-                'filter': filter
-            })
-
-            log.info('正在抓取第 [%i/%i] 页的游戏折扣数据 ...' % (page, pages))
-            html = sc.get_html()
-            tsgs = sc.parse_game(html)
-
-            log.info('正在更新第 [%i/%i] 页的游戏折扣数据 ...' % (page, pages))
-            saver.to_db(tsgs, False, True)
-            
-        except :
-            log.error('更新第 [%i/%i] 页的游戏折扣数据失败' % (page, pages))
-
 
 
 def update_rank() :
     try :
         sc = SteamCrawler(env.STEAM_GAME_STATS_URL)
 
-        log.error('正在抓取游戏排名数据 ...')
+        log.info('正在抓取游戏排名数据 ...')
         html = sc.get_html()
         tsgs = sc.parse_rank(html)
 
-        log.error('正在更新游戏排名数据 ...')
+        log.info('正在更新游戏排名数据 ...')
         saver.to_db(tsgs, True, False)
     except :
         log.error('更新游戏排名数据失败')
+
+
+def update_top_discount(pages, zone, specials, filter) :
+    for page in range(1, pages + 1) :
+        _update_discount(page, zone, specials, filter)
+        time.sleep(5)
+
+
+def update_random_discount(pages, zone, filter) :
+    for cnt in range(1, 10) :
+        page = random.randint(pages + 1, pages + 1000)
+        _update_discount(page, zone, False, filter)
+
+
+def _update_discount(page, zone, specials, filter) :
+    try :
+        sc = SteamCrawler(env.STEAM_GAME_PRICE_URL, page, options={
+            'cc': zone,
+            'specials': 1 if specials else 0,
+            'filter': filter
+        })
+
+        log.info('正在抓取第 [%i] 页的游戏折扣数据 ...' % page)
+        html = sc.get_html()
+        tsgs = sc.parse_game(html)
+
+        log.info('正在更新第 [%i] 页的游戏折扣数据 ...' % page)
+        saver.to_db(tsgs, False, True)
+    except :
+        log.error('更新第 [%i] 页的游戏折扣数据失败' % page)
 
 
 def init() :
@@ -92,16 +107,14 @@ def sys_args(sys_args) :
 
             elif sys_args[idx] == '-z' or sys_args[idx] == '--zone' :
                 idx += 1
-                zone = int(sys_args[idx])
+                zone = sys_args[idx]
 
             elif sys_args[idx] == '-s' or sys_args[idx] == '--specials' :
-                idx += 1
-                specials = sys_args[idx]
+                specials = True
 
             elif sys_args[idx] == '-f' or sys_args[idx] == '--filter' :
                 idx += 1
                 filter = sys_args[idx]
-
         except :
             pass
         idx += 1

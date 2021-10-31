@@ -95,7 +95,7 @@ class SteamCrawler :
                   item.get('data-ds-appid') or \
                   item.get('data-ds-bundleid') or \
                   re.search(r'/(\d+)', tsg.shop_url).group(1)
-        tsg.game_id = int(self._to_str(id))
+        tsg.game_id = int(self._to_str(game_id))
 
 
     def _parse_price(self, tsg, item) :
@@ -131,7 +131,7 @@ class SteamCrawler :
 
     def _parse_evaluation(self, tsg, item) :
         '''
-        解析游戏评价
+        解析游戏测评
         '''
         span = item.find('span', class_='search_review_summary positive')
         if not span :
