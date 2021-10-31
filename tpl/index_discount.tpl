@@ -1,4 +1,3 @@
-<!-- RELEASE TIME : %(datetime)s -->
 <html lang="zh-cn">
 
  <head>
@@ -6,14 +5,20 @@
   <meta name="robots" content="noarchive" />
   <meta name="author" content="EXP: www.exp-blog.com" />
   <link rel="stylesheet" type="text/css" href="./css/page.css" />
-  <title>Threat-Broadcast</title>
+  <title>Steam-Discount</title>
  </head>
 
  <body class="html">
 
   <div>
    <br />
-   <h2><a href="https://github.com/lyy289065406/steam-discount">威胁情报播报</a></h2>
+   <h2><a href="https://github.com/lyy289065406/steam-discount">Steam 特惠折扣排名</a></h2>
+   %(datetime)s
+   <br />
+   <br />
+
+   [<a href="index_hot.html">Steam 游戏热度排名</a>] [<a href="index_evaluation.html">Steam 游戏测评排名</a>]
+   <br />
    <br />
 
 %(table)s
