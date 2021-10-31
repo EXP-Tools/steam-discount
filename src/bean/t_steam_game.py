@@ -10,6 +10,7 @@ class TSteamGame :
     s_name = "s_name"
     s_original_price = "s_original_price"
     s_lowest_price = "s_lowest_price"
+    i_discount_rate = "i_discount_rate"
     s_discount_price = "s_discount_price"
     i_evaluation_id = "i_evaluation_id"
     s_evaluation = "s_evaluation"
@@ -25,6 +26,7 @@ class TSteamGame :
         self.name = None
         self.original_price = None
         self.lowest_price = None
+        self.discount_rate = None
         self.discount_price = None
         self.evaluation_id = None
         self.evaluation = None
@@ -40,6 +42,7 @@ class TSteamGame :
             self.name,
             self.original_price,
             self.lowest_price,
+            self.discount_rate,
             self.discount_price,
             self.evaluation_id,
             self.evaluation,
@@ -59,6 +62,7 @@ class TSteamGame :
                 "    %s = %s" % (self.s_name, self.name),
                 "    %s = %s" % (self.s_original_price, self.original_price),
                 "    %s = %s" % (self.s_lowest_price, self.lowest_price),
+                "    %s = %s" % (self.i_discount_rate, self.discount_rate),
                 "    %s = %s" % (self.s_discount_price, self.discount_price),
                 "    %s = %s" % (self.i_evaluation_id, self.evaluation_id),
                 "    %s = %s" % (self.s_evaluation, self.evaluation),

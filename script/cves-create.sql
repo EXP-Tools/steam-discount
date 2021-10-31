@@ -3,6 +3,7 @@ CREATE TABLE IF NOT EXISTS `t_steam_game` (
   `s_name`                  TEXT(128),
   `s_original_price`        TEXT(16),
   `s_lowest_price`          TEXT(16),
+  `i_discount_rate`         INTEGER(32),
   `s_discount_price`        TEXT(16),
   `i_evaluation_id`         INTEGER(32),
   `s_evaluation`            TEXT(64),

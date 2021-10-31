@@ -22,28 +22,8 @@ class SteamGame :
         self.shop_url = ''
 
 
-        
-class CVEInfo:
-
-    def __init__(self):
-        self.id = ''
-        self.src = ''
-        self.url = ''
-        self.time = ''
-        self.title = ''
-        self.info = ''
-        self.md5 = ''
-
-
     def is_vaild(self):
-        return not not self.title
-
-
-    def MD5(self):
-        if not self.md5:
-            data = '%s%s%s' % (self.id, self.title, self.url)
-            self.md5 = hashlib.md5(data.encode(encoding='UTF-8')).hexdigest()
-        return self.md5
+        return not not self.name
 
 
     def to_html(self):

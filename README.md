@@ -10,3 +10,6 @@
 
 - [Python爬虫实战：爬取steam打折优惠数据](https://www.i4k.xyz/article/m0_48405781/108812319)
 - [json - Steam Web API获取CS :GO inventory](https://www.coder.work/article/6737920)
+
+
+每小时随机爬取页数

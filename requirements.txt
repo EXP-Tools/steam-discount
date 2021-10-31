@@ -1,3 +1,4 @@
 requests==2.22.0
+bs4=4.10.0
 python-graphql-client==0.3.0
 pypdm-db=1.0.1
