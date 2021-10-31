@@ -3,7 +3,9 @@
 # @Author : EXP
 # -----------------------------------------------
 
-EVALUATION = {
+FREES = ['免费', '免费游戏', 'free', 'free to play']
+
+EVALUATIONS = {
     '好评如潮': 9, 
     'Overwhelmingly Positive': 9, 
 
@@ -34,3 +36,4 @@ EVALUATION = {
     '暂无评价': 0, 
     'Unknown': 0, 
 }
+

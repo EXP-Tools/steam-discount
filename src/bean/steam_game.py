@@ -12,7 +12,7 @@ import hashlib
 class SteamGame :
 
     def __init__(self) :
-        self.sort_id = -1
+        self.rank_id = -1
         self.name = ''
         self.original_price = 0
         self.Lowest_price = self.original_price

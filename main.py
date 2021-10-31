@@ -47,7 +47,7 @@ def to_db(new_tsgs, rank, discount) :
     # 重置排名
     if rank :
         for old_tsg in old_tsgs :
-            old_tsg.sort_id = None
+            old_tsg.rank_id = None
             old_tsg.cur_player_num = None
             old_tsg.today_max_player_num = None
             dao.update(conn, old_tsg)
@@ -79,7 +79,7 @@ def compare(old, new, rank, discount) :
 
     # 更新排名
     if rank :
-        old.sort_id = new.sort_id
+        old.rank_id = new.rank_id
         old.cur_player_num = new.cur_player_num
         old.today_max_player_num = new.cur_player_num
 

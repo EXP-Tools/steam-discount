@@ -8,7 +8,7 @@ import requests
 from urllib.parse import quote
 from bs4 import BeautifulSoup
 from src.cfg import env
-from src.cfg.evaluation import EVALUATION
+from src.cfg import enum
 from src.bean.t_steam_game import TSteamGame
 from src.utils import log
 
@@ -101,16 +101,26 @@ class SteamCrawler :
 
         # 没有折扣
         if not div.text.strip() :
+            tsg.discount_rate = 0
             div = item.find('div', class_='col search_price responsive_secondrow')
-            tsg.original_price = div.text.strip()
+            tsg.original_price = self._free(div.text.strip())
+            tsg.discount_price = tsg.original_price
+            tsg.lowest_price = tsg.original_price
 
         # 有折扣
         else :
             tsg.discount_rate = int(div.span.text.replace('-', '').replace('%', '').strip())
             div = item.find('div', class_='col search_price discounted responsive_secondrow')
-            tsg.original_price = div.strike.text.strip()
-            tsg.discount_price = re.search(r'<br/>(.+)</div>', div.__repr__(), re.I).group(1).strip()
-            
+            tsg.original_price = self._free(div.strike.text.strip())
+            tsg.discount_price = self._free(re.search(r'<br/>(.+)</div>', div.__repr__(), re.I).group(1).strip())
+            tsg.lowest_price = tsg.discount_price
+
+
+    def _free(self, price) :
+        if price.lower() in enum.FREES :
+            price = '0'
+        return price
+    
 
     def _parse_evaluation(self, tsg, item) :
         '''
@@ -124,19 +134,19 @@ class SteamCrawler :
             info = span.get('data-tooltip-html').strip().split('<br>')
             tsg.evaluation_info = info[1]
             tsg.evaluation = info[0]
-        tsg.evaluation_id = EVALUATION.get(tsg.evaluation, -1)
+        tsg.evaluation_id = enum.EVALUATIONS.get(tsg.evaluation, -1)
 
 
     def parse_stat(self, html) :
         tsgs = {}
-        sort = 0
+        rank = 0
 
         soup = BeautifulSoup(html, "html.parser")
         items = soup.find_all(class_="player_count_row")
         for item in items :
-            sort += 1
+            rank += 1
             tsg = TSteamGame()
-            tsg.sort_id = sort
+            tsg.rank_id = rank
 
             a = item.find('a', class_='gameLink')
             tsg.shop_url = a.get('href')
