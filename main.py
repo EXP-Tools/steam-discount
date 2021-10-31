@@ -33,7 +33,7 @@ def main(is_help, pages, zone, specials, filter, limit) :
     log.info('+++++++++++++++++++++++++++++++++++++++')
     update_rank()                                       # 更新游戏排名
     update_top_discount(pages, zone, specials, filter)  # 更新销售 top 的游戏的折扣信息
-    # update_random_discount(pages, zone, filter)         # 更新随机游戏的折扣信息（主要为了扩充数据库）
+    update_random_discount(pages, zone, filter)         # 更新随机游戏的折扣信息（主要为了扩充数据库）
     page.to_page(limit)
     log.info('---------------------------------------')
 

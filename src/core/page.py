@@ -12,6 +12,7 @@ from pypdm.dbc._sqlite import SqliteDBC
 from src.bean.t_steam_game import TSteamGame
 from src.dao.t_steam_game import TSteamGameDao
 from src.cfg import env
+from src.utils import num
 from src.utils import log
 
 HTML_DISCOUNT_PATH = '%s/docs/index_discount.html' % env.PRJ_DIR
@@ -39,25 +40,21 @@ def _to_page(sdbc, column, order, limit, tpl_path, savepath) :
     games = query_game(sdbc, column, order, limit)
     rows = []
     for g in games:
-        new_flag = ''
-        if g.original_price and g.lowest_price and g.discount_price :
-            if g.lowest_price < g.original_price and g.discount_price <= g.lowest_price :
-                new_flag = ' <img src="imgs/lowest.gif" />'
-
+        new_flag = compare(g.original_price, g.lowest_price, g.discount_price)
         row = tpl_row % {
-            'img_url': byte_to_str(g.img_url) or '',
+            'img_url': num.byte_to_str(g.img_url) or '',
             'game_id': g.game_id or 0,
-            'game_name': byte_to_str(g.game_name) or '',
-            'original_price': byte_to_str(g.original_price) or '',
-            'lowest_price': byte_to_str(g.lowest_price) or '',
+            'game_name': num.byte_to_str(g.game_name) or '',
+            'original_price': num.byte_to_str(g.original_price) or '',
+            'lowest_price': num.byte_to_str(g.lowest_price) or '',
             'discount_rate': g.discount_rate or 0,
-            'discount_price': byte_to_str(g.discount_price) or '',
+            'discount_price': num.byte_to_str(g.discount_price) or '',
             'new_flag': new_flag, 
-            'evaluation': byte_to_str(g.evaluation) or '',
+            'evaluation': num.byte_to_str(g.evaluation) or '',
             'rank_id': g.rank_id or 0,
             'cur_player_num': g.cur_player_num or 0,
             'today_max_player_num': g.today_max_player_num or 0,
-            'shop_url': byte_to_str(g.shop_url) or ''
+            'shop_url': num.byte_to_str(g.shop_url) or ''
         }
         rows.append(row)
 
@@ -110,7 +107,12 @@ def create_html(data, savepath) :
         file.write(data)
 
 
-def byte_to_str(value) :
-    if isinstance(value, bytes) :
-        value = bytes.decode(value)
-    return value
+def compare(original, lowest, discount) :
+    new_flag = ''
+    if original and lowest and discount :
+        org = num.to_float(original)
+        low = num.to_float(lowest)
+        dis = num.to_float(discount)
+        if dis <= low and low < org :
+            new_flag = ' <img src="imgs/lowest.gif" />'
+    return new_flag

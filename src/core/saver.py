@@ -7,21 +7,7 @@ import re
 from pypdm.dbc._sqlite import SqliteDBC
 from src.dao.t_steam_game import TSteamGameDao
 from src.cfg import env
-from src.utils import log
-
-
-
-def _to_float(s_price) :
-    f_price = 0
-    if s_price :
-        if isinstance(s_price, bytes) :
-            s_price = bytes.decode(s_price)
-    
-        try :
-            f_price = float(re.search(r'(\d+(\.\d+)?)', s_price).group(1))
-        except :
-            log.error('解析价格异常: [%s]' % s_price)
-    return f_price
+from src.utils import num
 
 
 
@@ -67,7 +53,7 @@ def compare(old, new, rank, discount) :
     if rank :
         old.rank_id = new.rank_id
         old.cur_player_num = new.cur_player_num
-        old.today_max_player_num = new.cur_player_num
+        old.today_max_player_num = new.today_max_player_num
 
     # 更新测评
     if discount :
@@ -82,8 +68,9 @@ def compare(old, new, rank, discount) :
         old.discount_rate = new.discount_rate
         old.discount_price = new.discount_price
 
-        min = _to_float(old.lowest_price)
-        cur = _to_float(new.lowest_price)
+        min = num.to_float(old.lowest_price)
+        cur = num.to_float(new.lowest_price)
         if cur < min :
             old.lowest_price = new.lowest_price
-            
+
+
