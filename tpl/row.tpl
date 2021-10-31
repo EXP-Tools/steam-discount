@@ -7,6 +7,7 @@
        <td>-%(discount_rate)i%%</td>
        <td>%(discount_price)s%(new_flag)s</td>
        <td>%(evaluation)s</td>
+       <td>%(evaluation_info)s</td>
        <td>%(rank_id)i</td>
        <td>%(cur_player_num)i</td>
        <td>%(today_max_player_num)i</td>
