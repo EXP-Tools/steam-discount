@@ -3,6 +3,9 @@
 
 ------
 
+
+## 参考文档
+
 - https://steamcommunity.com/dev?l=schinese
 - https://partner.steamgames.com/doc/webapi_overview?l=schinese
 - https://partner.steamgames.com/doc/webapi
@@ -12,4 +15,3 @@
 - [json - Steam Web API获取CS :GO inventory](https://www.coder.work/article/6737920)
 
 
-每小时随机爬取页数
