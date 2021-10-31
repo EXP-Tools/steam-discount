@@ -10,7 +10,6 @@ from bs4 import BeautifulSoup
 from src.cfg import env
 from src.cfg import enum
 from src.bean.t_steam_game import TSteamGame
-from src.utils.tools import byte_to_str
 from src.utils import log
 
 
@@ -69,8 +68,8 @@ class SteamCrawler :
         items = soup.find_all(class_="search_result_row ds_collapse_flag")
         for item in items :
             tsg = TSteamGame()
-            tsg.game_name = byte_to_str(item.find('span', class_='title').text)
-            tsg.shop_url = byte_to_str(item.get('href'))
+            tsg.game_name = item.find('span', class_='title').text
+            tsg.shop_url = item.get('href')
             self._prase_id(tsg, item)
             self._parse_price(tsg, item)
             self._parse_evaluation(tsg, item)
@@ -90,7 +89,7 @@ class SteamCrawler :
                   item.get('data-ds-appid') or \
                   item.get('data-ds-bundleid') or \
                   re.search(r'/(\d+)', tsg.shop_url).group(1)
-        tsg.game_id = int(byte_to_str(game_id))
+        tsg.game_id = int(game_id)
 
 
     def _parse_price(self, tsg, item) :
@@ -118,7 +117,6 @@ class SteamCrawler :
 
 
     def _free(self, price) :
-        price = byte_to_str(price)
         if price.lower() in enum.FREES :
             price = '0'
         return price
@@ -133,7 +131,7 @@ class SteamCrawler :
             tsg.evaluation_info = ''
             tsg.evaluation = '暂无评价'
         else :
-            info = byte_to_str(span.get('data-tooltip-html')).strip().split('<br>')
+            info = span.get('data-tooltip-html').strip().split('<br>')
             tsg.evaluation_info = info[1]
             tsg.evaluation = info[0]
         tsg.evaluation_id = enum.EVALUATIONS.get(tsg.evaluation)
@@ -151,13 +149,13 @@ class SteamCrawler :
             tsg.rank_id = rank
 
             a = item.find('a', class_='gameLink')
-            tsg.shop_url = byte_to_str(a.get('href'))
+            tsg.shop_url = a.get('href')
             tsg.game_id = int(re.search(r'/(\d+)', tsg.shop_url).group(1))
-            tsg.game_name = re.sub(r'\s+', ' ', byte_to_str(a.text), re.M).strip()
+            tsg.game_name = re.sub(r'\s+', ' ', a.text, re.M).strip()
 
             spans = item.find_all('span', class_='currentServers')
-            tsg.cur_player_num = int(byte_to_str(spans[0].text).strip().replace(',', ''))
-            tsg.today_max_player_num = int(byte_to_str(spans[1].text).strip().replace(',', ''))
+            tsg.cur_player_num = int(spans[0].text).strip().replace(',', '')
+            tsg.today_max_player_num = int(spans[1].text).strip().replace(',', '')
 
             tsgs[tsg.game_id] = (tsg)
         return tsgs

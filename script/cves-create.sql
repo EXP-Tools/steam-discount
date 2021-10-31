@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS `t_steam_game` (
   `s_evaluation`            TEXT(64),
   `s_evaluation_info`       TEXT(512),
   `s_shop_url`              TEXT(512), 
+  `s_img_url`               TEXT(512), 
   `i_rank_id`               INTEGER,
   `i_cur_player_num`        INTEGER, 
   `i_today_max_player_num`  INTEGER

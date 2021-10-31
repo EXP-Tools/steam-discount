@@ -12,7 +12,6 @@ from pypdm.dbc._sqlite import SqliteDBC
 from src.bean.t_steam_game import TSteamGame
 from src.dao.t_steam_game import TSteamGameDao
 from src.cfg import env
-from src.utils.tools import byte_to_str
 from src.utils import log
 
 HTML_DISCOUNT_PATH = '%s/docs/index_discount.html' % env.PRJ_DIR
@@ -108,3 +107,9 @@ def query_game(conn, column, order, limit) :
 def create_html(data, savepath) :
     with open(savepath, 'w+', encoding=env.CHARSET) as file:
         file.write(data)
+
+
+def byte_to_str(value) :
+    if isinstance(value, bytes) :
+        value = bytes.decode(value)
+    return value
