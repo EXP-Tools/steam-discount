@@ -11,9 +11,10 @@ import time
 from datetime import datetime, timedelta
 from src.cfg import env
 from src.utils import log
-from src.utils._sqlite import SqliteSDBC
-from src.bean.t_cves import TCves
-from src.dao.t_cves import TCvesDao
+from pypdm.dbc._sqlite import SqliteDBC
+from src.bean.t_steam_game import TSteamGame
+from src.dao.t_steam_game import TSteamGameDao
+
 
 HTML_PATH = '%s/docs/index.html' % env.PRJ_DIR
 HTML_TPL_PATH = '%s/tpl/html.tpl' % env.PRJ_DIR
@@ -21,19 +22,19 @@ TABLE_TPL_PATH = '%s/tpl/table.tpl' % env.PRJ_DIR
 ROW_TPL_PATH = '%s/tpl/row.tpl' % env.PRJ_DIR
 
 
-def to_page(top_limit = 10):
+def to_page(top_limit = 100) :
     today = time.strftime('%Y-%m-%d', time.localtime(time.time()))
     yesterday = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
     tormorrow = (datetime.now() + timedelta(days=1)).strftime('%Y-%m-%d') 
 
     html_tpl, table_tpl, row_tpl = load_tpl()
-    sdbc = SqliteSDBC(env.DB_PATH)
-    conn = sdbc.conn()
+    sdbc = SqliteDBC(env.DB_PATH)
+    sdbc.conn()
 
     tables = []
-    srcs = query_srcs(conn)
+    srcs = query_srcs(sdbc)
     for src in srcs:
-        cves = query_cves(conn, src, top_limit)
+        cves = query_cves(sdbc, src, top_limit)
 
         rows = []
         for cve in cves:
