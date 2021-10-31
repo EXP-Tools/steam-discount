@@ -36,7 +36,7 @@ jobs:
 
     - name: Crawl CVEs
       run: |-
-        python main.py -gtk ${{ secrets.GRAPAQL_TOKEN }}
+        python main.py -p 10 -z 'CN' -f 'globaltopsellers' -s
 
 
     # 如果不希望污染 commit 记录，user.email 和 user.name 随便填即可
