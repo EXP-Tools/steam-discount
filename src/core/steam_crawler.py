@@ -69,6 +69,7 @@ class SteamCrawler :
         for item in items :
             tsg = TSteamGame()
             tsg.game_name = item.find('span', class_='title').text
+            tsg.img_url = item.find('img').get('src')
             tsg.shop_url = item.get('href')
             self._prase_id(tsg, item)
             self._parse_price(tsg, item)
@@ -154,8 +155,8 @@ class SteamCrawler :
             tsg.game_name = re.sub(r'\s+', ' ', a.text, re.M).strip()
 
             spans = item.find_all('span', class_='currentServers')
-            tsg.cur_player_num = int(spans[0].text).strip().replace(',', '')
-            tsg.today_max_player_num = int(spans[1].text).strip().replace(',', '')
+            tsg.cur_player_num = int(spans[0].text.strip().replace(',', ''))
+            tsg.today_max_player_num = int(spans[1].text.strip().replace(',', ''))
 
             tsgs[tsg.game_id] = (tsg)
         return tsgs

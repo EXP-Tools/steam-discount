@@ -45,6 +45,7 @@ def _to_page(sdbc, column, order, limit, tpl_path, savepath) :
                 new_flag = ' <img src="imgs/lowest.gif" />'
 
         row = tpl_row % {
+            'img_url': byte_to_str(g.img_url) or '',
             'game_id': g.game_id or 0,
             'game_name': byte_to_str(g.game_name) or '',
             'original_price': byte_to_str(g.original_price) or '',

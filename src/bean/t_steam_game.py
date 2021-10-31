@@ -17,6 +17,7 @@ class TSteamGame :
     s_evaluation = "s_evaluation"
     s_evaluation_info = "s_evaluation_info"
     s_shop_url = "s_shop_url"
+    s_img_url = "s_img_url"
     i_rank_id = "i_rank_id"
     i_cur_player_num = "i_cur_player_num"
     i_today_max_player_num = "i_today_max_player_num"
@@ -34,6 +35,7 @@ class TSteamGame :
         self.evaluation = None
         self.evaluation_info = None
         self.shop_url = None
+        self.img_url = None
         self.rank_id = None
         self.cur_player_num = None
         self.today_max_player_num = None
@@ -51,6 +53,7 @@ class TSteamGame :
             self.evaluation,
             self.evaluation_info,
             self.shop_url,
+            self.img_url,
             self.rank_id,
             self.cur_player_num,
             self.today_max_player_num,
@@ -72,6 +75,7 @@ class TSteamGame :
                 "    %s = %s" % (self.s_evaluation, self.evaluation),
                 "    %s = %s" % (self.s_evaluation_info, self.evaluation_info),
                 "    %s = %s" % (self.s_shop_url, self.shop_url),
+                "    %s = %s" % (self.s_img_url, self.img_url),
                 "    %s = %s" % (self.i_rank_id, self.rank_id),
                 "    %s = %s" % (self.i_cur_player_num, self.cur_player_num),
                 "    %s = %s" % (self.i_today_max_player_num, self.today_max_player_num),
