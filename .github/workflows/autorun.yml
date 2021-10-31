@@ -1,4 +1,4 @@
-name: Automatically Crawl Steam Discount 
+name: Automatically Crawl Steam Discount
 on:
   pull_request:
     branches:
@@ -34,9 +34,9 @@ jobs:
       run: |
         python -m pip install -r requirements.txt
 
-    - name: Crawl CVEs
+    - name: Crawl Steam Discount
       run: |-
-        python main.py -p 10 -z 'CN' -f 'globaltopsellers' -s
+        python main.py -p 10 -z 'CN' -f 'globaltopsellers' -l 100 -s
 
 
     # 如果不希望污染 commit 记录，user.email 和 user.name 随便填即可

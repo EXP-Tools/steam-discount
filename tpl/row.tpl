@@ -1,7 +1,13 @@
       <tr>
-       <td>%(md5)s</td>
-       <td>%(id)s</td>
-       <td>%(time)s%(new_flag)s</td>
-       <td>%(title)s</td>
-       <td><a href="%(url)s">详情</a></td>
+       <td>%(game_id)i</td>
+       <td>%(game_name)s</td>
+       <td>%(original_price)s</td>
+       <td>%(lowest_price)s</td>
+       <td>-%(discount_rate)i%%</td>
+       <td>%(discount_price)s%(new_flag)s</td>
+       <td>%(evaluation)s</td>
+       <td>%(rank_id)i</td>
+       <td>%(cur_player_num)i</td>
+       <td>%(today_max_player_num)i</td>
+       <td><a href="%(shop_url)s">商店链接</a></td>
       </tr>
