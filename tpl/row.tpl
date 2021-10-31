@@ -10,5 +10,5 @@
        <td>%(rank_id)i</td>
        <td>%(cur_player_num)i</td>
        <td>%(today_max_player_num)i</td>
-       <td><a href="%(shop_url)s">商店链接</a></td>
+       <td><a href="%(shop_url)s" target="_blank">Link</a></td>
       </tr>
