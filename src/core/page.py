@@ -51,6 +51,7 @@ def _to_page(sdbc, column, order, limit, tpl_path, savepath) :
             'discount_price': num.byte_to_str(g.discount_price) or '',
             'new_flag': new_flag, 
             'evaluation': num.byte_to_str(g.evaluation) or '',
+            'evaluation_info': num.byte_to_str(g.evaluation_info) or '',
             'rank_id': g.rank_id or 0,
             'cur_player_num': g.cur_player_num or 0,
             'today_max_player_num': g.today_max_player_num or 0,

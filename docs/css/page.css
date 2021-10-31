@@ -914,13 +914,12 @@ table.dataintable th {
 	border:1px solid #3F3F3F;
 	text-align:left;
 	color:#fff;
-	}
+}
 
 table.dataintable td {
-	vertical-align:text-top;
 	padding:6px 15px 6px 6px;
 	border:1px solid #aaa;
-	}
+}
 
 table.dataintable tr:nth-child(odd) {
 	background-color:#F5F5F5;

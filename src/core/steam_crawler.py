@@ -133,7 +133,7 @@ class SteamCrawler :
             tsg.evaluation = '暂无评价'
         else :
             info = span.get('data-tooltip-html').strip().split('<br>')
-            tsg.evaluation_info = info[1]
+            tsg.evaluation_info = info[1].replace(',', '')
             tsg.evaluation = info[0]
         tsg.evaluation_id = enum.EVALUATIONS.get(tsg.evaluation)
 
