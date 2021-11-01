@@ -26,18 +26,18 @@ TPL_TABLE_PATH = '%s/tpl/table.tpl' % env.PRJ_DIR
 TPL_ROW_PATH = '%s/tpl/row.tpl' % env.PRJ_DIR
 
 
-def to_page(limit = 100) :
+def to_page(limit=500) :
     sdbc = SqliteDBC(env.DB_PATH)
     sdbc.conn()
-    _to_page(sdbc, TSteamGame.i_discount_rate, False, limit, TPL_DISCOUNT_PATH, HTML_DISCOUNT_PATH)
+    _to_page(sdbc, TSteamGame.i_discount_rate, False, limit, TPL_DISCOUNT_PATH, HTML_DISCOUNT_PATH, 'and %s > 6' % TSteamGame.i_evaluation_id)
     _to_page(sdbc, TSteamGame.i_evaluation_id, False, limit, TPL_EVALUATION_PATH, HTML_EVALUATION_PATH)
     _to_page(sdbc, TSteamGame.i_rank_id, True, limit, TPL_HOT_PATH, HTML_HOT_PATH)
     sdbc.close()
 
     
-def _to_page(sdbc, column, order, limit, tpl_path, savepath) :
+def _to_page(sdbc, column, order, limit, tpl_path, savepath, condition='') :
     tpl_index, tpl_table, tpl_row = load_tpl(tpl_path)
-    games = query_game(sdbc, column, order, limit)
+    games = query_game(sdbc, column, order, limit, condition)
     rows = []
     for g in games:
         new_flag = compare(g.original_price, g.lowest_price, g.discount_price)
@@ -86,10 +86,10 @@ def load_tpl(tpl_path) :
     return tpl_index, tpl_table, tpl_row
 
 
-def query_game(conn, column, order, limit) :
-    sort_by = 'asc' if order else 'desc'
+def query_game(conn, column, order, limit, condition='') :
     dao = TSteamGameDao()
-    where = " and %s is not null order by %s %s limit %i" % (column, column, sort_by, limit)
+    sort_by = 'asc' if order else 'desc'
+    where = " %s and %s is not null order by %s %s limit %i" % (condition, column, column, sort_by, limit)
     sql = TSteamGameDao.SQL_SELECT + where
     beans = []
     try:
