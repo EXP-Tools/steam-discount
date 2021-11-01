@@ -29,9 +29,9 @@ TPL_ROW_PATH = '%s/tpl/row.tpl' % env.PRJ_DIR
 def to_page(limit = 100) :
     sdbc = SqliteDBC(env.DB_PATH)
     sdbc.conn()
-    _to_page(sdbc, TSteamGame.i_discount_rate, 'desc', limit, TPL_DISCOUNT_PATH, HTML_DISCOUNT_PATH)
-    _to_page(sdbc, TSteamGame.i_evaluation_id, 'desc', limit, TPL_EVALUATION_PATH, HTML_EVALUATION_PATH)
-    _to_page(sdbc, TSteamGame.i_rank_id, 'asc', limit, TPL_HOT_PATH, HTML_HOT_PATH)
+    _to_page(sdbc, TSteamGame.i_discount_rate, False, limit, TPL_DISCOUNT_PATH, HTML_DISCOUNT_PATH)
+    _to_page(sdbc, TSteamGame.i_evaluation_id, False, limit, TPL_EVALUATION_PATH, HTML_EVALUATION_PATH)
+    _to_page(sdbc, TSteamGame.i_rank_id, True, limit, TPL_HOT_PATH, HTML_HOT_PATH)
     sdbc.close()
 
     
@@ -87,8 +87,9 @@ def load_tpl(tpl_path) :
 
 
 def query_game(conn, column, order, limit) :
+    sort_by = 'asc' if order else 'desc'
     dao = TSteamGameDao()
-    where = " and %s is not null order by %s %s limit %d" % (column, column, order, limit)
+    where = " and %s is not null order by %s %s limit %i" % (column, column, sort_by, limit)
     sql = TSteamGameDao.SQL_SELECT + where
     beans = []
     try:
