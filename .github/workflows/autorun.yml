@@ -36,7 +36,7 @@ jobs:
 
     - name: Crawl Steam Discount
       run: |-
-        python main.py -p 5 -z 'CN' -f 'globaltopsellers' -l 500 -s
+        python main.py -p ${{ secrets.PAGES }} -z ${{ secrets.ZONE }} -f ${{ secrets.FILTER }} -l ${{ secrets.LIMIT }} -s
 
 
     # 如果不希望污染 commit 记录，user.email 和 user.name 随便填即可

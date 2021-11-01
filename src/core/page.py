@@ -65,6 +65,7 @@ def _to_page(sdbc, column, order, limit, tpl_path, savepath) :
 
     index = tpl_index % {
         'datetime': time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) ,
+        'limit': limit, 
         'table': table
     }
 
