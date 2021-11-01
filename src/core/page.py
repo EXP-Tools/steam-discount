@@ -15,13 +15,13 @@ from src.cfg import env
 from src.utils import num
 from src.utils import log
 
-HTML_DISCOUNT_PATH = '%s/docs/index_discount.html' % env.PRJ_DIR
-HTML_EVALUATION_PATH = '%s/docs/index_evaluation.html' % env.PRJ_DIR
-HTML_HOT_PATH = '%s/docs/index_hot.html' % env.PRJ_DIR
+HTML_DISCOUNT_PATH = '%s/docs/discount.html' % env.PRJ_DIR
+HTML_EVALUATION_PATH = '%s/docs/evaluation.html' % env.PRJ_DIR
+HTML_HOT_PATH = '%s/docs/hot.html' % env.PRJ_DIR
 
-TPL_DISCOUNT_PATH = '%s/tpl/index_discount.tpl' % env.PRJ_DIR
-TPL_EVALUATION_PATH = '%s/tpl/index_evaluation.tpl' % env.PRJ_DIR
-TPL_HOT_PATH = '%s/tpl/index_hot.tpl' % env.PRJ_DIR
+TPL_DISCOUNT_PATH = '%s/tpl/html_discount.tpl' % env.PRJ_DIR
+TPL_EVALUATION_PATH = '%s/tpl/html_evaluation.tpl' % env.PRJ_DIR
+TPL_HOT_PATH = '%s/tpl/html_hot.tpl' % env.PRJ_DIR
 TPL_TABLE_PATH = '%s/tpl/table.tpl' % env.PRJ_DIR
 TPL_ROW_PATH = '%s/tpl/row.tpl' % env.PRJ_DIR
 
