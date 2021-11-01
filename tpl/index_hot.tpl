@@ -12,7 +12,7 @@
 
   <div>
    <br />
-   <h2><a href="https://github.com/lyy289065406/steam-discount">Steam 游戏热度排名</a></h2>
+   <h2><a href="https://github.com/lyy289065406/steam-discount">Steam 游戏热度排名</a> (top 100)</h2>
    %(datetime)s
    <br />
    <br />
