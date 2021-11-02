@@ -22,6 +22,8 @@ HTML_HOT_PATH = '%s/docs/hot.html' % env.PRJ_DIR
 TPL_DISCOUNT_PATH = '%s/tpl/html_discount.tpl' % env.PRJ_DIR
 TPL_EVALUATION_PATH = '%s/tpl/html_evaluation.tpl' % env.PRJ_DIR
 TPL_HOT_PATH = '%s/tpl/html_hot.tpl' % env.PRJ_DIR
+TPL_HEAD_PATH = '%s/tpl/head.tpl' % env.PRJ_DIR
+TPL_TAIL_PATH = '%s/tpl/tail.tpl' % env.PRJ_DIR
 TPL_TABLE_PATH = '%s/tpl/table.tpl' % env.PRJ_DIR
 TPL_ROW_PATH = '%s/tpl/row.tpl' % env.PRJ_DIR
 
@@ -36,7 +38,7 @@ def to_page(limit=500) :
 
     
 def _to_page(sdbc, column, order, limit, tpl_path, savepath, condition='') :
-    tpl_index, tpl_table, tpl_row = load_tpl(tpl_path)
+    tpl_index, tpl_head, tpl_tail, tpl_table, tpl_row = load_tpl(tpl_path)
     games = query_game(sdbc, column, order, limit, condition)
     rows = []
     for g in games:
@@ -64,6 +66,8 @@ def _to_page(sdbc, column, order, limit, tpl_path, savepath, condition='') :
     }
 
     index = tpl_index % {
+        'head': tpl_head, 
+        'tail': tpl_tail, 
         'datetime': time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) ,
         'limit': limit, 
         'table': table
@@ -77,13 +81,19 @@ def load_tpl(tpl_path) :
     with open(tpl_path, 'r', encoding=env.CHARSET) as file:
         tpl_index = file.read()
 
+    with open(TPL_HEAD_PATH, 'r', encoding=env.CHARSET) as file:
+        tpl_head = file.read()
+
+    with open(TPL_TAIL_PATH, 'r', encoding=env.CHARSET) as file:
+        tpl_tail = file.read()
+
     with open(TPL_TABLE_PATH, 'r', encoding=env.CHARSET) as file:
         tpl_table = file.read()
 
     with open(TPL_ROW_PATH, 'r', encoding=env.CHARSET) as file:
         tpl_row = file.read()
 
-    return tpl_index, tpl_table, tpl_row
+    return tpl_index, tpl_head, tpl_tail, tpl_table, tpl_row
 
 
 def query_game(conn, column, order, limit, condition='') :

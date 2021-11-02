@@ -1,5 +1,5 @@
       <tr>
-       <td><img src="%(img_url)s" /></td>
+       <td><img class="lazy" src="" data-echo="%(img_url)s" /></td>
        <td>%(game_id)i</td>
        <td>%(game_name)s</td>
        <td>%(original_price)s</td>
