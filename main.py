@@ -33,7 +33,7 @@ def main(is_help, pages, zone, specials, filter, limit) :
     log.info('+++++++++++++++++++++++++++++++++++++++')
     update_rank()                                       # 更新游戏排名
     update_top_discount(pages, zone, specials, filter)  # 更新销售 top 的游戏的折扣信息
-    update_random_discount(pages, zone)         # 更新随机游戏的折扣信息（主要为了扩充数据库）
+    update_random_discount(zone)         # 更新随机游戏的折扣信息（主要为了扩充数据库）
     page.to_page(limit)
     log.info('---------------------------------------')
 
@@ -59,9 +59,9 @@ def update_top_discount(pages, zone, specials, filter) :
         time.sleep(5)
 
 
-def update_random_discount(pages, zone) :
+def update_random_discount(zone) :
     for cnt in range(1, 10) :
-        page = random.randint(pages + 1, pages + 1000)
+        page = random.randint(1, 1000)
         _update_discount(page, zone, False, '')
 
 
