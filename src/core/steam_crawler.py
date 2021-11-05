@@ -18,6 +18,7 @@ class SteamCrawler :
 
     def __init__(self, url, page=None, options={}) :
         self.url = url
+        self.page = page
         kvs = self._concat_kvs(page, options)
         if len(kvs) > 0 :
             self.url = '%s?%s' % (url, kvs)
@@ -71,9 +72,9 @@ class SteamCrawler :
             tsg.game_name = item.find('span', class_='title').text
             tsg.img_url = item.find('img').get('src')
             tsg.shop_url = item.get('href')
+            self._parse_evaluation(tsg, item)
             self._prase_id(tsg, item)
             self._parse_price(tsg, item)
-            self._parse_evaluation(tsg, item)
             tsgs[tsg.game_id] = (tsg)
         return tsgs
 
@@ -104,6 +105,8 @@ class SteamCrawler :
         if not div.text.strip() :
             tsg.discount_rate = 0
             div = item.find('div', class_='col search_price responsive_secondrow')
+            if div.text.strip().startswith('Â') :
+               tsg.evaluation_info = str(self.page)
             tsg.original_price = self._free(div.text.strip())
             tsg.discount_price = tsg.original_price
             tsg.lowest_price = tsg.original_price
