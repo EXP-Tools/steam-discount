@@ -126,6 +126,7 @@ def compare(original, lowest, discount) :
         org = num.to_float(original)
         low = num.to_float(lowest)
         dis = num.to_float(discount)
+        low = low + 0.001  # 精度误差
         if dis <= low and low < org :
             new_flag = ' <img src="imgs/lowest.gif" />'
     return new_flag
