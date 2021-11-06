@@ -22,7 +22,6 @@ class SteamCrawler :
         kvs = self._concat_kvs(page, options)
         if len(kvs) > 0 :
             self.url = '%s?%s' % (url, kvs)
-        self.
 
 
     def _concat_kvs(self, page, options) :
