@@ -6,6 +6,7 @@
 import re
 from pypdm.dbc._sqlite import SqliteDBC
 from src.dao.t_steam_game import TSteamGameDao
+from src.cfg import enum
 from src.cfg import env
 from src.utils import num
 
@@ -72,5 +73,14 @@ def compare(old, new, rank, discount) :
         cur = num.to_float(new.lowest_price)
         if cur < min :
             old.lowest_price = new.lowest_price
+
+        if old.original_price in enum.FREES :
+            old.original_price = 0
+
+        if old.lowest_price in enum.FREES :
+            old.lowest_price = 0
+
+        if old.discount_price in enum.FREES :
+            old.discount_price = 0
 
 
