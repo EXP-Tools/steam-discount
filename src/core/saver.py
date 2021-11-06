@@ -74,13 +74,13 @@ def compare(old, new, rank, discount) :
         if cur < min :
             old.lowest_price = new.lowest_price
 
-        if old.original_price in enum.FREES :
+        if num.byte_to_str(old.original_price) in enum.FREES :
             old.original_price = 0
 
-        if old.lowest_price in enum.FREES :
+        if num.byte_to_str(old.lowest_price) in enum.FREES :
             old.lowest_price = 0
 
-        if old.discount_price in enum.FREES :
+        if num.byte_to_str(old.discount_price) in enum.FREES :
             old.discount_price = 0
 
 
