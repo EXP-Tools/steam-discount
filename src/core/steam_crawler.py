@@ -75,7 +75,7 @@ class SteamCrawler :
             self._parse_evaluation(tsg, item)
             self._prase_id(tsg, item)
             self._parse_price(tsg, item)
-            if not tsg.is_garbled :
+            if not tsg.is_garbled() :
                 tsgs[tsg.game_id] = (tsg)
         return tsgs
 
@@ -106,7 +106,7 @@ class SteamCrawler :
         if not div.text.strip() :
             tsg.discount_rate = 0
             div = item.find('div', class_='col search_price responsive_secondrow')
-            if div.text.strip().startswith('Â') :
+            if div.text.strip().startswith('Â') or div.text.strip().startswith('å') :
                 tsg.garbled = True     # 偶发的乱码，下次再爬取即可
             tsg.original_price = self._free(div.text.strip())
             tsg.discount_price = tsg.original_price
@@ -116,7 +116,7 @@ class SteamCrawler :
         else :
             tsg.discount_rate = int(div.span.text.replace('-', '').replace('%', '').strip())
             div = item.find('div', class_='col search_price discounted responsive_secondrow')
-            if div.text.strip().startswith('Â') :
+            if div.text.strip().startswith('Â') or div.text.strip().startswith('å') :
                 tsg.garbled = True     # 偶发的乱码，下次再爬取即可
             tsg.original_price = self._free(div.strike.text.strip())
             tsg.discount_price = self._free(re.search(r'<br/>(.+)</div>', div.__repr__(), re.I).group(1).strip())
