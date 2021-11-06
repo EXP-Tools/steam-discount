@@ -18,7 +18,4 @@ DB_PATH =  '%s/data/steam.db' % PRJ_DIR
 
 STEAM_GAME_PRICE_URL = 'https://store.steampowered.com/search/'
 STEAM_GAME_STATS_URL = 'https://store.steampowered.com/stats/'
-
-GITHUB_GRAPHQL = 'https://api.github.com/graphql'
-GITHUB_REPO = 'threat-broadcast'
-GITHUB_REPO_OWNER = 'lyy289065406'
+STEAM_TOTAL_PAGES = 5000

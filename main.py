@@ -17,7 +17,7 @@ from src.utils import log
 def help_info() :
     return '''
 -h           查看帮助信息
--p <pages>   爬取 steam 商城的游戏页数，默认 5
+-p <pages>   爬取 steam 商城的游戏页数，默认 10
 -z <zone>    指定 steam 商城的地区，会影响售价单位，默认 CN （RMB）
 -s           是否只爬取正在打折的游戏，默认不指定
 -f <filter>  其他过滤参数，默认 globaltopsellers
@@ -61,7 +61,7 @@ def update_top_discount(pages, zone, specials, filter) :
 
 def update_random_discount(zone) :
     for cnt in range(1, 10) :
-        page = random.randint(1, 1000)
+        page = random.randint(1, env.STEAM_TOTAL_PAGES)
         _update_discount(page, zone, False, '')
 
 
@@ -91,7 +91,7 @@ def init() :
 
 def sys_args(sys_args) :
     is_help = False
-    pages = 5           # 最大爬取页数
+    pages = 10          # 最大爬取页数
     zone = 'CN'         # 价格区域
     specials = False    # 仅特惠游戏
     filter = 'globaltopsellers'    # 全球热销游戏

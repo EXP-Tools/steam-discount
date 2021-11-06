@@ -5,11 +5,16 @@
 
 import re
 from src.utils import log
+from src.cfg import enum
 
 
 def to_float(s_price) :
     f_price = 0
-    if s_price :
+    s_price = byte_to_str(s_price)
+    if s_price in enum.FREES :
+        f_price = 0
+
+    elif s_price :
         s_price = byte_to_str(s_price)
         try :
             f_price = float(re.search(r'(\d+(\.\d+)?)', s_price).group(1))
