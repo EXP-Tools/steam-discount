@@ -22,7 +22,6 @@ class SteamCrawler :
         kvs = self._concat_kvs(page, options)
         if len(kvs) > 0 :
             self.url = '%s?%s' % (url, kvs)
-        self.
 
 
     def _concat_kvs(self, page, options) :
@@ -108,7 +107,7 @@ class SteamCrawler :
             tsg.discount_rate = 0
             div = item.find('div', class_='col search_price responsive_secondrow')
             if div.text.strip().startswith('Â') :
-                self.garbled = True     # 偶发的乱码，下次再爬取即可
+                tsg.garbled = True     # 偶发的乱码，下次再爬取即可
             tsg.original_price = self._free(div.text.strip())
             tsg.discount_price = tsg.original_price
             tsg.lowest_price = tsg.original_price
@@ -118,7 +117,7 @@ class SteamCrawler :
             tsg.discount_rate = int(div.span.text.replace('-', '').replace('%', '').strip())
             div = item.find('div', class_='col search_price discounted responsive_secondrow')
             if div.text.strip().startswith('Â') :
-                self.garbled = True     # 偶发的乱码，下次再爬取即可
+                tsg.garbled = True     # 偶发的乱码，下次再爬取即可
             tsg.original_price = self._free(div.strike.text.strip())
             tsg.discount_price = self._free(re.search(r'<br/>(.+)</div>', div.__repr__(), re.I).group(1).strip())
             tsg.lowest_price = tsg.discount_price
