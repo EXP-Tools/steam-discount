@@ -24,6 +24,7 @@ class TSteamGame :
 
 
     def __init__(self) :
+        self.garbled = False
         self.id = None
         self.game_id = None
         self.game_name = None
@@ -58,6 +59,10 @@ class TSteamGame :
             self.cur_player_num,
             self.today_max_player_num,
         )
+
+
+    def is_garbled(self) :
+        return self.garbled
 
 
     def __repr__(self) :
