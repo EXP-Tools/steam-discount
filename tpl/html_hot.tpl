@@ -14,7 +14,7 @@
    <br />
    <br />
 
-   [<a href="evaluation.html">Steam 游戏测评榜单</a>] [<a href="discount.html">Steam 特惠折扣榜单</a>]
+   [<a href="evaluation.html">Steam 游戏测评榜单</a>] [<a href="discount.html">Steam 特惠折扣榜单</a>] [<a href="zero.html">Steam 零元购</a>]
    <br />
    <br />
 

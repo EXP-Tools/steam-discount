@@ -12,14 +12,17 @@ from pypdm.dbc._sqlite import SqliteDBC
 from src.bean.t_steam_game import TSteamGame
 from src.dao.t_steam_game import TSteamGameDao
 from src.cfg import env
+from src.cfg import enum
 from src.utils import num
 from src.utils import log
 
 HTML_DISCOUNT_PATH = '%s/docs/discount.html' % env.PRJ_DIR
+HTML_ZERO_PATH = '%s/docs/zero.html' % env.PRJ_DIR
 HTML_EVALUATION_PATH = '%s/docs/evaluation.html' % env.PRJ_DIR
 HTML_HOT_PATH = '%s/docs/hot.html' % env.PRJ_DIR
 
 TPL_DISCOUNT_PATH = '%s/tpl/html_discount.tpl' % env.PRJ_DIR
+TPL_ZERO_PATH = '%s/tpl/html_zero.tpl' % env.PRJ_DIR
 TPL_EVALUATION_PATH = '%s/tpl/html_evaluation.tpl' % env.PRJ_DIR
 TPL_HOT_PATH = '%s/tpl/html_hot.tpl' % env.PRJ_DIR
 TPL_HEAD_PATH = '%s/tpl/head.tpl' % env.PRJ_DIR
@@ -32,12 +35,14 @@ def to_page(limit=500) :
     sdbc = SqliteDBC(env.DB_PATH)
     sdbc.conn()
     _to_page(sdbc, TSteamGame.i_discount_rate, False, limit, TPL_DISCOUNT_PATH, HTML_DISCOUNT_PATH, 'and %s > 6' % TSteamGame.i_evaluation_id)
+    _to_page(sdbc, TSteamGame.s_discount_price, False, limit, TPL_ZERO_PATH, HTML_ZERO_PATH, 'and %s in ("%s")' % (TSteamGame.s_discount_price, '", "'.join(enum.FREES)))
     _to_page(sdbc, TSteamGame.i_evaluation_id, False, limit, TPL_EVALUATION_PATH, HTML_EVALUATION_PATH)
     _to_page(sdbc, TSteamGame.i_rank_id, True, limit, TPL_HOT_PATH, HTML_HOT_PATH)
     sdbc.close()
 
     
 def _to_page(sdbc, column, order, limit, tpl_path, savepath, condition='') :
+    print(condition)
     tpl_index, tpl_head, tpl_tail, tpl_table, tpl_row = load_tpl(tpl_path)
     games = query_game(sdbc, column, order, limit, condition)
     rows = []
