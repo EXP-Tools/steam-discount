@@ -42,7 +42,6 @@ def to_page(limit=500) :
 
     
 def _to_page(sdbc, column, order, limit, tpl_path, savepath, condition='') :
-    print(condition)
     tpl_index, tpl_head, tpl_tail, tpl_table, tpl_row = load_tpl(tpl_path)
     games = query_game(sdbc, column, order, limit, condition)
     rows = []
