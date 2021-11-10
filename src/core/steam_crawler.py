@@ -124,7 +124,7 @@ class SteamCrawler :
 
 
     def _free(self, price) :
-        if price.lower() in enum.FREES :
+        if price.lower().strip() in enum.FREES :
             price = '0'
         return price
     

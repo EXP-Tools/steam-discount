@@ -10,7 +10,7 @@ from pypdm.dbc._sqlite import SqliteDBC
 from src.core.steam_crawler import SteamCrawler
 from src.cfg import env
 from src.core import saver
-from src.core import page
+from src.core import pager
 from src.utils import log
 
 
@@ -34,7 +34,7 @@ def main(is_help, pages, zone, specials, filter, limit) :
     update_rank()                                       # 更新游戏排名
     update_top_discount(pages, zone, specials, filter)  # 更新销售 top 的游戏的折扣信息
     update_random_discount(zone)         # 更新随机游戏的折扣信息（主要为了扩充数据库）
-    page.to_page(limit)
+    pager.to_page(limit)
     log.info('---------------------------------------')
 
 
