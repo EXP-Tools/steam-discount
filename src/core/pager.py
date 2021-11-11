@@ -107,6 +107,7 @@ def query_game(conn, column, order, limit, condition='') :
     sort_by = 'asc' if order else 'desc'
     where = " %s and %s is not null order by %s %s limit %i" % (condition, column, column, sort_by, limit)
     sql = TSteamGameDao.SQL_SELECT + where
+    log.info(sql)
     beans = []
     try:
         cursor = conn.cursor()
