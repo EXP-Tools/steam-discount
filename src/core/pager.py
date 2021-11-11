@@ -44,6 +44,8 @@ def to_page(limit=500) :
 def _to_page(sdbc, column, order, limit, tpl_path, savepath, condition='') :
     tpl_index, tpl_head, tpl_tail, tpl_table, tpl_row = load_tpl(tpl_path)
     games = query_game(sdbc, column, order, limit, condition)
+    log.info(len(games))
+    log.info(games[0])
     rows = []
     for g in games:
         new_flag = compare(g.original_price, g.lowest_price, g.discount_price)
