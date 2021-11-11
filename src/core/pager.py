@@ -35,14 +35,14 @@ def to_page(limit=500) :
     sdbc = SqliteDBC(env.DB_PATH)
     sdbc.conn()
     _to_page(sdbc, TSteamGame.i_discount_rate, False, limit, TPL_DISCOUNT_PATH, HTML_DISCOUNT_PATH, 
-        'and %s > %i and %s <> 0' % (
+        'and %s > %i and %s not like 0' % (
             TSteamGame.i_evaluation_id, 
             enum.EVALUATIONS.get('Positive'), 
             TSteamGame.s_original_price
         )
     )
     _to_page(sdbc, TSteamGame.i_evaluation_id, False, limit, TPL_ZERO_PATH, HTML_ZERO_PATH, 
-        'and %s = 0' % TSteamGame.s_discount_price
+        'and %s like 0' % TSteamGame.s_discount_price
     )
     _to_page(sdbc, TSteamGame.i_evaluation_id, False, limit, TPL_EVALUATION_PATH, HTML_EVALUATION_PATH)
     _to_page(sdbc, TSteamGame.i_rank_id, True, limit, TPL_HOT_PATH, HTML_HOT_PATH)
