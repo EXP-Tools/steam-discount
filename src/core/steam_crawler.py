@@ -76,7 +76,7 @@ class SteamCrawler :
             self._prase_id(tsg, item)
             self._parse_price(tsg, item)
             if not tsg.is_garbled() :
-                tsgs[tsg.game_id] = (tsg)
+                tsgs[tsg.game_id] = tsg
         return tsgs
 
     
