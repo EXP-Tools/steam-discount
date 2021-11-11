@@ -35,7 +35,7 @@ def to_page(limit=500) :
     sdbc = SqliteDBC(env.DB_PATH)
     sdbc.conn()
     _to_page(sdbc, TSteamGame.i_discount_rate, False, limit, TPL_DISCOUNT_PATH, HTML_DISCOUNT_PATH, 'and %s > 6 and %s not like "0"' % (TSteamGame.i_evaluation_id, TSteamGame.s_original_price))
-    _to_page(sdbc, TSteamGame.s_discount_price, False, limit, TPL_ZERO_PATH, HTML_ZERO_PATH, 'and %s like "0"' % TSteamGame.s_discount_price)
+    _to_page(sdbc, TSteamGame.s_discount_price, False, limit, TPL_ZERO_PATH, HTML_ZERO_PATH, 'and (%s like "0" or %s = "0")' % (TSteamGame.s_discount_price, TSteamGame.s_discount_price))
     _to_page(sdbc, TSteamGame.i_evaluation_id, False, limit, TPL_EVALUATION_PATH, HTML_EVALUATION_PATH)
     _to_page(sdbc, TSteamGame.i_rank_id, True, limit, TPL_HOT_PATH, HTML_HOT_PATH)
     sdbc.close()
@@ -104,7 +104,6 @@ def query_game(conn, column, order, limit, condition='') :
     dao = TSteamGameDao()
     sort_by = 'asc' if order else 'desc'
     where = " %s and %s is not null order by %s %s limit %i" % (condition, column, column, sort_by, limit)
-    print(where)
     sql = TSteamGameDao.SQL_SELECT + where
     beans = []
     try:
