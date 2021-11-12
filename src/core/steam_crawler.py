@@ -122,6 +122,10 @@ class SteamCrawler :
             tsg.discount_price = self._free(re.search(r'<br/>(.+)</div>', div.__repr__(), re.I).group(1).strip())
             tsg.lowest_price = tsg.discount_price
 
+        if str(tsg.discount_price) == '0' :
+            tsg.discount_rate = 100
+        
+
 
     def _free(self, price) :
         if price.lower().strip() in enum.FREES :
