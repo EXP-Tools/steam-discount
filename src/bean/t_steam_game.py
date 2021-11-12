@@ -61,10 +61,6 @@ class TSteamGame :
         )
 
 
-    def is_garbled(self) :
-        return self.garbled
-
-
     def __repr__(self) :
         return '\n'.join(
             (
