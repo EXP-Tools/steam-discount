@@ -69,6 +69,9 @@ def compare(old, new, rank, discount) :
         old.discount_rate = new.discount_rate
         old.discount_price = new.discount_price
 
+        if str(old.discount_price) == '0' :
+            old.discount_rate = 100
+
         min = num.to_float(old.lowest_price)
         cur = num.to_float(new.lowest_price)
         if cur < min :
