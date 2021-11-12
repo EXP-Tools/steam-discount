@@ -142,7 +142,10 @@ class SteamCrawler :
             tsg.evaluation_info = ''
             tsg.evaluation = '暂无评价'
         else :
-            info = span.get('data-tooltip-html').strip().split('<br>')
+            _evaluation = span.get('data-tooltip-html').strip()
+            if _evaluation.startswith('Â') or _evaluation.startswith('å') :
+                tsg.garbled = True     # 偶发的乱码，下次再爬取即可
+            info = _evaluation.split('<br>')
             tsg.evaluation_info = info[1].replace(',', '')
             tsg.evaluation = info[0]
         tsg.evaluation_id = enum.EVALUATIONS.get(tsg.evaluation)
