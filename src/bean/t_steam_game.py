@@ -42,6 +42,22 @@ class TSteamGame :
         self.today_max_player_num = None
 
 
+    def is_garbled(self) :
+        return self._contain_garbled(self.game_name) or \
+            self._contain_garbled(self.original_price) or \
+            self._contain_garbled(self.lowest_price) or \
+            self._contain_garbled(self.discount_price) or \
+            self._contain_garbled(self.evaluation) or \
+            self._contain_garbled(self.evaluation_info)
+
+
+    def _contain_garbled(self, text) :
+        is_garbled = False
+        if 'Â' in text or 'å' in text :
+            is_garbled = True
+        return is_garbled
+
+
     def params(self) :
         return (
             self.game_id,

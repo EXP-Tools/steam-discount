@@ -70,14 +70,13 @@ class SteamCrawler :
         for item in items :
             tsg = TSteamGame()
             tsg.game_name = item.find('span', class_='title').text
-            tsg.garbled = self.contain_garbled(tsg.game_name)
             tsg.img_url = item.find('img').get('src')
             tsg.shop_url = item.get('href')
             self._parse_evaluation(tsg, item)
             self._prase_id(tsg, item)
             self._parse_price(tsg, item)
             
-            if not tsg.garbled :    # 偶发的乱码问题，下次再爬取即可
+            if not tsg.is_garbled() :    # 偶发的乱码问题，先不存储，下次再爬取即可
                 tsgs[tsg.game_id] = tsg
         return tsgs
 
@@ -108,7 +107,6 @@ class SteamCrawler :
         if not div.text.strip() :
             tsg.discount_rate = 0
             div = item.find('div', class_='col search_price responsive_secondrow')
-            tsg.garbled = self.contain_garbled(div.text)
             tsg.original_price = self._free(div.text.strip())
             tsg.discount_price = tsg.original_price
             tsg.lowest_price = tsg.original_price
@@ -117,7 +115,6 @@ class SteamCrawler :
         else :
             tsg.discount_rate = int(div.span.text.replace('-', '').replace('%', '').strip())
             div = item.find('div', class_='col search_price discounted responsive_secondrow')
-            tsg.garbled = self.contain_garbled(div.text)
             tsg.original_price = self._free(div.strike.text.strip())
             tsg.discount_price = self._free(re.search(r'<br/>(.+)</div>', div.__repr__(), re.I).group(1).strip())
             tsg.lowest_price = tsg.discount_price
@@ -142,9 +139,7 @@ class SteamCrawler :
             tsg.evaluation_info = ''
             tsg.evaluation = '暂无评价'
         else :
-            _evaluation = span.get('data-tooltip-html').strip()
-            tsg.garbled = self.contain_garbled(_evaluation)
-            info = _evaluation.split('<br>')
+            info = span.get('data-tooltip-html').strip().split('<br>')
             tsg.evaluation_info = info[1].replace(',', '')
             tsg.evaluation = info[0]
         tsg.evaluation_id = enum.EVALUATIONS.get(tsg.evaluation)
@@ -174,11 +169,5 @@ class SteamCrawler :
         return tsgs
 
     
-    def contain_garbled(self, text) :
-        is_garbled = False
-        if 'Â' in text or 'å' in text :
-            is_garbled = True
-        return is_garbled
-
 
 
