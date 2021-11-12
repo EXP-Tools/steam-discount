@@ -14,7 +14,7 @@
    <br />
    <br />
 
-   [<a href="hot.html">Steam 游戏热度榜单</a>] [<a href="evaluation.html">Steam 游戏测评榜单</a>] [<a href="discount.html">Steam 特惠折扣榜单</a>]
+   [<a href="hot.html">Steam 热度榜单</a>] [<a href="evaluation.html">Steam 测评榜单</a>] [<a href="discount.html">Steam 特惠榜单</a>]
    <br />
    <br />
 
