@@ -5,7 +5,7 @@
 
 import re
 from src.utils import log
-from . import enum
+import src.enum as enum
 
 
 def to_float(s_price) :

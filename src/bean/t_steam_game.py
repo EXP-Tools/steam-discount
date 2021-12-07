@@ -52,6 +52,7 @@ class TSteamGame :
 
 
     def _contain_garbled(self, text) :
+        text = str(text)
         is_garbled = False
         if 'Â' in text or 'å' in text :
             is_garbled = True
