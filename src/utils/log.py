@@ -7,7 +7,7 @@ import os
 import traceback
 import logging
 from logging.handlers import TimedRotatingFileHandler
-from src.cfg.env import PRJ_DIR
+from src.config import PRJ_DIR
 
 LOG_DIR = '%s/log' % PRJ_DIR
 RUN_LOG = '%s/run.log' % LOG_DIR
@@ -48,8 +48,8 @@ def init():
     logger.addHandler(exfh)
 
     # 禁用第三方日志
-    # logging.getLogger("requests").setLevel(logging.FATAL)
-
+    logging.getLogger("requests").setLevel(logging.FATAL)
+    logging.getLogger('chardet.charsetprober').setLevel(logging.FATAL)
 
 
 def debug(msg):

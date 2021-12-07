@@ -8,7 +8,7 @@ import time
 import random
 from pypdm.dbc._sqlite import SqliteDBC
 from src.core.steam_crawler import SteamCrawler
-from src.cfg import env
+from src.config import settings
 from src.core import saver
 from src.core import pager
 from src.utils import log
@@ -41,7 +41,7 @@ def main(is_help, pages, zone, specials, filter, limit) :
 
 def update_rank() :
     try :
-        sc = SteamCrawler(env.STEAM_GAME_STATS_URL)
+        sc = SteamCrawler(settings.steam['game_stats_url'])
 
         log.info('正在抓取游戏排名数据 ...')
         html = sc.get_html()
@@ -61,13 +61,13 @@ def update_top_discount(pages, zone, specials, filter) :
 
 def update_random_discount(zone) :
     for cnt in range(1, 10) :
-        page = random.randint(1, env.STEAM_TOTAL_PAGES)
+        page = random.randint(1, settings.steam['total_pages'])
         _update_discount(page, zone, False, '')
 
 
 def _update_discount(page, zone, specials, filter) :
     try :
-        sc = SteamCrawler(env.STEAM_GAME_PRICE_URL, page, options={
+        sc = SteamCrawler(settings.steam['game_price_url'], page, options={
             'cc': zone,
             'specials': 1 if specials else 0,
             'filter': filter
@@ -85,8 +85,8 @@ def _update_discount(page, zone, specials, filter) :
 
 def init() :
     log.init()
-    sdbc = SqliteDBC(env.DB_PATH)
-    sdbc.exec_script(env.SQL_PATH)
+    sdbc = SqliteDBC(options=settings.database)
+    sdbc.exec_script(settings.database['sqlpath'])
 
 
 def sys_args(sys_args) :

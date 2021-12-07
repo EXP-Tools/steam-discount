@@ -6,8 +6,7 @@
 import re
 from pypdm.dbc._sqlite import SqliteDBC
 from src.dao.t_steam_game import TSteamGameDao
-from src.cfg import enum
-from src.cfg import env
+import src.config as config
 from src.utils import num
 
 
@@ -16,7 +15,7 @@ def to_db(new_tsgs, rank, discount) :
     '''
     创建或更新记录到数据库
     '''
-    sdbc = SqliteDBC(env.DB_PATH)
+    sdbc = SqliteDBC(options=config.settings.database)
     sdbc.conn()
 
     dao = TSteamGameDao()

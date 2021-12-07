@@ -1,0 +1,10 @@
+database:
+  dbtype: 'sqlite'
+  dbpath: './data/steam.db'
+  sqlpath: './script/cves-create.sql'
+
+steam:
+  game_price_url: 'https://store.steampowered.com/search/'
+  game_stats_url: 'https://store.steampowered.com/stats/'
+  total_pages: 5000
+

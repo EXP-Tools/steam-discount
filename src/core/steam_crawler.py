@@ -7,8 +7,8 @@ import re
 import requests
 from urllib.parse import quote
 from bs4 import BeautifulSoup
-from src.cfg import env
-from src.cfg import enum
+import src.config as config
+import src.enum as enum
 from src.bean.t_steam_game import TSteamGame
 from src.utils import log
 
@@ -29,7 +29,7 @@ class SteamCrawler :
         self._add_kv('page', page or 1)
         kvs = []
         for key, val in self.options.items() :
-            kv = '%s=%s' % (key, quote(str(val), env.CHARSET))
+            kv = '%s=%s' % (key, quote(str(val), config.CHARSET))
             kvs.append(kv)
         return '&'.join(kvs)
 

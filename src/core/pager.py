@@ -11,28 +11,28 @@ import time
 from pypdm.dbc._sqlite import SqliteDBC
 from src.bean.t_steam_game import TSteamGame
 from src.dao.t_steam_game import TSteamGameDao
-from src.cfg import env
-from src.cfg import enum
+import src.config as config
+import src.enum as enum
 from src.utils import num
 from src.utils import log
 
-HTML_DISCOUNT_PATH = '%s/docs/discount.html' % env.PRJ_DIR
-HTML_ZERO_PATH = '%s/docs/zero.html' % env.PRJ_DIR
-HTML_EVALUATION_PATH = '%s/docs/evaluation.html' % env.PRJ_DIR
-HTML_HOT_PATH = '%s/docs/hot.html' % env.PRJ_DIR
+HTML_DISCOUNT_PATH = '%s/docs/discount.html' % config.PRJ_DIR
+HTML_ZERO_PATH = '%s/docs/zero.html' % config.PRJ_DIR
+HTML_EVALUATION_PATH = '%s/docs/evaluation.html' % config.PRJ_DIR
+HTML_HOT_PATH = '%s/docs/hot.html' % config.PRJ_DIR
 
-TPL_DISCOUNT_PATH = '%s/tpl/html_discount.tpl' % env.PRJ_DIR
-TPL_ZERO_PATH = '%s/tpl/html_zero.tpl' % env.PRJ_DIR
-TPL_EVALUATION_PATH = '%s/tpl/html_evaluation.tpl' % env.PRJ_DIR
-TPL_HOT_PATH = '%s/tpl/html_hot.tpl' % env.PRJ_DIR
-TPL_HEAD_PATH = '%s/tpl/head.tpl' % env.PRJ_DIR
-TPL_TAIL_PATH = '%s/tpl/tail.tpl' % env.PRJ_DIR
-TPL_TABLE_PATH = '%s/tpl/table.tpl' % env.PRJ_DIR
-TPL_ROW_PATH = '%s/tpl/row.tpl' % env.PRJ_DIR
+TPL_DISCOUNT_PATH = '%s/tpl/html_discount.tpl' % config.PRJ_DIR
+TPL_ZERO_PATH = '%s/tpl/html_zero.tpl' % config.PRJ_DIR
+TPL_EVALUATION_PATH = '%s/tpl/html_evaluation.tpl' % config.PRJ_DIR
+TPL_HOT_PATH = '%s/tpl/html_hot.tpl' % config.PRJ_DIR
+TPL_HEAD_PATH = '%s/tpl/head.tpl' % config.PRJ_DIR
+TPL_TAIL_PATH = '%s/tpl/tail.tpl' % config.PRJ_DIR
+TPL_TABLE_PATH = '%s/tpl/table.tpl' % config.PRJ_DIR
+TPL_ROW_PATH = '%s/tpl/row.tpl' % config.PRJ_DIR
 
 
 def to_page(limit=500) :
-    sdbc = SqliteDBC(env.DB_PATH)
+    sdbc = SqliteDBC(options=config.settings.database)
     sdbc.conn()
     _to_page(sdbc, TSteamGame.i_discount_rate, False, limit, TPL_DISCOUNT_PATH, HTML_DISCOUNT_PATH, 
         'and %s > %i and %s < 100' % (
@@ -90,19 +90,19 @@ def _to_page(sdbc, column, order, limit, tpl_path, savepath, condition='') :
 
 
 def load_tpl(tpl_path) :
-    with open(tpl_path, 'r', encoding=env.CHARSET) as file:
+    with open(tpl_path, 'r', encoding=config.CHARSET) as file:
         tpl_index = file.read()
 
-    with open(TPL_HEAD_PATH, 'r', encoding=env.CHARSET) as file:
+    with open(TPL_HEAD_PATH, 'r', encoding=config.CHARSET) as file:
         tpl_head = file.read()
 
-    with open(TPL_TAIL_PATH, 'r', encoding=env.CHARSET) as file:
+    with open(TPL_TAIL_PATH, 'r', encoding=config.CHARSET) as file:
         tpl_tail = file.read()
 
-    with open(TPL_TABLE_PATH, 'r', encoding=env.CHARSET) as file:
+    with open(TPL_TABLE_PATH, 'r', encoding=config.CHARSET) as file:
         tpl_table = file.read()
 
-    with open(TPL_ROW_PATH, 'r', encoding=env.CHARSET) as file:
+    with open(TPL_ROW_PATH, 'r', encoding=config.CHARSET) as file:
         tpl_row = file.read()
 
     return tpl_index, tpl_head, tpl_tail, tpl_table, tpl_row
@@ -128,7 +128,7 @@ def query_game(conn, column, order, limit, condition='') :
 
 
 def create_html(data, savepath) :
-    with open(savepath, 'w+', encoding=env.CHARSET) as file:
+    with open(savepath, 'w+', encoding=config.CHARSET) as file:
         file.write(data)
 
 
