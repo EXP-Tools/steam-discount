@@ -20,8 +20,9 @@ class Config :
         if os.path.exists(settings_path) :
             with open(settings_path, 'r', encoding=charset) as file:
                 context = yaml.load(file.read())
-                self.steam = context.get('steam')
                 self.database = context.get('database')
+                self.steam = context.get('steam')
+                self.crawler = context.get('crawler')
 
 
 settings = Config(SETTINGS_PATH, CHARSET)

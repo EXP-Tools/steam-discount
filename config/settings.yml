@@ -6,5 +6,12 @@ database:
 steam:
   game_price_url: 'https://store.steampowered.com/search/'
   game_stats_url: 'https://store.steampowered.com/stats/'
-  total_pages: 5000
+  total_pages: 5000             # 总页数
+  specials: False               # 仅特惠游戏
+  filter: 'globaltopsellers'    # 全球热销游戏
+  zone: 'CN'                    # 价格区域
+
+crawler:
+  pages: 10                     # 最大爬取页数
+  limit: 500                    # 页面限制展示数
 

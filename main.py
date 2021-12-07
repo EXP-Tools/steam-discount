@@ -91,11 +91,11 @@ def init() :
 
 def sys_args(sys_args) :
     is_help = False
-    pages = 10          # 最大爬取页数
-    zone = 'CN'         # 价格区域
-    specials = False    # 仅特惠游戏
-    filter = 'globaltopsellers'    # 全球热销游戏
-    limit = 500         # 页面限制展示数
+    zone = settings.steam['zone']
+    specials = settings.steam['specials']
+    filter = settings.steam['filter']
+    pages = settings.crawler['pages']
+    limit = settings.crawler['limit']
 
     idx = 1
     size = len(sys_args)
