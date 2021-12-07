@@ -1,7 +1,7 @@
 database:
   dbtype: 'sqlite'
   dbpath: './data/steam.db'
-  sqlpath: './script/cves-create.sql'
+  sqlpath: './script/steam-create.sql'
 
 steam:
   game_price_url: 'https://store.steampowered.com/search/'
