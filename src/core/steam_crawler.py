@@ -29,8 +29,9 @@ class SteamCrawler :
         self._add_kv('page', page or 1)
         kvs = []
         for key, val in self.options.items() :
-            kv = '%s=%s' % (key, quote(str(val), config.CHARSET))
-            kvs.append(kv)
+            if key and val :
+                kv = '%s=%s' % (key, quote(str(val), config.CHARSET))
+                kvs.append(kv)
         return '&'.join(kvs)
 
 
