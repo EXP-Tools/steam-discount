@@ -9,7 +9,7 @@ steam:
   total_pages: 5000             # 总页数
   specials: False               # 仅特惠游戏
   filter: 'globaltopsellers'    # 全球热销游戏
-  zone: 'CN'                    # 价格区域
+  zone: ''                      # 价格区域，如 国区 为 CN
 
 crawler:
   pages: 10                     # 最大爬取页数
