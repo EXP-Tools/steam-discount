@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 import src.config as config
 import src.enum as enum
 from src.bean.t_steam_game import TSteamGame
-from src.utils import log
+from color_log.clog import log
 
 
 
