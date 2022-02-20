@@ -22,7 +22,7 @@ def args() :
         description='从商城爬取游戏的【打折】【零元购】【测评】【热度】情况的榜单整理并展示',  
         epilog='\r\n'.join([
             '使用示例: ', 
-            '  python main.py -t 10 --gtk {GRAPAQL_TOKEN}', 
+            '  python main.py -p 10 -l 500', 
         ])
     )
     parser.add_argument('-p', '--pages', dest='pages', type=int, default=10, help='爬取 steam 商城的游戏页数')
@@ -104,7 +104,4 @@ def init() :
 
 if __name__ == "__main__" :
     init()
-    try :
-        main(*get_args(args()))
-    except :
-        log.error('未知异常')
+    main(*get_args(args()))
