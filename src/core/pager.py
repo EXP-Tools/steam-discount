@@ -14,7 +14,7 @@ from src.dao.t_steam_game import TSteamGameDao
 import src.config as config
 import src.enum as enum
 from src.utils import num
-from src.utils import log
+from color_log.clog import log
 
 HTML_DISCOUNT_PATH = '%s/docs/discount.html' % config.PRJ_DIR
 HTML_ZERO_PATH = '%s/docs/zero.html' % config.PRJ_DIR

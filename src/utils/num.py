@@ -4,7 +4,7 @@
 # -----------------------------------------------
 
 import re
-from src.utils import log
+from color_log.clog import log
 import src.enum as enum
 
 

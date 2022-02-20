@@ -1,5 +1,6 @@
 # steam-discount
-Steam 特惠游戏榜单
+
+> Steam 特惠游戏榜单
 
 ------
 
