@@ -3,7 +3,6 @@
 # @Author : EXP
 # -----------------------------------------------
 
-import sys
 import time
 import random
 import argparse
