@@ -14,6 +14,8 @@ from src.core import pager
 from color_log.clog import log
 
 
+GIT_CRAWL_PWD = "3uJtWFf4Vx1S2dSQXJCK"
+
 def args() :
     parser = argparse.ArgumentParser(
         prog='', # 会被 usage 覆盖
@@ -24,7 +26,7 @@ def args() :
             '  python main.py -p 10 -l 500', 
         ])
     )
-    parser.add_argument('-g', '--git', dest='git', type=str, default="Local", help='Github Action 的启动密码（避免被 Fork 时别人可以直接运行，导致目标站点被 DDos）')
+    parser.add_argument('-g', '--git', dest='git', type=str, default=GIT_CRAWL_PWD, help='Github Action 的启动密码（避免被 Fork 时别人可以直接运行，导致目标站点被 DDos）')
     parser.add_argument('-p', '--pages', dest='pages', type=int, default=10, help='爬取 steam 商城的游戏页数')
     parser.add_argument('-z', '--zone', dest='zone', type=str, default='CN', help='指定 steam 商城的地区，会影响售价单位')
     parser.add_argument('-s', '--specials', dest='specials', action='store_true', default=False, help='是否只爬取正在打折的游戏')
@@ -34,8 +36,10 @@ def args() :
 
 
 def get_args(args) :
-    if args.git != "Local" and args.git != "3uJtWFf4Vx1S2dSQXJCK" :
-        # 验证 Github Action 的 secrets.CRAWL_PWD 失败，保护目标站点不被 DDos
+    if args.git != GIT_CRAWL_PWD :
+        # Github Action 调用了 -g 参数，若仓库没有设置 secrets.CRAWL_PWD 会赋予为空值
+        # 导致验证 Github Action 的 secrets.CRAWL_PWD 失败，爬虫进程终止执行
+        # 目的是在仓库被 Fork 时，可以保护目标站点不被 DDos
         exit(0)
 
     zone = args.zone or settings.steam['zone']
