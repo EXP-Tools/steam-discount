@@ -36,7 +36,7 @@ def args() :
 def get_args(args) :
     if args.git != "Local" and args.git != "3uJtWFf4Vx1S2dSQXJCK" :
         # 验证 Github Action 的 secrets.CRAWL_PWD 失败，保护目标站点不被 DDos
-        exit(1)
+        exit(0)
 
     zone = args.zone or settings.steam['zone']
     specials = args.specials or settings.steam['specials']
