@@ -14,7 +14,7 @@
    <br />
    <br />
 
-   [<a href="zero.html">Steam 零元购</a>] [<a href="hot.html">Steam 热度榜单</a>] [<a href="evaluation.html">Steam 测评榜单</a>]
+   [<a href="zero.html">Steam 零元购</a>] [<a href="evaluation.html">Steam 测评榜单</a>]
    <br />
    <br />
 

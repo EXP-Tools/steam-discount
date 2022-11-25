@@ -16,7 +16,7 @@ from color_log.clog import log
 
 class SteamCrawler :
 
-    def __init__(self, url, page=None, options={}) :
+    def __init__(self, url, page=None, proxy='', options={}) :
         self.url = url
         self.page = page
         kvs = self._concat_kvs(page, options)
@@ -149,7 +149,9 @@ class SteamCrawler :
     def parse_rank(self, html) :
         tsgs = {}
         rank = 0
-
+        with open('1.html', 'w+', encoding='utf-8') as file :
+            file.write(html)
+ 
         soup = BeautifulSoup(html, "html.parser")
         items = soup.find_all(class_="player_count_row")
         for item in items :
