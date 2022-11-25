@@ -45,7 +45,7 @@ def to_page(limit=500) :
         'and %s >= 100' % TSteamGame.i_discount_rate
     )
     _to_page(sdbc, TSteamGame.i_evaluation_id, False, limit, TPL_EVALUATION_PATH, HTML_EVALUATION_PATH)
-    _to_page(sdbc, TSteamGame.i_rank_id, True, limit, TPL_HOT_PATH, HTML_HOT_PATH)
+    # _to_page(sdbc, TSteamGame.i_rank_id, True, limit, TPL_HOT_PATH, HTML_HOT_PATH)
     sdbc.close()
 
     
