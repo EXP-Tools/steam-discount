@@ -1,6 +1,6 @@
 # steam-discount
 
-> Steam 特惠游戏榜单 [[Link](lyy289065406.github.io/steam-discount/)]
+> Steam 特惠游戏榜单 [ [Link](https://lyy289065406.github.io/steam-discount/) ]
 
 ------
 
