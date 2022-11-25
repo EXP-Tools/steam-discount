@@ -15,6 +15,8 @@
 
 > 随着脚本的运行次数越来越多，缓存到本地的数据库会越来越完善
 
+![](./docs/imgs/demo.jpg)
+
 
 ## 官方接口文档
 
@@ -51,24 +53,3 @@ steam-discount
 - 启用 Settings --> Actions 功能
 
 > 尔后程序便会每半时执行一次，并自动生成 [Github Page](https://lyy289065406.github.io/steam-discount/) 特惠排行榜单（若要调整执行频率，可修改 [`autorun.yml`](.github/workflows/autorun.yml) 的 `schedule` 触发时点）
-
-
-## 赞助途径
-
-| 支付宝 | 微信 |
-|:---:|:---:|
-| ![](docs/imgs/alipay.png) | ![](docs/imgs/wechat.png) |
-
-
-## 版权声明
-
-　[![Copyright (C) EXP,2016](https://img.shields.io/badge/Copyright%20(C)-EXP%202016-blue.svg)](http://exp-blog.com)　[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-
-- Site: [http://exp-blog.com](http://exp-blog.com) 
-- Mail: <a href="mailto:289065406@qq.com?subject=[EXP's Github]%20Your%20Question%20（请写下您的疑问）&amp;body=What%20can%20I%20help%20you?%20（需要我提供什么帮助吗？）">289065406@qq.com</a>
-
-
-------
-
-
-
