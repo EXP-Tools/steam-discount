@@ -1,6 +1,6 @@
 
 <!--
-<h2><font color="red">赞助途径</font></h2>
+  <h2><font color="red">赞助途径</font></h2>
   <div style="text-align: center;">
     <table id="donate" style="margin: auto;">
       <tbody>
