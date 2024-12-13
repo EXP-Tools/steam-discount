@@ -1,6 +1,6 @@
 # steam-discount
 
-> Steam 特惠游戏榜单 [ [Link](https://lyy289065406.github.io/steam-discount/) ]
+> Steam 特惠游戏榜单 [ [Link](https://exp-tools.github.io/steam-discount/) ]
 
 ------
 
@@ -29,7 +29,7 @@
 
 本项目已配置 [Github Actions](https://docs.github.com/cn/actions/configuring-and-managing-workflows/configuring-a-workflow)，因此你只需轻松几步即可实现部署：
 
-- [Fork 本项目](https://github.com/lyy289065406/steam-discount) 到你的代码仓库
+- [Fork 本项目](https://github.com/EXP-Tools/steam-discount/) 到你的代码仓库
 - 通过 Settings --> Secrets 配置用于 发送 威胁情报邮件的 4 个环境变量：
     - `PAGES`： 爬取 steam 商城的游戏页数，建议 5
     - `ZONE`： 指定 steam 商城的地区，会影响售价单位，默认 CN （RMB）
