@@ -1,14 +1,7 @@
-  <meta charset="UTF-8" />
-  <meta name="robots" content="noarchive" />
-  <link rel="shortcut icon" href="https://exp-blog.com/favicon.png"/>
-  <meta name="author" content="EXP: www.exp-blog.com" />
-  <link rel="stylesheet" type="text/css" href="./css/page.css" />
-  
-  <!-- image lazyload -->
-  <script src="js/echo.min.js"></script>
-  <script>
-      echo.init({
-          offset: 0,
-          throttle: 0
-      });
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0d13">
+  <meta name="description" content="Steam 玩家游戏情报站：发现特惠、零元领取、口碑佳作与热门游戏。">
+  <link rel="icon" href="imgs/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/page.css">
+  <script src="js/board.js" defer></script>

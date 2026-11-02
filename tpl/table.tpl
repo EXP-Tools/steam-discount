@@ -1,24 +1,10 @@
-   <div>
-    <table id="steam" class="dataintable">
-     <tbody>
-      <tr>
-       <th width="10%%">缩略图</th>
-       <th width="5%%">游戏ID</th>
-       <th width="15%%">游戏名称</th>
-       <th width="5%%">原价</th>
-       <th width="5%%">史低价</th>
-       <th width="5%%">折扣率</th>
-       <th width="10%%">折扣价</th>
-       <th width="10%%">游戏测评</th>
-       <th width="15%%">测评详情</th>
-       <th width="5%%">热度排名</th>
-       <th width="5%%">当前在线</th>
-       <th width="5%%">峰值在线</th>
-       <th width="5%%">商店链接</th>
-      </tr>
+      <div class="table-scroll" role="region" aria-label="游戏榜单" tabindex="0">
+        <table id="steam"><caption class="sr-only">Steam 游戏价格、测评与在线人数榜单</caption>
+          <thead><tr><th scope="col">#</th><th scope="col">游戏 / GAME</th><th scope="col">当前价格</th><th scope="col">折扣</th><th scope="col">已记录最低</th><th scope="col">玩家测评</th><th scope="col">购买区域限制</th><th scope="col">当前在线</th><th scope="col"><span class="sr-only">商店链接</span></th></tr></thead>
+          <tbody>
 %(rows)s
-     </tbody>
-    </table>
-   </div>
+          </tbody>
+        </table>
+      </div>
 
    <br />

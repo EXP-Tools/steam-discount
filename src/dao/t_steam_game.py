@@ -6,6 +6,7 @@
 
 from ..bean.t_steam_game import TSteamGame
 from pypdm.dao._base import BaseDao
+from pypdm.assist.cfg import SQLITE
 
 
 class TSteamGameDao(BaseDao) :
@@ -18,7 +19,7 @@ class TSteamGameDao(BaseDao) :
     SQL_SELECT = 'select i_id, i_game_id, s_game_name, s_original_price, s_lowest_price, i_discount_rate, s_discount_price, i_evaluation_id, s_evaluation, s_evaluation_info, s_shop_url, s_img_url, i_rank_id, i_cur_player_num, i_today_max_player_num from t_steam_game where 1 = 1 '
 
     def __init__(self) :
-        BaseDao.__init__(self)
+        BaseDao.__init__(self, dbtype=SQLITE)
 
     def _to_bean(self, row) :
         bean = None

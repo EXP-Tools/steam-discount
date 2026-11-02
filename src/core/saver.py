@@ -3,8 +3,7 @@
 # @Author : EXP
 # -----------------------------------------------
 
-import re
-from pypdm.dbc._sqlite import SqliteDBC
+import sqlite3
 from src.dao.t_steam_game import TSteamGameDao
 import src.config as config
 from src.utils import num
@@ -15,33 +14,26 @@ def to_db(new_tsgs, rank, discount) :
     '''
     创建或更新记录到数据库
     '''
-    sdbc = SqliteDBC(options=config.settings.database)
-    sdbc.conn()
-
+    if not new_tsgs:
+        return  # Never clear cached ranks after an empty/failed response.
     dao = TSteamGameDao()
-    old_tsgs = dao.query_all(sdbc)
-
-    # 重置排名
-    if rank :
-        for old_tsg in old_tsgs :
-            old_tsg.rank_id = None
-            old_tsg.cur_player_num = None
-            old_tsg.today_max_player_num = None
-            dao.update(sdbc, old_tsg)
-
-    # 更新游戏信息
-    for old_tsg in old_tsgs :
-        new_tsg = new_tsgs.get(old_tsg.game_id)
-        if new_tsg is not None :
-            compare(old_tsg, new_tsg, rank, discount)
-            dao.update(sdbc, old_tsg)
-            new_tsgs.pop(old_tsg.game_id)
-
-    # 插入新游戏
-    for id, tsg in new_tsgs.items() :
-        dao.insert(sdbc, tsg)
- 
-    sdbc.close()
+    pending = dict(new_tsgs)
+    conn = sqlite3.connect(config.settings.database['dbpath'])
+    try:
+        with conn:
+            old_tsgs = [dao._to_bean(row) for row in conn.execute(dao.SQL_SELECT)]
+            if rank:
+                conn.execute('UPDATE t_steam_game SET i_rank_id = NULL, '
+                             'i_cur_player_num = NULL, i_today_max_player_num = NULL')
+            for old in old_tsgs:
+                new = pending.pop(old.game_id, None)
+                if new is not None:
+                    compare(old, new, rank, discount)
+                    conn.execute(dao.SQL_UPDATE + ' AND i_id = ?', old.params() + (old.id,))
+            for game in pending.values():
+                conn.execute(dao.SQL_INSERT, game.params())
+    finally:
+        conn.close()
 
 
 def compare(old, new, rank, discount) :
@@ -57,18 +49,19 @@ def compare(old, new, rank, discount) :
 
     # 更新测评
     if discount :
-        old.evaluation_id = new.evaluation_id or old.evaluation_id
-        old.evaluation = new.evaluation or old.evaluation
-        old.evaluation_info = new.evaluation_info or old.evaluation_info
+        old.evaluation_id = new.evaluation_id
+        old.evaluation = new.evaluation
+        old.evaluation_info = new.evaluation_info
 
     # 更新价格
     if discount :
-        old.original_price = new.original_price or old.original_price
+        if new.original_price is not None:
+            old.original_price = new.original_price
         old.lowest_price = old.lowest_price or new.lowest_price
         old.discount_rate = new.discount_rate
         old.discount_price = new.discount_price
 
-        if str(old.discount_price) == '0' :
+        if str(old.discount_price) == '0' and str(old.original_price) != '0':
             old.discount_rate = 100
 
         min = num.to_float(old.lowest_price)

@@ -12,6 +12,6 @@ steam:
   zone: ''                      # 价格区域，如 国区 为 CN
 
 crawler:
-  pages: 10                     # 最大爬取页数
-  limit: 500                    # 页面限制展示数
+  pages: 4                      # 默认爬取页数
+  limit: 100                    # 每榜展示上限
 

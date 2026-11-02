@@ -1,4 +1,9 @@
 # Byte-compiled / optimized / DLL files
+/data/steam.db
+/data/steam.db-journal
+/data/steam.db-wal
+/data/steam.db-shm
+/data/*.tmp
 __pycache__/
 *.py[cod]
 *$py.class

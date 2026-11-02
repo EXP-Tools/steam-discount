@@ -17,7 +17,18 @@ def to_float(s_price) :
     elif s_price :
         s_price = byte_to_str(s_price)
         try :
-            f_price = float(re.search(r'(\d+(\.\d+)?)', s_price).group(1))
+            value = re.search(r'\d[\d.,\s\u00a0\u202f]*', str(s_price)).group(0)
+            value = re.sub(r'\s', '', value)
+            if ',' in value and '.' in value:
+                # The last separator is decimal (1,299.99 or 1.299,99).
+                if value.rfind(',') > value.rfind('.'):
+                    value = value.replace('.', '').replace(',', '.')
+                else:
+                    value = value.replace(',', '')
+            elif ',' in value:
+                parts = value.split(',')
+                value = ''.join(parts) if len(parts[-1]) == 3 else ''.join(parts[:-1]) + '.' + parts[-1]
+            f_price = float(value)
         except :
             log.error('解析价格异常: [%s]' % s_price)
     return f_price

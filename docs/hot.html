@@ -1,83 +1,1248 @@
-<html lang="zh-cn">
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <title>在线战场 · Steam Discount</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0d13">
+  <meta name="description" content="Steam 玩家游戏情报站：发现特惠、零元领取、口碑佳作与热门游戏。">
+  <link rel="icon" href="imgs/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/page.css">
+  <script src="js/board.js" defer></script>
 
- <head>
-  <title>Steam-Hot</title>
-  <meta charset="UTF-8" />
-  <meta name="robots" content="noarchive" />
-  <link rel="shortcut icon" href="https://exp-blog.com/favicon.png"/>
-  <meta name="author" content="EXP: www.exp-blog.com" />
-  <link rel="stylesheet" type="text/css" href="./css/page.css" />
-  
-  <!-- image lazyload -->
-  <script src="js/echo.min.js"></script>
-  <script>
-      echo.init({
-          offset: 0,
-          throttle: 0
-      });
-  </script>
- </head>
-
- <body class="html">
-
-  <div>
-   <br />
-   <h2><a href="https://exp-blog.com" target="_blank">眈眈探求</a> | <a href="https://github.com/lyy289065406/steam-discount">Steam 热度榜单</a> - TOP 100</h2>
-   2022-11-26 01:46:24
-   <br />
-   <br />
-
-   [<a href="evaluation.html">Steam 测评榜单</a>] [<a href="discount.html">Steam 特惠榜单</a>] [<a href="zero.html">Steam 零元购</a>]
-   <br />
-   <br />
-
-   <div>
-    <table id="steam" class="dataintable">
-     <tbody>
-      <tr>
-       <th width="10%">缩略图</th>
-       <th width="5%">游戏ID</th>
-       <th width="15%">游戏名称</th>
-       <th width="5%">原价</th>
-       <th width="5%">史低价</th>
-       <th width="5%">折扣率</th>
-       <th width="10%">折扣价</th>
-       <th width="10%">游戏测评</th>
-       <th width="15%">测评详情</th>
-       <th width="5%">热度排名</th>
-       <th width="5%">当前在线</th>
-       <th width="5%">峰值在线</th>
-       <th width="5%">商店链接</th>
+</head>
+<body data-board="hot">
+  <a class="skip-link" href="#leaderboard">跳到榜单</a>
+  <header class="site-header wrap">
+    <a class="brand" href="discount.html" aria-label="Steam Discount 首页"><span class="brand-mark" aria-hidden="true">S<span>D</span></span><span>STEAM<span class="brand-sub">DISCOUNT / 游戏情报站</span></span></a>
+    <div class="header-right"><span class="edition">THE PLAYER'S RADAR</span><a class="repo-link" href="https://github.com/EXP-Tools/steam-discount" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div>
+  </header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy"><p class="eyebrow"><span></span> MOST PLAYED <i>/ 04</i></p><h1 id="page-title">此刻，<br><em>一起开玩。</em></h1><p class="hero-description">看看玩家正在奔赴哪些世界。Steam 当前在线人数与今日峰值，一览即知。</p><a class="jump-link" href="#leaderboard">进入热门榜单 <span aria-hidden="true">↓</span></a></div>
+      <div class="hero-radar" aria-label="本榜精选"><div class="radar-label"><span>ON YOUR RADAR</span><span class="signal-bars" aria-hidden="true">▂▄▆█</span></div><a class="featured-game" href="https://store.steampowered.com/app/730/CounterStrike_2?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-730.webp" width="104" height="40" alt=""><span><strong>Counter-Strike 2</strong><small>0</small></span><span class="discount-badge" data-rate="100">-100%</span></a>
+<a class="featured-game" href="https://store.steampowered.com/app/4115450/%E5%BD%B1%E4%B9%8B%E5%88%83%E9%9B%B6?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-4115450.webp" width="104" height="40" alt=""><span><strong>影之刃零</strong><small>查看商店</small></span><span class="discount-badge" data-rate="0">PLAY</span></a>
+<a class="featured-game" href="https://store.steampowered.com/app/570/Dota_2?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-570.webp" width="104" height="40" alt=""><span><strong>Dota 2</strong><small>0</small></span><span class="discount-badge" data-rate="100">-100%</span></a><div class="radar-footer"><span>DISCOVER. PLAY. REPEAT.</span><span aria-hidden="true">✦</span></div></div>
+    </section>
+    <section class="intel-strip" aria-label="榜单信息"><div><span class="intel-label">本榜游戏</span><strong>100 <small>GAMES</small></strong></div><div><span class="intel-label">最高折扣</span><strong class="lime">100% <small>OFF</small></strong></div><div class="update-intel"><span class="intel-label">数据更新 · UTC+8</span><time>2026-11-02 12:54</time></div><p><span class="status-dot"></span> STEAM STORE DATA<br><small>价格与活动以商店页面为准</small></p></section>
+    <nav class="board-nav" aria-label="选择榜单"><a data-board="discount" href="discount.html"><span>01</span> 特惠雷达 <b>DISCOUNTS</b></a><a data-board="zero" href="zero.html"><span>02</span> 零元补给 <b>FREE DROPS</b></a><a data-board="evaluation" href="evaluation.html"><span>03</span> 口碑殿堂 <b>TOP RATED</b></a><a data-board="hot" href="hot.html"><span>04</span> 在线战场 <b>MOST PLAYED</b></a></nav>
+    <section id="leaderboard" class="leaderboard" aria-labelledby="board-title">
+      <div class="board-toolbar"><div><p class="eyebrow">THE LEADERBOARD</p><h2 id="board-title">在线战场 <span id="result-count">100</span></h2></div><div class="table-controls"><label class="search-box"><span aria-hidden="true">⌕</span><input id="game-search" type="search" placeholder="搜索游戏名称 / ID" aria-label="搜索游戏名称或 ID"></label><label class="sr-only" for="discount-filter">筛选折扣</label><select id="discount-filter"><option value="0">全部折扣</option><option value="50">50% 以上</option><option value="75">75% 以上</option><option value="90">90% 以上</option></select></div></div>
+      <div class="table-scroll" role="region" aria-label="游戏榜单" tabindex="0">
+        <table id="steam"><caption class="sr-only">Steam 游戏价格、测评与在线人数榜单</caption>
+          <thead><tr><th scope="col">#</th><th scope="col">游戏 / GAME</th><th scope="col">当前价格</th><th scope="col">折扣</th><th scope="col">已记录最低</th><th scope="col">玩家测评</th><th scope="col">购买区域限制</th><th scope="col">当前在线</th><th scope="col"><span class="sr-only">商店链接</span></th></tr></thead>
+          <tbody>
+      <tr data-search="Counter-Strike 2 730" data-discount="100">
+        <td class="position">01</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/730/CounterStrike_2?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-730.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Counter-Strike 2</strong><small>APP / 730</small></span></a></td>
+        <td class="price-cell"><strong>0</strong><del>0</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="100">-100%</span></td>
+        <td class="lowest-cell"><span>0</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 7343052 篇用户评测中有 88% 为好评。">特别好评</span><small title="此游戏的 7343052 篇用户评测中有 88% 为好评。">此游戏的 7343052 篇用户评测中有 88% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>447,839</span><small>峰值 1,288,020</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/730/CounterStrike_2?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Counter-Strike 2 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
       </tr>
 
-     </tbody>
-    </table>
-   </div>
+      <tr data-search="影之刃零 4115450" data-discount="0">
+        <td class="position">02</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/4115450/%E5%BD%B1%E4%B9%8B%E5%88%83%E9%9B%B6?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-4115450.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>影之刃零</strong><small>APP / 4115450</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>342,022</span><small>峰值 833,921</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/4115450/%E5%BD%B1%E4%B9%8B%E5%88%83%E9%9B%B6?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 影之刃零 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Dota 2 570" data-discount="100">
+        <td class="position">03</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/570/Dota_2?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-570.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Dota 2</strong><small>APP / 570</small></span></a></td>
+        <td class="price-cell"><strong>0</strong><del>¥ 465.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="100">-100%</span></td>
+        <td class="lowest-cell"><span>0</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 2007002 篇用户评测中有 82% 为好评。">特别好评</span><small title="此游戏的 2007002 篇用户评测中有 82% 为好评。">此游戏的 2007002 篇用户评测中有 82% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>333,490</span><small>峰值 802,613</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/570/Dota_2?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Dota 2 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="PUBG: BATTLEGROUNDS 578080" data-discount="100">
+        <td class="position">04</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/578080/PUBG_BATTLEGROUNDS?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-578080.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>PUBG: BATTLEGROUNDS</strong><small>APP / 578080</small></span></a></td>
+        <td class="price-cell"><strong>0</strong><del>¥ 98.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="100">-100%</span></td>
+        <td class="lowest-cell"><span>0</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>214,627</span><small>峰值 802,207</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/578080/PUBG_BATTLEGROUNDS?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 PUBG: BATTLEGROUNDS 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Deadlock 1422450" data-discount="0">
+        <td class="position">05</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/1422450/Deadlock?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-1422450.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Deadlock</strong><small>APP / 1422450</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>179,815</span><small>峰值 263,220</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/1422450/Deadlock?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Deadlock 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="AION 2 3393110" data-discount="0">
+        <td class="position">06</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/3393110/AION_2?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-3393110.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>AION 2</strong><small>APP / 3393110</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>134,839</span><small>峰值 233,713</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/3393110/AION_2?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 AION 2 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="使命召唤® 1938090" data-discount="45">
+        <td class="position">07</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/1938090/%E4%BD%BF%E5%91%BD%E5%8F%AC%E5%94%A4?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-1938090.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>使命召唤®</strong><small>APP / 1938090</small></span></a></td>
+        <td class="price-cell"><strong>¥ 245.30</strong><del>¥ 446.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="45">-45%</span></td>
+        <td class="lowest-cell"><span>¥ 245.30</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>130,132</span><small>峰值 193,921</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/1938090/%E4%BD%BF%E5%91%BD%E5%8F%AC%E5%94%A4?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 使命召唤® 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Bongo Cat 3419430" data-discount="0">
+        <td class="position">08</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/3419430/Bongo_Cat?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-3419430.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Bongo Cat</strong><small>APP / 3419430</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>128,689</span><small>峰值 144,879</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/3419430/Bongo_Cat?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Bongo Cat 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="赛博朋克 2077 1091500" data-discount="50">
+        <td class="position">09</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/1091500/%E8%B5%9B%E5%8D%9A%E6%9C%8B%E5%85%8B_2077?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-1091500.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>赛博朋克 2077</strong><small>APP / 1091500</small></span></a></td>
+        <td class="price-cell"><strong>¥ 149.00</strong><del>¥ 298.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="50">-50%</span></td>
+        <td class="lowest-cell"><span>¥ 149.00</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 546056 篇用户评测中有 80% 为好评。">特别好评</span><small title="此游戏的 546056 篇用户评测中有 80% 为好评。">此游戏的 546056 篇用户评测中有 80% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>101,791</span><small>峰值 168,742</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/1091500/%E8%B5%9B%E5%8D%9A%E6%9C%8B%E5%85%8B_2077?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 赛博朋克 2077 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="FiveM 2676230" data-discount="0">
+        <td class="position">10</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/2676230/FiveM?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-2676230.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>FiveM</strong><small>APP / 2676230</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>93,614</span><small>峰值 195,910</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/2676230/FiveM?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 FiveM 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Team Fortress 2 440" data-discount="100">
+        <td class="position">11</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/440/Team_Fortress_2?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-440.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Team Fortress 2</strong><small>APP / 440</small></span></a></td>
+        <td class="price-cell"><strong>0</strong><del>0</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="100">-100%</span></td>
+        <td class="lowest-cell"><span>0</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 965286 篇用户评测中有 93% 为好评。">特别好评</span><small title="此游戏的 965286 篇用户评测中有 93% 为好评。">此游戏的 965286 篇用户评测中有 93% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>86,878</span><small>峰值 119,530</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/440/Team_Fortress_2?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Team Fortress 2 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="深空当铺：可能是偷的 4348910" data-discount="10">
+        <td class="position">12</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/4348910/深空当铺可能是偷的/?snr=1_7_7_2300_150_1" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-4348910.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>深空当铺：可能是偷的</strong><small>APP / 4348910</small></span></a></td>
+        <td class="price-cell"><strong>¥49.50</strong><del>¥55.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="10">-10%</span></td>
+        <td class="lowest-cell"><span>¥49.50</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-9" title="此游戏的 3189 篇用户评测中有 96% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">好评如潮</span><small title="此游戏的 3189 篇用户评测中有 96% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">此游戏的 3189 篇用户评测中有 96% 为好评</small></td>
+        <td class="region-cell"><span>国区可购</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>86,447</span><small>峰值 152,036</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/4348910/深空当铺可能是偷的/?snr=1_7_7_2300_150_1" target="_blank" rel="noopener noreferrer" aria-label="前往 深空当铺：可能是偷的 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="WARDOGS 1867240" data-discount="0">
+        <td class="position">13</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/1867240/WARDOGS?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-1867240.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>WARDOGS</strong><small>APP / 1867240</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>71,678</span><small>峰值 146,252</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/1867240/WARDOGS?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 WARDOGS 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Wallpaper Engine：壁纸引擎 431960" data-discount="0">
+        <td class="position">14</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/431960/Wallpaper_Engine%E5%A3%81%E7%BA%B8%E5%BC%95%E6%93%8E?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-431960.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Wallpaper Engine：壁纸引擎</strong><small>APP / 431960</small></span></a></td>
+        <td class="price-cell"><strong>¥ 19.00</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>¥ 19.00</span></td>
+        <td class="review-cell"><span class="review-score score-9" title="此软件的 606977 篇用户评测中有 98% 为好评。">好评如潮</span><small title="此软件的 606977 篇用户评测中有 98% 为好评。">此软件的 606977 篇用户评测中有 98% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>68,535</span><small>峰值 118,591</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/431960/Wallpaper_Engine%E5%A3%81%E7%BA%B8%E5%BC%95%E6%93%8E?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Wallpaper Engine：壁纸引擎 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Apex Legends™ 1172470" data-discount="100">
+        <td class="position">15</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/1172470/Apex_Legends?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-1172470.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Apex Legends™</strong><small>APP / 1172470</small></span></a></td>
+        <td class="price-cell"><strong>0</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="100">-100%</span></td>
+        <td class="lowest-cell"><span>0</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 680868 篇用户评测中有 81% 为好评。">特别好评</span><small title="此游戏的 680868 篇用户评测中有 81% 为好评。">此游戏的 680868 篇用户评测中有 81% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>65,771</span><small>峰值 203,578</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/1172470/Apex_Legends?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Apex Legends™ 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="TBH: 塔斯克巴·英雄 3678970" data-discount="0">
+        <td class="position">16</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/3678970/TBH_%E5%A1%94%E6%96%AF%E5%85%8B%E5%B7%B4%E8%8B%B1%E9%9B%84?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-3678970.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>TBH: 塔斯克巴·英雄</strong><small>APP / 3678970</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>63,390</span><small>峰值 76,451</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/3678970/TBH_%E5%A1%94%E6%96%AF%E5%85%8B%E5%B7%B4%E8%8B%B1%E9%9B%84?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 TBH: 塔斯克巴·英雄 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Warframe 星际战甲 230410" data-discount="100">
+        <td class="position">17</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/230410/Warframe_%E6%98%9F%E9%99%85%E6%88%98%E7%94%B2?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-230410.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Warframe 星际战甲</strong><small>APP / 230410</small></span></a></td>
+        <td class="price-cell"><strong>0</strong><del>0</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="100">-100%</span></td>
+        <td class="lowest-cell"><span>0</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 533587 篇用户评测中有 86% 为好评。">特别好评</span><small title="此游戏的 533587 篇用户评测中有 86% 为好评。">此游戏的 533587 篇用户评测中有 86% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>61,957</span><small>峰值 86,297</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/230410/Warframe_%E6%98%9F%E9%99%85%E6%88%98%E7%94%B2?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Warframe 星际战甲 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Slay the Spire 2 2868840" data-discount="0">
+        <td class="position">18</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/2868840/Slay_the_Spire_2?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-2868840.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Slay the Spire 2</strong><small>APP / 2868840</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>54,977</span><small>峰值 89,859</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/2868840/Slay_the_Spire_2?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Slay the Spire 2 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="彩虹六号：围攻 359550" data-discount="60">
+        <td class="position">19</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/359550/%E5%BD%A9%E8%99%B9%E5%85%AD%E5%8F%B7%E5%9B%B4%E6%94%BB?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-359550.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>彩虹六号：围攻</strong><small>APP / 359550</small></span></a></td>
+        <td class="price-cell"><strong>¥ 35.20</strong><del>¥ 88.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="60">-60%</span></td>
+        <td class="lowest-cell"><span>¥ 35.20</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 974100 篇用户评测中有 86% 为好评。">特别好评</span><small title="此游戏的 974100 篇用户评测中有 86% 为好评。">此游戏的 974100 篇用户评测中有 86% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>51,526</span><small>峰值 86,360</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/359550/%E5%BD%A9%E8%99%B9%E5%85%AD%E5%8F%B7%E5%9B%B4%E6%94%BB?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 彩虹六号：围攻 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="《守望先锋®》 2357570" data-discount="0">
+        <td class="position">20</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/2357570/%E5%AE%88%E6%9C%9B%E5%85%88%E9%94%8B?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-2357570.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>《守望先锋®》</strong><small>APP / 2357570</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>48,841</span><small>峰值 65,807</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/2357570/%E5%AE%88%E6%9C%9B%E5%85%88%E9%94%8B?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 《守望先锋®》 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="ARC Raiders 1808500" data-discount="100">
+        <td class="position">21</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/1808500/ARC_Raiders?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-1808500.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>ARC Raiders</strong><small>APP / 1808500</small></span></a></td>
+        <td class="price-cell"><strong>0</strong><del>0</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="100">-100%</span></td>
+        <td class="lowest-cell"><span>0</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>48,391</span><small>峰值 95,451</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/1808500/ARC_Raiders?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 ARC Raiders 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="VRChat 438100" data-discount="100">
+        <td class="position">22</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/438100/VRChat?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-438100.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>VRChat</strong><small>APP / 438100</small></span></a></td>
+        <td class="price-cell"><strong>0</strong><del>0</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="100">-100%</span></td>
+        <td class="lowest-cell"><span>0</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="141264 篇用户的游戏评测中有 90% 为好评。">暂无评价</span><small title="141264 篇用户的游戏评测中有 90% 为好评。">141264 篇用户的游戏评测中有 90% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>47,432</span><small>峰值 67,356</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/438100/VRChat?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 VRChat 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Valheim: 英灵神殿 892970" data-discount="40">
+        <td class="position">23</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/892970/Valheim_%E8%8B%B1%E7%81%B5%E7%A5%9E%E6%AE%BF?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-892970.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Valheim: 英灵神殿</strong><small>APP / 892970</small></span></a></td>
+        <td class="price-cell"><strong>¥ 42.00</strong><del>¥ 70.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="40">-40%</span></td>
+        <td class="lowest-cell"><span>¥ 42.00</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-9" title="此游戏的 352017 篇用户评测中有 95% 为好评。">好评如潮</span><small title="此游戏的 352017 篇用户评测中有 95% 为好评。">此游戏的 352017 篇用户评测中有 95% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>46,309</span><small>峰值 106,724</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/892970/Valheim_%E8%8B%B1%E7%81%B5%E7%A5%9E%E6%AE%BF?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Valheim: 英灵神殿 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Rust 252490" data-discount="50">
+        <td class="position">24</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/252490/Rust/?snr=1_7_7_2300_150_9" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-252490.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Rust</strong><small>APP / 252490</small></span></a></td>
+        <td class="price-cell"><strong>¥69.00</strong><del>¥138.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="50">-50%</span></td>
+        <td class="lowest-cell"><span>¥69.00</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-7" title="此游戏的 20445 篇用户评测中有 75% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">多半好评</span><small title="此游戏的 20445 篇用户评测中有 75% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">此游戏的 20445 篇用户评测中有 75% 为好评</small></td>
+        <td class="region-cell"><span>国区可购</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>45,107</span><small>峰值 120,346</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/252490/Rust/?snr=1_7_7_2300_150_9" target="_blank" rel="noopener noreferrer" aria-label="前往 Rust 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="漫威争锋 2767030" data-discount="0">
+        <td class="position">25</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/2767030/%E6%BC%AB%E5%A8%81%E4%BA%89%E9%94%8B?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-2767030.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>漫威争锋</strong><small>APP / 2767030</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>44,547</span><small>峰值 54,774</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/2767030/%E6%BC%AB%E5%A8%81%E4%BA%89%E9%94%8B?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 漫威争锋 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Moon Sweepers 5335510" data-discount="0">
+        <td class="position">26</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/5335510/Moon_Sweepers?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-5335510.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Moon Sweepers</strong><small>APP / 5335510</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>43,190</span><small>峰值 83,138</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/5335510/Moon_Sweepers?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Moon Sweepers 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="三角洲行动 2507950" data-discount="0">
+        <td class="position">27</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/2507950/%E4%B8%89%E8%A7%92%E6%B4%B2%E8%A1%8C%E5%8A%A8?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-2507950.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>三角洲行动</strong><small>APP / 2507950</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>42,912</span><small>峰值 108,109</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/2507950/%E4%B8%89%E8%A7%92%E6%B4%B2%E8%A1%8C%E5%8A%A8?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 三角洲行动 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="黎明杀机 381210" data-discount="60">
+        <td class="position">28</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/381210/黎明杀机/?snr=1_7_7_2300_150_2" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-381210.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>黎明杀机</strong><small>APP / 381210</small></span></a></td>
+        <td class="price-cell"><strong>¥37.50</strong><del>¥93.75</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="60">-60%</span></td>
+        <td class="lowest-cell"><span>¥ 28.70</span></td>
+        <td class="review-cell"><span class="review-score score-5" title="此游戏的 97146 篇用户评测中有 62% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">褒贬不一</span><small title="此游戏的 97146 篇用户评测中有 62% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">此游戏的 97146 篇用户评测中有 62% 为好评</small></td>
+        <td class="region-cell"><span>国区可购</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>42,882</span><small>峰值 76,247</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/381210/黎明杀机/?snr=1_7_7_2300_150_2" target="_blank" rel="noopener noreferrer" aria-label="前往 黎明杀机 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Stardew Valley 413150" data-discount="34">
+        <td class="position">29</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/413150/Stardew_Valley?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-413150.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Stardew Valley</strong><small>APP / 413150</small></span></a></td>
+        <td class="price-cell"><strong>¥ 31.68</strong><del>¥ 48.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="34">-34%</span></td>
+        <td class="lowest-cell"><span>¥ 24.00</span></td>
+        <td class="review-cell"><span class="review-score score-9" title="此游戏的 491172 篇用户评测中有 98% 为好评。">好评如潮</span><small title="此游戏的 491172 篇用户评测中有 98% 为好评。">此游戏的 491172 篇用户评测中有 98% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>41,114</span><small>峰值 92,004</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/413150/Stardew_Valley?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Stardew Valley 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="战争雷霆 236390" data-discount="100">
+        <td class="position">30</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/236390/%E6%88%98%E4%BA%89%E9%9B%B7%E9%9C%86?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-236390.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>战争雷霆</strong><small>APP / 236390</small></span></a></td>
+        <td class="price-cell"><strong>0</strong><del>0</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="100">-100%</span></td>
+        <td class="lowest-cell"><span>0</span></td>
+        <td class="review-cell"><span class="review-score score-7" title="此游戏的 377957 篇用户评测中有 75% 为好评。">多半好评</span><small title="此游戏的 377957 篇用户评测中有 75% 为好评。">此游戏的 377957 篇用户评测中有 75% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>40,643</span><small>峰值 106,784</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/236390/%E6%88%98%E4%BA%89%E9%9B%B7%E9%9C%86?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 战争雷霆 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="雾锁王国 (Enshrouded) 1203620" data-discount="0">
+        <td class="position">31</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/1203620/%E9%9B%BE%E9%94%81%E7%8E%8B%E5%9B%BD_Enshrouded?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-1203620.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>雾锁王国 (Enshrouded)</strong><small>APP / 1203620</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>38,234</span><small>峰值 98,272</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/1203620/%E9%9B%BE%E9%94%81%E7%8E%8B%E5%9B%BD_Enshrouded?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 雾锁王国 (Enshrouded) 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Project Zomboid 108600" data-discount="33">
+        <td class="position">32</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/108600/Project_Zomboid?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-108600.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Project Zomboid</strong><small>APP / 108600</small></span></a></td>
+        <td class="price-cell"><strong>¥ 50.92</strong><del>¥ 76.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="33">-33%</span></td>
+        <td class="lowest-cell"><span>¥ 32.16</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 162128 篇用户评测中有 94% 为好评。">特别好评</span><small title="此游戏的 162128 篇用户评测中有 94% 为好评。">此游戏的 162128 篇用户评测中有 94% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>35,421</span><small>峰值 61,716</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/108600/Project_Zomboid?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Project Zomboid 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="伊莫 4126040" data-discount="0">
+        <td class="position">33</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/4126040/%E4%BC%8A%E8%8E%AB?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-4126040.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>伊莫</strong><small>APP / 4126040</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>32,880</span><small>峰值 61,576</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/4126040/%E4%BC%8A%E8%8E%AB?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 伊莫 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="R.E.P.O. 3241660" data-discount="35">
+        <td class="position">34</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/3241660/REPO/?snr=1_7_7_2300_150_17" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-3241660.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>R.E.P.O.</strong><small>APP / 3241660</small></span></a></td>
+        <td class="price-cell"><strong>¥22.75</strong><del>¥35.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="35">-35%</span></td>
+        <td class="lowest-cell"><span>¥22.75</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 15288 篇用户评测中有 92% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">特别好评</span><small title="此游戏的 15288 篇用户评测中有 92% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">此游戏的 15288 篇用户评测中有 92% 为好评</small></td>
+        <td class="region-cell"><span>国区可购</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>32,432</span><small>峰值 72,524</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/3241660/REPO/?snr=1_7_7_2300_150_17" target="_blank" rel="noopener noreferrer" aria-label="前往 R.E.P.O. 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="博德之门3 1086940" data-discount="0">
+        <td class="position">35</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/1086940/%E5%8D%9A%E5%BE%B7%E4%B9%8B%E9%97%A83?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-1086940.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>博德之门3</strong><small>APP / 1086940</small></span></a></td>
+        <td class="price-cell"><strong>¥ 298.00</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>¥ 298.00</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 57697 篇用户评测中有 88% 为好评。">特别好评</span><small title="此游戏的 57697 篇用户评测中有 88% 为好评。">此游戏的 57697 篇用户评测中有 88% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>32,401</span><small>峰值 58,283</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/1086940/%E5%8D%9A%E5%BE%B7%E4%B9%8B%E9%97%A83?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 博德之门3 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Grand Theft Auto V 增强版 3240220" data-discount="50">
+        <td class="position">36</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/3240220/Grand_Theft_Auto_V_增强版/?snr=1_7_7_2300_150_6" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-3240220.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Grand Theft Auto V 增强版</strong><small>APP / 3240220</small></span></a></td>
+        <td class="price-cell"><strong>¥74.50</strong><del>¥149.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="50">-50%</span></td>
+        <td class="lowest-cell"><span>¥74.50</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 56301 篇用户评测中有 80% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">特别好评</span><small title="此游戏的 56301 篇用户评测中有 80% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">此游戏的 56301 篇用户评测中有 80% 为好评</small></td>
+        <td class="region-cell"><span>国区可购</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>32,277</span><small>峰值 72,469</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/3240220/Grand_Theft_Auto_V_增强版/?snr=1_7_7_2300_150_6" target="_blank" rel="noopener noreferrer" aria-label="前往 Grand Theft Auto V 增强版 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="HELLDIVERS™ 绝地潜兵2 553850" data-discount="0">
+        <td class="position">37</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/553850/HELLDIVERS_%E7%BB%9D%E5%9C%B0%E6%BD%9C%E5%85%B52?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-553850.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>HELLDIVERS™ 绝地潜兵2</strong><small>APP / 553850</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>30,483</span><small>峰值 50,415</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/553850/HELLDIVERS_%E7%BB%9D%E5%9C%B0%E6%BD%9C%E5%85%B52?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 HELLDIVERS™ 绝地潜兵2 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Geometry Dash 322170" data-discount="0">
+        <td class="position">38</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/322170/Geometry_Dash?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-322170.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Geometry Dash</strong><small>APP / 322170</small></span></a></td>
+        <td class="price-cell"><strong>¥ 18.00</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>¥ 18.00</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 187216 篇用户评测中有 93% 为好评。">特别好评</span><small title="此游戏的 187216 篇用户评测中有 93% 为好评。">此游戏的 187216 篇用户评测中有 93% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>30,202</span><small>峰值 70,803</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/322170/Geometry_Dash?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Geometry Dash 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="The Binding of Isaac: Rebirth 250900" data-discount="0">
+        <td class="position">39</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/250900/The_Binding_of_Isaac_Rebirth?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-250900.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>The Binding of Isaac: Rebirth</strong><small>APP / 250900</small></span></a></td>
+        <td class="price-cell"><strong>¥ 48.00</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>¥ 24.00</span></td>
+        <td class="review-cell"><span class="review-score score-9" title="此游戏的 191057 篇用户评测中有 97% 为好评。">好评如潮</span><small title="此游戏的 191057 篇用户评测中有 97% 为好评。">此游戏的 191057 篇用户评测中有 97% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>29,672</span><small>峰值 55,879</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/250900/The_Binding_of_Isaac_Rebirth?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 The Binding of Isaac: Rebirth 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Limbus Company 1973530" data-discount="0">
+        <td class="position">40</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/1973530/Limbus_Company?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-1973530.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Limbus Company</strong><small>APP / 1973530</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>28,869</span><small>峰值 42,450</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/1973530/Limbus_Company?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Limbus Company 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Crosshair X 1366800" data-discount="25">
+        <td class="position">41</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/1366800/Crosshair_X?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-1366800.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Crosshair X</strong><small>APP / 1366800</small></span></a></td>
+        <td class="price-cell"><strong>¥ 24.00</strong><del>¥ 32.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="25">-25%</span></td>
+        <td class="lowest-cell"><span>¥ 9.00</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此软件的 7599 篇用户评测中有 91% 为好评。">特别好评</span><small title="此软件的 7599 篇用户评测中有 91% 为好评。">此软件的 7599 篇用户评测中有 91% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>27,091</span><small>峰值 46,380</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/1366800/Crosshair_X?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Crosshair X 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Palworld / 幻兽帕鲁 1623730" data-discount="0">
+        <td class="position">42</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/1623730/Palworld_%E5%B9%BB%E5%85%BD%E5%B8%95%E9%B2%81?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-1623730.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Palworld / 幻兽帕鲁</strong><small>APP / 1623730</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>26,856</span><small>峰值 52,597</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/1623730/Palworld_%E5%B9%BB%E5%85%BD%E5%B8%95%E9%B2%81?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Palworld / 幻兽帕鲁 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Grand Theft Auto V 传承版 271590" data-discount="0">
+        <td class="position">43</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/271590/Grand_Theft_Auto_V_%E4%BC%A0%E6%89%BF%E7%89%88?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-271590.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Grand Theft Auto V 传承版</strong><small>APP / 271590</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 1447081 篇用户评测中有 86% 为好评。">特别好评</span><small title="此游戏的 1447081 篇用户评测中有 86% 为好评。">此游戏的 1447081 篇用户评测中有 86% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>26,578</span><small>峰值 75,795</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/271590/Grand_Theft_Auto_V_%E4%BC%A0%E6%89%BF%E7%89%88?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Grand Theft Auto V 传承版 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="DayZ 221100" data-discount="50">
+        <td class="position">44</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/221100/DayZ/?snr=1_7_7_2300_150_14" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-221100.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>DayZ</strong><small>APP / 221100</small></span></a></td>
+        <td class="price-cell"><strong>¥119.50</strong><del>¥239.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="50">-50%</span></td>
+        <td class="lowest-cell"><span>¥ 99.50</span></td>
+        <td class="review-cell"><span class="review-score score-5" title="此游戏的 9974 篇用户评测中有 64% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">褒贬不一</span><small title="此游戏的 9974 篇用户评测中有 64% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">此游戏的 9974 篇用户评测中有 64% 为好评</small></td>
+        <td class="region-cell"><span>国区可购</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>25,567</span><small>峰值 66,239</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/221100/DayZ/?snr=1_7_7_2300_150_14" target="_blank" rel="noopener noreferrer" aria-label="前往 DayZ 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="边缘世界 RimWorld 294100" data-discount="20">
+        <td class="position">45</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/294100/%E8%BE%B9%E7%BC%98%E4%B8%96%E7%95%8C_RimWorld?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-294100.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>边缘世界 RimWorld</strong><small>APP / 294100</small></span></a></td>
+        <td class="price-cell"><strong>¥ 90.40</strong><del>¥ 113.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="20">-20%</span></td>
+        <td class="lowest-cell"><span>¥ 90.40</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-9" title="此游戏的 137621 篇用户评测中有 98% 为好评。">好评如潮</span><small title="此游戏的 137621 篇用户评测中有 98% 为好评。">此游戏的 137621 篇用户评测中有 98% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>25,205</span><small>峰值 42,986</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/294100/%E8%BE%B9%E7%BC%98%E4%B8%96%E7%95%8C_RimWorld?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 边缘世界 RimWorld 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="桌面破坏神：挂机ARPG 4623570" data-discount="0">
+        <td class="position">46</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/4623570/%E6%A1%8C%E9%9D%A2%E7%A0%B4%E5%9D%8F%E7%A5%9E%E6%8C%82%E6%9C%BAARPG?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-4623570.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>桌面破坏神：挂机ARPG</strong><small>APP / 4623570</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>24,877</span><small>峰值 26,900</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/4623570/%E6%A1%8C%E9%9D%A2%E7%A0%B4%E5%9D%8F%E7%A5%9E%E6%8C%82%E6%9C%BAARPG?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 桌面破坏神：挂机ARPG 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Left 4 Dead 2 550" data-discount="90">
+        <td class="position">47</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/550/Left_4_Dead_2?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-550.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Left 4 Dead 2</strong><small>APP / 550</small></span></a></td>
+        <td class="price-cell"><strong>¥ 4.20</strong><del>¥ 42.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="90">-90%</span></td>
+        <td class="lowest-cell"><span>¥ 4.20</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-9" title="此游戏的 558621 篇用户评测中有 97% 为好评。">好评如潮</span><small title="此游戏的 558621 篇用户评测中有 97% 为好评。">此游戏的 558621 篇用户评测中有 97% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>24,632</span><small>峰值 34,167</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/550/Left_4_Dead_2?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Left 4 Dead 2 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="命运2 1085660" data-discount="100">
+        <td class="position">48</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/1085660/%E5%91%BD%E8%BF%902?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-1085660.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>命运2</strong><small>APP / 1085660</small></span></a></td>
+        <td class="price-cell"><strong>0</strong><del>0</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="100">-100%</span></td>
+        <td class="lowest-cell"><span>0</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 548201 篇用户评测中有 82% 为好评。">特别好评</span><small title="此游戏的 548201 篇用户评测中有 82% 为好评。">此游戏的 548201 篇用户评测中有 82% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>24,618</span><small>峰值 33,292</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/1085660/%E5%91%BD%E8%BF%902?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 命运2 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="饥荒联机版 322330" data-discount="50">
+        <td class="position">49</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/322330/饥荒联机版/?snr=1_7_7_2300_150_51" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-322330.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>饥荒联机版</strong><small>APP / 322330</small></span></a></td>
+        <td class="price-cell"><strong>¥12.00</strong><del>¥24.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="50">-50%</span></td>
+        <td class="lowest-cell"><span>¥ 4.80</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 136866 篇用户评测中有 92% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">特别好评</span><small title="此游戏的 136866 篇用户评测中有 92% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">此游戏的 136866 篇用户评测中有 92% 为好评</small></td>
+        <td class="region-cell"><span>国区可购</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>23,866</span><small>峰值 70,243</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/322330/饥荒联机版/?snr=1_7_7_2300_150_51" target="_blank" rel="noopener noreferrer" aria-label="前往 饥荒联机版 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="MapleStory 216150" data-discount="0">
+        <td class="position">50</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/216150/MapleStory?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-216150.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>MapleStory</strong><small>APP / 216150</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>23,789</span><small>峰值 25,178</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/216150/MapleStory?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 MapleStory 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="The Elder Scrolls V: Skyrim Special Edition 489830" data-discount="75">
+        <td class="position">51</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/489830/The_Elder_Scrolls_V_Skyrim_Special_Edition?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-489830.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>The Elder Scrolls V: Skyrim Special Edition</strong><small>APP / 489830</small></span></a></td>
+        <td class="price-cell"><strong>¥ 41.25</strong><del>¥ 165.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="75">-75%</span></td>
+        <td class="lowest-cell"><span>¥ 41.25</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 113256 篇用户评测中有 94% 为好评。">特别好评</span><small title="此游戏的 113256 篇用户评测中有 94% 为好评。">此游戏的 113256 篇用户评测中有 94% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>23,067</span><small>峰值 40,724</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/489830/The_Elder_Scrolls_V_Skyrim_Special_Edition?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 The Elder Scrolls V: Skyrim Special Edition 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="战地风云™ 6 2807960" data-discount="0">
+        <td class="position">52</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/2807960/%E6%88%98%E5%9C%B0%E9%A3%8E%E4%BA%91_6?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-2807960.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>战地风云™ 6</strong><small>APP / 2807960</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>22,418</span><small>峰值 47,247</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/2807960/%E6%88%98%E5%9C%B0%E9%A3%8E%E4%BA%91_6?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 战地风云™ 6 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="红色沙漠：增强版 3321460" data-discount="0">
+        <td class="position">53</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/3321460/%E7%BA%A2%E8%89%B2%E6%B2%99%E6%BC%A0%E5%A2%9E%E5%BC%BA%E7%89%88?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-3321460.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>红色沙漠：增强版</strong><small>APP / 3321460</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>22,053</span><small>峰值 43,998</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/3321460/%E7%BA%A2%E8%89%B2%E6%B2%99%E6%BC%A0%E5%A2%9E%E5%BC%BA%E7%89%88?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 红色沙漠：增强版 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Terraria 105600" data-discount="50">
+        <td class="position">54</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/105600/Terraria?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-105600.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Terraria</strong><small>APP / 105600</small></span></a></td>
+        <td class="price-cell"><strong>¥ 18.00</strong><del>¥ 36.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="50">-50%</span></td>
+        <td class="lowest-cell"><span>¥ 18.00</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-9" title="此游戏的 920345 篇用户评测中有 97% 为好评。">好评如潮</span><small title="此游戏的 920345 篇用户评测中有 97% 为好评。">此游戏的 920345 篇用户评测中有 97% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>21,866</span><small>峰值 45,798</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/105600/Terraria?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Terraria 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Sid Meier’s Civilization® VI 289070" data-discount="90">
+        <td class="position">55</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/289070/Sid_Meiers_Civilization_VI?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-289070.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Sid Meier’s Civilization® VI</strong><small>APP / 289070</small></span></a></td>
+        <td class="price-cell"><strong>¥ 19.90</strong><del>¥ 199.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="90">-90%</span></td>
+        <td class="lowest-cell"><span>¥ 19.90</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 195623 篇用户评测中有 85% 为好评。">特别好评</span><small title="此游戏的 195623 篇用户评测中有 85% 为好评。">此游戏的 195623 篇用户评测中有 85% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>21,828</span><small>峰值 43,908</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/289070/Sid_Meiers_Civilization_VI?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Sid Meier’s Civilization® VI 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="全面战争：战锤3 1142710" data-discount="40">
+        <td class="position">56</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/1142710/%E5%85%A8%E9%9D%A2%E6%88%98%E4%BA%89%E6%88%98%E9%94%A43?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-1142710.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>全面战争：战锤3</strong><small>APP / 1142710</small></span></a></td>
+        <td class="price-cell"><strong>¥ 178.80</strong><del>¥ 298.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="40">-40%</span></td>
+        <td class="lowest-cell"><span>¥ 178.80</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-7" title="此游戏的 52109 篇用户评测中有 74% 为好评。">多半好评</span><small title="此游戏的 52109 篇用户评测中有 74% 为好评。">此游戏的 52109 篇用户评测中有 74% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>21,776</span><small>峰值 49,763</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/1142710/%E5%85%A8%E9%9D%A2%E6%88%98%E4%BA%89%E6%88%98%E9%94%A43?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 全面战争：战锤3 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Hearts of Iron IV 394360" data-discount="0">
+        <td class="position">57</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/394360/Hearts_of_Iron_IV?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-394360.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Hearts of Iron IV</strong><small>APP / 394360</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>21,260</span><small>峰值 54,472</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/394360/Hearts_of_Iron_IV?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Hearts of Iron IV 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Red Dead Redemption 2 1174180" data-discount="67">
+        <td class="position">58</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/1174180/Red_Dead_Redemption_2?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-1174180.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Red Dead Redemption 2</strong><small>APP / 1174180</small></span></a></td>
+        <td class="price-cell"><strong>¥ 92.07</strong><del>¥ 279.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="67">-67%</span></td>
+        <td class="lowest-cell"><span>¥ 82.17</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 388302 篇用户评测中有 90% 为好评。">特别好评</span><small title="此游戏的 388302 篇用户评测中有 90% 为好评。">此游戏的 388302 篇用户评测中有 90% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>20,551</span><small>峰值 43,382</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/1174180/Red_Dead_Redemption_2?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Red Dead Redemption 2 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="巫师3：狂猎 — 重制版 292030" data-discount="70">
+        <td class="position">59</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/292030/%E5%B7%AB%E5%B8%883%E7%8B%82%E7%8C%8E_%E9%87%8D%E5%88%B6%E7%89%88?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-292030.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>巫师3：狂猎 — 重制版</strong><small>APP / 292030</small></span></a></td>
+        <td class="price-cell"><strong>¥ 38.10</strong><del>¥ 127.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="70">-70%</span></td>
+        <td class="lowest-cell"><span>¥ 25.40</span></td>
+        <td class="review-cell"><span class="review-score score-9" title="此游戏的 659975 篇用户评测中有 96% 为好评。">好评如潮</span><small title="此游戏的 659975 篇用户评测中有 96% 为好评。">此游戏的 659975 篇用户评测中有 96% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>19,722</span><small>峰值 63,225</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/292030/%E5%B7%AB%E5%B8%883%E7%8B%82%E7%8C%8E_%E9%87%8D%E5%88%B6%E7%89%88?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 巫师3：狂猎 — 重制版 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="EA SPORTS FC™ 27 4080220" data-discount="0">
+        <td class="position">60</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/4080220/EA_SPORTS_FC_27?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-4080220.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>EA SPORTS FC™ 27</strong><small>APP / 4080220</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>19,603</span><small>峰值 67,129</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/4080220/EA_SPORTS_FC_27?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 EA SPORTS FC™ 27 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="七日世界 2139460" data-discount="0">
+        <td class="position">61</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/2139460/%E4%B8%83%E6%97%A5%E4%B8%96%E7%95%8C?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-2139460.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>七日世界</strong><small>APP / 2139460</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>18,889</span><small>峰值 34,149</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/2139460/%E4%B8%83%E6%97%A5%E4%B8%96%E7%95%8C?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 七日世界 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Escape from Tarkov 3932890" data-discount="0">
+        <td class="position">62</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/3932890/Escape_from_Tarkov?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-3932890.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Escape from Tarkov</strong><small>APP / 3932890</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>18,355</span><small>峰值 42,170</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/3932890/Escape_from_Tarkov?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Escape from Tarkov 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="艾尔登法环 1245620" data-discount="30">
+        <td class="position">63</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/1245620/%E8%89%BE%E5%B0%94%E7%99%BB%E6%B3%95%E7%8E%AF?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-1245620.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>艾尔登法环</strong><small>APP / 1245620</small></span></a></td>
+        <td class="price-cell"><strong>¥ 208.60</strong><del>¥ 298.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="30">-30%</span></td>
+        <td class="lowest-cell"><span>¥ 208.60</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 515407 篇用户评测中有 92% 为好评。">特别好评</span><small title="此游戏的 515407 篇用户评测中有 92% 为好评。">此游戏的 515407 篇用户评测中有 92% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>18,205</span><small>峰值 33,274</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/1245620/%E8%89%BE%E5%B0%94%E7%99%BB%E6%B3%95%E7%8E%AF?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 艾尔登法环 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="方舟: 生存飞升 2399830" data-discount="75">
+        <td class="position">64</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/2399830/方舟_生存飞升/?snr=1_7_7_2300_150_18" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-2399830.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>方舟: 生存飞升</strong><small>APP / 2399830</small></span></a></td>
+        <td class="price-cell"><strong>¥62.00</strong><del>¥248.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="75">-75%</span></td>
+        <td class="lowest-cell"><span>¥62.00</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-5" title="此游戏的 9600 篇用户评测中有 41% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">褒贬不一</span><small title="此游戏的 9600 篇用户评测中有 41% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">此游戏的 9600 篇用户评测中有 41% 为好评</small></td>
+        <td class="region-cell"><span>国区可购</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>18,076</span><small>峰值 33,127</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/2399830/方舟_生存飞升/?snr=1_7_7_2300_150_18" target="_blank" rel="noopener noreferrer" aria-label="前往 方舟: 生存飞升 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Garry&#x27;s Mod 4000" data-discount="50">
+        <td class="position">65</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/4000/Garrys_Mod?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-4000.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Garry&#x27;s Mod</strong><small>APP / 4000</small></span></a></td>
+        <td class="price-cell"><strong>¥ 18.00</strong><del>¥ 36.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="50">-50%</span></td>
+        <td class="lowest-cell"><span>¥ 14.40</span></td>
+        <td class="review-cell"><span class="review-score score-9" title="此游戏的 836322 篇用户评测中有 96% 为好评。">好评如潮</span><small title="此游戏的 836322 篇用户评测中有 96% 为好评。">此游戏的 836322 篇用户评测中有 96% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>17,540</span><small>峰值 38,254</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/4000/Garrys_Mod?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Garry&#x27;s Mod 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="The Sims™ 4 1222670" data-discount="100">
+        <td class="position">66</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/1222670/The_Sims_4?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-1222670.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>The Sims™ 4</strong><small>APP / 1222670</small></span></a></td>
+        <td class="price-cell"><strong>0</strong><del>¥ 118.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="100">-100%</span></td>
+        <td class="lowest-cell"><span>0</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 98040 篇用户评测中有 87% 为好评。">特别好评</span><small title="此游戏的 98040 篇用户评测中有 87% 为好评。">此游戏的 98040 篇用户评测中有 87% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>17,459</span><small>峰值 33,529</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/1222670/The_Sims_4?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 The Sims™ 4 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="FINAL FANTASY RESONANCE 3259780" data-discount="0">
+        <td class="position">67</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/3259780/FINAL_FANTASY_RESONANCE?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-3259780.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>FINAL FANTASY RESONANCE</strong><small>APP / 3259780</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>17,442</span><small>峰值 31,253</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/3259780/FINAL_FANTASY_RESONANCE?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 FINAL FANTASY RESONANCE 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="FINAL FANTASY XIV Online 39210" data-discount="0">
+        <td class="position">68</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/39210/FINAL_FANTASY_XIV_Online?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-39210.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>FINAL FANTASY XIV Online</strong><small>APP / 39210</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>17,300</span><small>峰值 25,119</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/39210/FINAL_FANTASY_XIV_Online?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 FINAL FANTASY XIV Online 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="永劫无间 1203220" data-discount="0">
+        <td class="position">69</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/1203220/%E6%B0%B8%E5%8A%AB%E6%97%A0%E9%97%B4?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-1203220.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>永劫无间</strong><small>APP / 1203220</small></span></a></td>
+        <td class="price-cell"><strong>¥ 98.00</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>¥ 49.00</span></td>
+        <td class="review-cell"><span class="review-score score-7" title="此游戏的 133297 篇用户评测中有 75% 为好评。">多半好评</span><small title="此游戏的 133297 篇用户评测中有 75% 为好评。">此游戏的 133297 篇用户评测中有 75% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>16,715</span><small>峰值 63,537</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/1203220/%E6%B0%B8%E5%8A%AB%E6%97%A0%E9%97%B4?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 永劫无间 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="7 Days to Die 251570" data-discount="45">
+        <td class="position">70</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/251570/7_Days_to_Die/?snr=1_7_7_2300_150_28" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-251570.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>7 Days to Die</strong><small>APP / 251570</small></span></a></td>
+        <td class="price-cell"><strong>¥83.60</strong><del>¥152.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="45">-45%</span></td>
+        <td class="lowest-cell"><span>¥ 18.72</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 37664 篇用户评测中有 85% 为好评。 此产品在一个或多个时间段内出现跑题评测活动。这些时间段内的评测已按您的偏好设置不计入此产品的总体评价。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">特别好评</span><small title="此游戏的 37664 篇用户评测中有 85% 为好评。 此产品在一个或多个时间段内出现跑题评测活动。这些时间段内的评测已按您的偏好设置不计入此产品的总体评价。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">此游戏的 37664 篇用户评测中有 85% 为好评</small></td>
+        <td class="region-cell"><span>国区可购</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>16,580</span><small>峰值 39,358</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/251570/7_Days_to_Die/?snr=1_7_7_2300_150_28" target="_blank" rel="noopener noreferrer" aria-label="前往 7 Days to Die 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Rocket League® 252950" data-discount="0">
+        <td class="position">71</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/252950/Rocket_League?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-252950.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Rocket League®</strong><small>APP / 252950</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>16,129</span><small>峰值 31,473</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/252950/Rocket_League?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Rocket League® 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="THE FINALS 2073850" data-discount="100">
+        <td class="position">72</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/2073850/THE_FINALS?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-2073850.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>THE FINALS</strong><small>APP / 2073850</small></span></a></td>
+        <td class="price-cell"><strong>0</strong><del>0</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="100">-100%</span></td>
+        <td class="lowest-cell"><span>0</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>15,706</span><small>峰值 26,628</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/2073850/THE_FINALS?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 THE FINALS 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="针影裁梦 4019220" data-discount="0">
+        <td class="position">73</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/4019220/%E9%92%88%E5%BD%B1%E8%A3%81%E6%A2%A6?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-4019220.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>针影裁梦</strong><small>APP / 4019220</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>15,671</span><small>峰值 23,542</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/4019220/%E9%92%88%E5%BD%B1%E8%A3%81%E6%A2%A6?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 针影裁梦 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="PEAK 3527290" data-discount="38">
+        <td class="position">74</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/3527290/PEAK/?snr=1_7_7_2300_150_19" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-3527290.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>PEAK</strong><small>APP / 3527290</small></span></a></td>
+        <td class="price-cell"><strong>¥20.46</strong><del>¥33.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="38">-38%</span></td>
+        <td class="lowest-cell"><span>¥20.46</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 18011 篇用户评测中有 83% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">特别好评</span><small title="此游戏的 18011 篇用户评测中有 83% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">此游戏的 18011 篇用户评测中有 83% 为好评</small></td>
+        <td class="region-cell"><span>国区可购</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>15,592</span><small>峰值 22,264</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/3527290/PEAK/?snr=1_7_7_2300_150_19" target="_blank" rel="noopener noreferrer" aria-label="前往 PEAK 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="BeamNG.drive 284160" data-discount="20">
+        <td class="position">75</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/284160/BeamNGdrive?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-284160.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>BeamNG.drive</strong><small>APP / 284160</small></span></a></td>
+        <td class="price-cell"><strong>¥ 64.00</strong><del>¥ 80.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="20">-20%</span></td>
+        <td class="lowest-cell"><span>¥ 64.00</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-9" title="此游戏的 169790 篇用户评测中有 97% 为好评。">好评如潮</span><small title="此游戏的 169790 篇用户评测中有 97% 为好评。">此游戏的 169790 篇用户评测中有 97% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>15,483</span><small>峰值 41,055</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/284160/BeamNGdrive?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 BeamNG.drive 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="EA SPORTS FC™ 26 3405690" data-discount="0">
+        <td class="position">76</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/3405690/EA_SPORTS_FC_26?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-3405690.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>EA SPORTS FC™ 26</strong><small>APP / 3405690</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>15,297</span><small>峰值 34,193</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/3405690/EA_SPORTS_FC_26?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 EA SPORTS FC™ 26 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Age of Empires II: Definitive Edition 813780" data-discount="75">
+        <td class="position">77</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/813780/Age_of_Empires_II_Definitive_Edition?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-813780.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Age of Empires II: Definitive Edition</strong><small>APP / 813780</small></span></a></td>
+        <td class="price-cell"><strong>¥ 24.75</strong><del>¥ 99.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="75">-75%</span></td>
+        <td class="lowest-cell"><span>¥ 24.75</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 112014 篇用户评测中有 94% 为好评。">特别好评</span><small title="此游戏的 112014 篇用户评测中有 94% 为好评。">此游戏的 112014 篇用户评测中有 94% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>14,893</span><small>峰值 27,673</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/813780/Age_of_Empires_II_Definitive_Edition?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Age of Empires II: Definitive Edition 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="tModLoader 1281930" data-discount="100">
+        <td class="position">78</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/1281930/tModLoader?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-1281930.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>tModLoader</strong><small>APP / 1281930</small></span></a></td>
+        <td class="price-cell"><strong>0</strong><del>0</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="100">-100%</span></td>
+        <td class="lowest-cell"><span>0</span></td>
+        <td class="review-cell"><span class="review-score score-9" title="此游戏的 190059 篇用户评测中有 97% 为好评。">好评如潮</span><small title="此游戏的 190059 篇用户评测中有 97% 为好评。">此游戏的 190059 篇用户评测中有 97% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>14,865</span><small>峰值 34,308</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/1281930/tModLoader?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 tModLoader 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Mount &amp; Blade II: Bannerlord 261550" data-discount="40">
+        <td class="position">79</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/261550/Mount_Blade_II_Bannerlord?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-261550.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Mount &amp; Blade II: Bannerlord</strong><small>APP / 261550</small></span></a></td>
+        <td class="price-cell"><strong>¥ 148.80</strong><del>¥ 248.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="40">-40%</span></td>
+        <td class="lowest-cell"><span>¥ 148.80</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 175400 篇用户评测中有 87% 为好评。">特别好评</span><small title="此游戏的 175400 篇用户评测中有 87% 为好评。">此游戏的 175400 篇用户评测中有 87% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>14,840</span><small>峰值 36,426</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/261550/Mount_Blade_II_Bannerlord?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Mount &amp; Blade II: Bannerlord 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="[WoG] War of Genesis: Idle Loot 4891320" data-discount="0">
+        <td class="position">80</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/4891320/WoG_War_of_Genesis_Idle_Loot?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-4891320.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>[WoG] War of Genesis: Idle Loot</strong><small>APP / 4891320</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>14,693</span><small>峰值 16,401</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/4891320/WoG_War_of_Genesis_Idle_Loot?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 [WoG] War of Genesis: Idle Loot 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Unturned 304930" data-discount="100">
+        <td class="position">81</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/304930/Unturned?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-304930.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Unturned</strong><small>APP / 304930</small></span></a></td>
+        <td class="price-cell"><strong>0</strong><del>0</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="100">-100%</span></td>
+        <td class="lowest-cell"><span>0</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 493616 篇用户评测中有 91% 为好评。">特别好评</span><small title="此游戏的 493616 篇用户评测中有 91% 为好评。">此游戏的 493616 篇用户评测中有 91% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>14,675</span><small>峰值 18,461</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/304930/Unturned?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Unturned 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="暗区突围：无限 2073620" data-discount="0">
+        <td class="position">82</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/2073620/%E6%9A%97%E5%8C%BA%E7%AA%81%E5%9B%B4%E6%97%A0%E9%99%90?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-2073620.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>暗区突围：无限</strong><small>APP / 2073620</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>14,522</span><small>峰值 37,431</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/2073620/%E6%9A%97%E5%8C%BA%E7%AA%81%E5%9B%B4%E6%97%A0%E9%99%90?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 暗区突围：无限 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="The Isle 376210" data-discount="0">
+        <td class="position">83</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/376210/The_Isle?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-376210.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>The Isle</strong><small>APP / 376210</small></span></a></td>
+        <td class="price-cell"><strong>¥ 68.00</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>¥ 45.56</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 51263 篇用户评测中有 83% 为好评。">特别好评</span><small title="此游戏的 51263 篇用户评测中有 83% 为好评。">此游戏的 51263 篇用户评测中有 83% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>14,209</span><small>峰值 25,014</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/376210/The_Isle?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 The Isle 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="OBS Studio 1905180" data-discount="100">
+        <td class="position">84</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/1905180/OBS_Studio?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-1905180.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>OBS Studio</strong><small>APP / 1905180</small></span></a></td>
+        <td class="price-cell"><strong>0</strong><del>0</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="100">-100%</span></td>
+        <td class="lowest-cell"><span>0</span></td>
+        <td class="review-cell"><span class="review-score score-9" title="此软件的 11430 篇用户评测中有 95% 为好评。">好评如潮</span><small title="此软件的 11430 篇用户评测中有 95% 为好评。">此软件的 11430 篇用户评测中有 95% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>13,792</span><small>峰值 31,185</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/1905180/OBS_Studio?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 OBS Studio 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Monster Hunter Wilds 2246340" data-discount="25">
+        <td class="position">85</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/2246340/Monster_Hunter_Wilds/?snr=1_7_7_2300_150_23" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-2246340.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Monster Hunter Wilds</strong><small>APP / 2246340</small></span></a></td>
+        <td class="price-cell"><strong>¥148.50</strong><del>¥198.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="25">-25%</span></td>
+        <td class="lowest-cell"><span>¥148.50</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-3" title="此游戏的 50241 篇用户评测中有 21% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">多半差评</span><small title="此游戏的 50241 篇用户评测中有 21% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">此游戏的 50241 篇用户评测中有 21% 为好评</small></td>
+        <td class="region-cell"><span>国区可购</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>13,677</span><small>峰值 31,828</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/2246340/Monster_Hunter_Wilds/?snr=1_7_7_2300_150_23" target="_blank" rel="noopener noreferrer" aria-label="前往 Monster Hunter Wilds 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Farming Simulator 25 2300320" data-discount="0">
+        <td class="position">86</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/2300320/Farming_Simulator_25?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-2300320.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Farming Simulator 25</strong><small>APP / 2300320</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>13,207</span><small>峰值 62,953</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/2300320/Farming_Simulator_25?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Farming Simulator 25 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Black Desert 582660" data-discount="0">
+        <td class="position">87</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/582660/Black_Desert?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-582660.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Black Desert</strong><small>APP / 582660</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>13,042</span><small>峰值 18,430</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/582660/Black_Desert?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Black Desert 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Factorio 427520" data-discount="0">
+        <td class="position">88</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/427520/Factorio?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-427520.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Factorio</strong><small>APP / 427520</small></span></a></td>
+        <td class="price-cell"><strong>¥ 130.00</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>¥ 90.00</span></td>
+        <td class="review-cell"><span class="review-score score-9" title="此游戏的 132175 篇用户评测中有 96% 为好评。">好评如潮</span><small title="此游戏的 132175 篇用户评测中有 96% 为好评。">此游戏的 132175 篇用户评测中有 96% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>12,793</span><small>峰值 27,438</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/427520/Factorio?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Factorio 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Crusader Kings III 1158310" data-discount="50">
+        <td class="position">89</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/1158310/Crusader_Kings_III?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-1158310.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Crusader Kings III</strong><small>APP / 1158310</small></span></a></td>
+        <td class="price-cell"><strong>¥ 89.00</strong><del>¥ 178.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="50">-50%</span></td>
+        <td class="lowest-cell"><span>¥ 89.00</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 61096 篇用户评测中有 92% 为好评。">特别好评</span><small title="此游戏的 61096 篇用户评测中有 92% 为好评。">此游戏的 61096 篇用户评测中有 92% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>12,533</span><small>峰值 25,130</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/1158310/Crusader_Kings_III?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Crusader Kings III 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Street Fighter 6 1364780" data-discount="0">
+        <td class="position">90</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/1364780/Street_Fighter_6?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-1364780.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Street Fighter 6</strong><small>APP / 1364780</small></span></a></td>
+        <td class="price-cell"><strong>¥ 348.00</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>¥ 348.00</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 7540 篇用户评测中有 90% 为好评。">特别好评</span><small title="此游戏的 7540 篇用户评测中有 90% 为好评。">此游戏的 7540 篇用户评测中有 90% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>12,466</span><small>峰值 30,391</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/1364780/Street_Fighter_6?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Street Fighter 6 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="No Man&#x27;s Sky 无人深空 275850" data-discount="60">
+        <td class="position">91</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/275850/No_Mans_Sky_无人深空/?snr=1_7_7_2300_150_27" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-275850.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>No Man&#x27;s Sky 无人深空</strong><small>APP / 275850</small></span></a></td>
+        <td class="price-cell"><strong>¥70.00</strong><del>¥175.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="60">-60%</span></td>
+        <td class="lowest-cell"><span>¥70.00</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 46956 篇用户评测中有 87% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">特别好评</span><small title="此游戏的 46956 篇用户评测中有 87% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">此游戏的 46956 篇用户评测中有 87% 为好评</small></td>
+        <td class="region-cell"><span>国区可购</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>11,992</span><small>峰值 21,646</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/275850/No_Mans_Sky_无人深空/?snr=1_7_7_2300_150_27" target="_blank" rel="noopener noreferrer" aria-label="前往 No Man&#x27;s Sky 无人深空 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="IdleOn - 放置类MMO 1476970" data-discount="100">
+        <td class="position">92</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/1476970/IdleOn_%E6%94%BE%E7%BD%AE%E7%B1%BBMMO?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-1476970.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>IdleOn - 放置类MMO</strong><small>APP / 1476970</small></span></a></td>
+        <td class="price-cell"><strong>0</strong><del>0</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="100">-100%</span></td>
+        <td class="lowest-cell"><span>0</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 8722 篇用户评测中有 89% 为好评。">特别好评</span><small title="此游戏的 8722 篇用户评测中有 89% 为好评。">此游戏的 8722 篇用户评测中有 89% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>11,924</span><small>峰值 14,358</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/1476970/IdleOn_%E6%94%BE%E7%BD%AE%E7%B1%BBMMO?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 IdleOn - 放置类MMO 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="雨中冒险 2 632360" data-discount="50">
+        <td class="position">93</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/632360/%E9%9B%A8%E4%B8%AD%E5%86%92%E9%99%A9_2?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-632360.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>雨中冒险 2</strong><small>APP / 632360</small></span></a></td>
+        <td class="price-cell"><strong>¥ 40.00</strong><del>¥ 80.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="50">-50%</span></td>
+        <td class="lowest-cell"><span>¥ 40.00</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-9" title="此游戏的 161336 篇用户评测中有 96% 为好评。">好评如潮</span><small title="此游戏的 161336 篇用户评测中有 96% 为好评。">此游戏的 161336 篇用户评测中有 96% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>11,705</span><small>峰值 16,506</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/632360/%E9%9B%A8%E4%B8%AD%E5%86%92%E9%99%A9_2?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 雨中冒险 2 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="幸福工厂 526870" data-discount="45">
+        <td class="position">94</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/526870/%E5%B9%B8%E7%A6%8F%E5%B7%A5%E5%8E%82?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-526870.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>幸福工厂</strong><small>APP / 526870</small></span></a></td>
+        <td class="price-cell"><strong>¥ 54.45</strong><del>¥ 99.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="45">-45%</span></td>
+        <td class="lowest-cell"><span>¥ 54.45</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-9" title="此游戏的 116772 篇用户评测中有 97% 为好评。">好评如潮</span><small title="此游戏的 116772 篇用户评测中有 97% 为好评。">此游戏的 116772 篇用户评测中有 97% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>11,621</span><small>峰值 27,552</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/526870/%E5%B9%B8%E7%A6%8F%E5%B7%A5%E5%8E%82?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 幸福工厂 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Sons Of The Forest 1326470" data-discount="72">
+        <td class="position">95</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/1326470/Sons_Of_The_Forest/?snr=1_7_7_2300_150_4" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-1326470.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Sons Of The Forest</strong><small>APP / 1326470</small></span></a></td>
+        <td class="price-cell"><strong>¥30.24</strong><del>¥108.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="72">-72%</span></td>
+        <td class="lowest-cell"><span>¥30.24</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 32675 篇用户评测中有 82% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">特别好评</span><small title="此游戏的 32675 篇用户评测中有 82% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">此游戏的 32675 篇用户评测中有 82% 为好评</small></td>
+        <td class="region-cell"><span>国区可购</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>11,468</span><small>峰值 36,591</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/1326470/Sons_Of_The_Forest/?snr=1_7_7_2300_150_4" target="_blank" rel="noopener noreferrer" aria-label="前往 Sons Of The Forest 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="PAYDAY 2 218620" data-discount="90">
+        <td class="position">96</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/218620/PAYDAY_2?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-218620.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>PAYDAY 2</strong><small>APP / 218620</small></span></a></td>
+        <td class="price-cell"><strong>¥ 3.90</strong><del>¥ 39.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="90">-90%</span></td>
+        <td class="lowest-cell"><span>¥ 3.90</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 409037 篇用户评测中有 89% 为好评。">特别好评</span><small title="此游戏的 409037 篇用户评测中有 89% 为好评。">此游戏的 409037 篇用户评测中有 89% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>11,398</span><small>峰值 21,128</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/218620/PAYDAY_2?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 PAYDAY 2 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="eFootball™ 1665460" data-discount="0">
+        <td class="position">97</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/1665460/eFootball?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-1665460.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>eFootball™</strong><small>APP / 1665460</small></span></a></td>
+        <td class="price-cell"><strong>—</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>—</span></td>
+        <td class="review-cell"><span class="review-score score-0" title="">暂无评价</span><small title=""></small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>11,397</span><small>峰值 22,011</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/1665460/eFootball?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 eFootball™ 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="《NBA 2K27》 4356430" data-discount="55">
+        <td class="position">98</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/4356430/NBA_2K27/?snr=1_7_7_2300_150_5" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-4356430.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>《NBA 2K27》</strong><small>APP / 4356430</small></span></a></td>
+        <td class="price-cell"><strong>¥207.00</strong><del>¥460.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="55">-55%</span></td>
+        <td class="lowest-cell"><span>¥207.00</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-3" title="此游戏的 904 篇用户评测中有 34% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">多半差评</span><small title="此游戏的 904 篇用户评测中有 34% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">此游戏的 904 篇用户评测中有 34% 为好评</small></td>
+        <td class="region-cell"><span>国区可购</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>11,365</span><small>峰值 20,102</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/4356430/NBA_2K27/?snr=1_7_7_2300_150_5" target="_blank" rel="noopener noreferrer" aria-label="前往 《NBA 2K27》 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="Fallout 4 377160" data-discount="0">
+        <td class="position">99</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/377160/Fallout_4?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-377160.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>Fallout 4</strong><small>APP / 377160</small></span></a></td>
+        <td class="price-cell"><strong>¥ 83.00</strong><del></del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="0">—</span></td>
+        <td class="lowest-cell"><span>¥ 20.75</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 185500 篇用户评测中有 82% 为好评。">特别好评</span><small title="此游戏的 185500 篇用户评测中有 82% 为好评。">此游戏的 185500 篇用户评测中有 82% 为好评</small></td>
+        <td class="region-cell"><span>国区 · 待核验</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>11,238</span><small>峰值 19,575</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/377160/Fallout_4?snr=1_7001_7005_" target="_blank" rel="noopener noreferrer" aria-label="前往 Fallout 4 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+      <tr data-search="The Outlast Trials 1304930" data-discount="70">
+        <td class="position">100</td>
+        <td class="game-cell"><a class="game-link" href="https://store.steampowered.com/app/1304930/The_Outlast_Trials/?snr=1_7_7_2300_150_12" target="_blank" rel="noopener noreferrer"><img src="imgs/covers/app-1304930.webp" loading="lazy" decoding="async" width="116" height="44" alt=""><span><strong>The Outlast Trials</strong><small>APP / 1304930</small></span></a></td>
+        <td class="price-cell"><strong>¥40.80</strong><del>¥136.00</del></td>
+        <td class="discount-cell"><span class="discount-badge" data-rate="70">-70%</span></td>
+        <td class="lowest-cell"><span>¥40.80</span><span class="low-badge">↘ 已记录史低</span></td>
+        <td class="review-cell"><span class="review-score score-8" title="此游戏的 16008 篇用户评测中有 88% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">特别好评</span><small title="此游戏的 16008 篇用户评测中有 88% 为好评。 此产品的总体评价是基于您的偏好用以您语言撰写的评测计算得出的。">此游戏的 16008 篇用户评测中有 88% 为好评</small></td>
+        <td class="region-cell"><span>国区可购</span><details><summary>区域说明</summary><p>商店未披露跨区激活或赠送限制，购买前请确认商品页。</p></details></td>
+        <td class="players-cell"><span>11,172</span><small>峰值 32,044</small></td>
+        <td class="action-cell"><a class="store-link" href="https://store.steampowered.com/app/1304930/The_Outlast_Trials/?snr=1_7_7_2300_150_12" target="_blank" rel="noopener noreferrer" aria-label="前往 The Outlast Trials 的 Steam 商店">商店 <span aria-hidden="true">↗</span></a></td>
+      </tr>
+
+          </tbody>
+        </table>
+      </div>
 
    <br />
 
-  </div>
+      <p id="empty-state" class="empty-state" hidden>没有找到匹配的游戏，试试其他关键词或折扣。</p>
+      <div class="table-footnote"><span id="visible-count" role="status" aria-live="polite">显示 100 款游戏</span><span>史低为本站已记录最低价 · 不同地区售价可能不同</span></div>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><a class="footer-brand" href="discount.html">SD<span> / STEAM DISCOUNT</span></a><p>为下一次冒险，发现值得入手的好游戏。</p><a href="https://exp-blog.com" target="_blank" rel="noopener noreferrer">由 EXP 构建 ↗</a><small>独立玩家项目 · 非 Valve 官方网站</small></footer>
 
-  <br />
-  <br />
-
- </body>
- 
- <tail>
-  <h2><font color="red">赞助途径</font></h2>
-  <div style="text-align: center;">
-    <table id="donate" style="margin: auto;">
-      <tbody>
-        <tr>
-          <th><img src="imgs/alipay.png"/></th>
-          <th><img src="imgs/wechat.png"/></th>
-        </tr>
-        <tr>
-          <td style="text-align: center;">支付宝</td>
-          <td style="text-align: center;">微信</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
- </tail>
+</body>
 </html>

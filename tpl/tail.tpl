@@ -1,18 +1,1 @@
-
-<!--
-  <h2><font color="red">赞助途径</font></h2>
-  <div style="text-align: center;">
-    <table id="donate" style="margin: auto;">
-      <tbody>
-        <tr>
-          <th><img src="imgs/alipay.png"/></th>
-          <th><img src="imgs/wechat.png"/></th>
-        </tr>
-        <tr>
-          <td style="text-align: center;">支付宝</td>
-          <td style="text-align: center;">微信</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
--->
+  <footer class="site-footer wrap"><a class="footer-brand" href="discount.html">SD<span> / STEAM DISCOUNT</span></a><p>为下一次冒险，发现值得入手的好游戏。</p><a href="https://exp-blog.com" target="_blank" rel="noopener noreferrer">由 EXP 构建 ↗</a><small>独立玩家项目 · 非 Valve 官方网站</small></footer>
