@@ -7,7 +7,7 @@
   },
   "CN:app-1004640": {
     "available": true,
-    "observed": 1795119366
+    "observed": 1795204139
   },
   "CN:app-1004750": {
     "available": true,
@@ -108,7 +108,7 @@
   },
   "CN:app-1044720": {
     "available": true,
-    "observed": 1795119383
+    "observed": 1795204151
   },
   "CN:app-1048080": {
     "available": true,
@@ -129,7 +129,7 @@
     "available": true,
     "checked": 1794425141,
     "notice": "",
-    "observed": 1795119400,
+    "observed": 1795204163,
     "source": "https://store.steampowered.com/app/1056760/Euro_Truck_Simulator_2_Road_to_the_Black_Sea/?snr=1_7_7_2300_150_64&cc=CN&l=schinese"
   },
   "CN:app-1062520": {
@@ -161,6 +161,13 @@
   "CN:app-1084160": {
     "available": true,
     "observed": 1793733467
+  },
+  "CN:app-1088850": {
+    "available": true,
+    "checked": 1795204177,
+    "notice": "",
+    "observed": 1795204163,
+    "source": "https://store.steampowered.com/app/1088850/Marvels_Guardians_of_the_Galaxy/?snr=1_7_7_2300_150_204&cc=CN&l=schinese"
   },
   "CN:app-1089090": {
     "available": true,
@@ -215,7 +222,10 @@
   },
   "CN:app-1113560": {
     "available": true,
-    "observed": 1795119372
+    "checked": 1795204179,
+    "notice": "",
+    "observed": 1795204145,
+    "source": "https://store.steampowered.com/app/1113560/NieR_Replicant_ver122474487139/?snr=1_7_7_2300_150_137&cc=CN&l=schinese"
   },
   "CN:app-1114150": {
     "available": true,
@@ -231,6 +241,10 @@
   "CN:app-1118070": {
     "available": true,
     "observed": 1794678579
+  },
+  "CN:app-1119730": {
+    "available": true,
+    "observed": 1795204157
   },
   "CN:app-1121320": {
     "available": true,
@@ -259,9 +273,20 @@
     "available": true,
     "observed": 1793991996
   },
+  "CN:app-1139900": {
+    "available": true,
+    "checked": 1795204178,
+    "notice": "",
+    "observed": 1795204169,
+    "source": "https://store.steampowered.com/app/1139900/Ghostrunner_%E5%B9%BD%E7%81%B5%E8%A1%8C%E8%80%85/?snr=1_7_7_2300_150_235&cc=CN&l=schinese"
+  },
   "CN:app-1142710": {
     "available": true,
-    "observed": 1795119361
+    "observed": 1795204121
+  },
+  "CN:app-1144200": {
+    "available": true,
+    "observed": 1795204127
   },
   "CN:app-1147560": {
     "available": true,
@@ -273,7 +298,7 @@
   },
   "CN:app-1151640": {
     "available": true,
-    "observed": 1795119389
+    "observed": 1795204121
   },
   "CN:app-1153410": {
     "available": true,
@@ -298,7 +323,7 @@
     "available": true,
     "checked": 1795119421,
     "notice": "",
-    "observed": 1795119361,
+    "observed": 1795204116,
     "source": "https://store.steampowered.com/app/1158310/Crusader_Kings_III/?snr=1_7_7_2300_150_8&cc=CN&l=schinese"
   },
   "CN:app-1164940": {
@@ -322,6 +347,20 @@
   "CN:app-1168840": {
     "available": true,
     "observed": 1794073122
+  },
+  "CN:app-1172380": {
+    "available": true,
+    "checked": 1795204177,
+    "notice": "",
+    "observed": 1795204139,
+    "source": "https://store.steampowered.com/app/1172380/%E6%98%9F%E7%90%83%E5%A4%A7%E6%88%98_%E7%BB%9D%E5%9C%B0%E9%99%A8%E8%90%BD%E7%9A%84%E6%AD%A6%E5%A3%AB%E5%9B%A2/?snr=1_7_7_2300_150_112&cc=CN&l=schinese"
+  },
+  "CN:app-1172620": {
+    "available": true,
+    "checked": 1795204178,
+    "notice": "",
+    "observed": 1795204139,
+    "source": "https://store.steampowered.com/app/1172620/Sea_of_Thieves_2026_Edition/?snr=1_7_7_2300_150_114&cc=CN&l=schinese"
   },
   "CN:app-1173820": {
     "available": true,
@@ -381,7 +420,7 @@
     "available": true,
     "checked": 1794425142,
     "notice": "",
-    "observed": 1795119406,
+    "observed": 1795204163,
     "source": "https://store.steampowered.com/app/1209460/Euro_Truck_Simulator_2_Iberia/?snr=1_7_7_2300_150_59&cc=CN&l=schinese"
   },
   "CN:app-1209470": {
@@ -423,7 +462,7 @@
     "available": true,
     "checked": 1795119419,
     "notice": "",
-    "observed": 1795119400,
+    "observed": 1795204121,
     "source": "https://store.steampowered.com/app/1222680/Need_for_Speed_Heat/?snr=1_7_7_2300_150_185&cc=CN&l=schinese"
   },
   "CN:app-1227170": {
@@ -460,14 +499,30 @@
     "available": true,
     "checked": 1795032853,
     "notice": "",
-    "observed": 1795119389,
+    "observed": 1795204163,
     "source": "https://store.steampowered.com/app/1235140/%E4%BA%BA%E4%B8%AD%E4%B9%8B%E9%BE%997_%E5%85%89%E4%B8%8E%E6%9A%97%E7%9A%84%E5%8E%BB%E5%90%91_%E5%9B%BD%E9%99%85%E7%89%88/?snr=1_7_7_2300_150_105&cc=CN&l=schinese"
+  },
+  "CN:app-1235721": {
+    "available": true,
+    "observed": 1795204151
+  },
+  "CN:app-1235731": {
+    "available": true,
+    "observed": 1795204163
+  },
+  "CN:app-1235733": {
+    "available": true,
+    "observed": 1795204157
+  },
+  "CN:app-1235734": {
+    "available": true,
+    "observed": 1795204163
   },
   "CN:app-1237320": {
     "available": true,
     "checked": 1794865777,
     "notice": "",
-    "observed": 1795119378,
+    "observed": 1795204127,
     "source": "https://store.steampowered.com/app/1237320/%E7%B4%A2%E5%B0%BC%E5%85%8B_%E6%9C%AA%E7%9F%A5%E8%BE%B9%E5%A2%83/?snr=1_7_7_2300_150_133&cc=CN&l=schinese"
   },
   "CN:app-1238290": {
@@ -477,6 +532,10 @@
   "CN:app-1238762": {
     "available": true,
     "observed": 1794948029
+  },
+  "CN:app-1238810": {
+    "available": true,
+    "observed": 1795204121
   },
   "CN:app-1240590": {
     "available": true,
@@ -496,6 +555,13 @@
     "observed": 1793907849,
     "source": "https://store.steampowered.com/app/1249110/Skully/?snr=1_7_7_230_150_27331&cc=CN&l=schinese"
   },
+  "CN:app-1262580": {
+    "available": true,
+    "checked": 1795204177,
+    "notice": "",
+    "observed": 1795204163,
+    "source": "https://store.steampowered.com/app/1262580/Need_for_Speed_Payback/?snr=1_7_7_2300_150_206&cc=CN&l=schinese"
+  },
   "CN:app-1263550": {
     "available": true,
     "observed": 1793820869
@@ -508,7 +574,7 @@
     "available": true,
     "checked": 1795119420,
     "notice": "",
-    "observed": 1795119383,
+    "observed": 1795204151,
     "source": "https://store.steampowered.com/app/1265920/Life_is_Strange_Remastered/?snr=1_7_7_2300_150_108&cc=CN&l=schinese"
   },
   "CN:app-1266130": {
@@ -557,11 +623,11 @@
   },
   "CN:app-1285190": {
     "available": true,
-    "observed": 1795119395
+    "observed": 1795204133
   },
   "CN:app-1286220": {
     "available": true,
-    "observed": 1795119395
+    "observed": 1795204151
   },
   "CN:app-1286680": {
     "available": true,
@@ -596,7 +662,7 @@
   },
   "CN:app-1295510": {
     "available": true,
-    "observed": 1795119389
+    "observed": 1795204163
   },
   "CN:app-1295660": {
     "available": true,
@@ -625,7 +691,7 @@
     "available": true,
     "checked": 1795032854,
     "notice": "",
-    "observed": 1795119406,
+    "observed": 1795204169,
     "source": "https://store.steampowered.com/app/1325200/%E4%BB%81%E7%8E%8B%EF%BC%92_Complete_Edition/?snr=1_7_7_2300_150_103&cc=CN&l=schinese"
   },
   "CN:app-1326470": {
@@ -679,7 +745,7 @@
     "available": true,
     "checked": 1795119421,
     "notice": "",
-    "observed": 1795119389,
+    "observed": 1795204169,
     "source": "https://store.steampowered.com/app/1358700/STRANGER_OF_PARADISE_FINAL_FANTASY_ORIGIN/?snr=1_7_7_2300_150_146&cc=CN&l=schinese"
   },
   "CN:app-1359660": {
@@ -713,10 +779,10 @@
   },
   "CN:app-1372110": {
     "available": true,
-    "checked": 1793907850,
+    "checked": 1795204178,
     "notice": "",
-    "observed": 1794262003,
-    "source": "https://store.steampowered.com/app/1372110/JOJO%E7%9A%84%E5%A5%87%E5%A6%99%E5%86%92%E9%99%A9_%E7%BE%A4%E6%98%9F%E4%B9%8B%E6%88%98_%E9%87%8D%E5%88%B6%E7%89%88/?snr=1_7_7_2300_150_214&cc=CN&l=schinese"
+    "observed": 1795204151,
+    "source": "https://store.steampowered.com/app/1372110/JOJO%E7%9A%84%E5%A5%87%E5%A6%99%E5%86%92%E9%99%A9_%E7%BE%A4%E6%98%9F%E4%B9%8B%E6%88%98_%E9%87%8D%E5%88%B6%E7%89%88/?snr=1_7_7_2300_150_159&cc=CN&l=schinese"
   },
   "CN:app-1373960": {
     "available": true,
@@ -751,6 +817,10 @@
   "CN:app-1392500": {
     "available": true,
     "observed": 1794073122
+  },
+  "CN:app-1392860": {
+    "available": true,
+    "observed": 1795204169
   },
   "CN:app-1395240": {
     "available": true,
@@ -803,7 +873,7 @@
     "available": true,
     "checked": 1795119420,
     "notice": "",
-    "observed": 1795119366,
+    "observed": 1795204116,
     "source": "https://store.steampowered.com/app/1426210/%E5%8F%8C%E4%BA%BA%E6%88%90%E8%A1%8C/?snr=1_7_7_2300_150_27&cc=CN&l=schinese"
   },
   "CN:app-1428000": {
@@ -864,6 +934,10 @@
     "available": true,
     "observed": 1795032825
   },
+  "CN:app-1449110": {
+    "available": true,
+    "observed": 1795204157
+  },
   "CN:app-1449690": {
     "available": true,
     "checked": 1793655245,
@@ -889,6 +963,10 @@
     "observed": 1794160070,
     "source": "https://store.steampowered.com/app/1451940/%E4%B8%BB%E6%92%AD%E5%A5%B3%E5%AD%A9%E9%87%8D%E5%BA%A6%E4%BE%9D%E8%B5%96/?snr=1_7_7_2300_150_160&cc=CN&l=schinese"
   },
+  "CN:app-1452490": {
+    "available": true,
+    "observed": 1795204151
+  },
   "CN:app-1455840": {
     "available": true,
     "checked": 1794160104,
@@ -907,6 +985,10 @@
     "observed": 1794160064,
     "source": "https://store.steampowered.com/app/1458140/%E8%B6%85%E8%87%AA%E7%84%B6%E8%BD%A6%E6%97%85_Pacific_Drive/?snr=1_7_7_2300_150_142&cc=CN&l=schinese"
   },
+  "CN:app-1458150": {
+    "available": true,
+    "observed": 1795204163
+  },
   "CN:app-1460810": {
     "available": true,
     "observed": 1794160088
@@ -919,7 +1001,7 @@
     "available": true,
     "checked": 1795032851,
     "notice": "",
-    "observed": 1795119361,
+    "observed": 1795204116,
     "source": "https://store.steampowered.com/app/1462040/FINAL_FANTASY_VII_REMAKE_INTERGRADE/?snr=1_7_7_2300_150_42&cc=CN&l=schinese"
   },
   "CN:app-1462810": {
@@ -943,6 +1025,13 @@
     "notice": "",
     "observed": 1794865759,
     "source": "https://store.steampowered.com/app/1465750/American_Truck_Simulator_Texas/?snr=1_7_7_2300_150_146&cc=CN&l=schinese"
+  },
+  "CN:app-1466860": {
+    "available": true,
+    "checked": 1795204178,
+    "notice": "",
+    "observed": 1795204127,
+    "source": "https://store.steampowered.com/app/1466860/Age_of_Empires_IV_Anniversary_Edition/?snr=1_7_7_2300_150_68&cc=CN&l=schinese"
   },
   "CN:app-1469610": {
     "available": true,
@@ -1028,7 +1117,7 @@
     "available": true,
     "checked": 1794678580,
     "notice": "",
-    "observed": 1795119406,
+    "observed": 1795204163,
     "source": "https://store.steampowered.com/app/1498570/THE_KING_OF_FIGHTERS_XV/?snr=1_7_7_2300_150_196&cc=CN&l=schinese"
   },
   "CN:app-1501750": {
@@ -1054,6 +1143,10 @@
   "CN:app-1515580": {
     "available": true,
     "observed": 1793733486
+  },
+  "CN:app-1517290": {
+    "available": true,
+    "observed": 1795204127
   },
   "CN:app-1518080": {
     "available": true,
@@ -1091,7 +1184,7 @@
   },
   "CN:app-1544020": {
     "available": true,
-    "observed": 1795119389
+    "observed": 1795204157
   },
   "CN:app-1546400": {
     "available": true,
@@ -1112,9 +1205,16 @@
     "available": true,
     "observed": 1794160088
   },
+  "CN:app-1551360": {
+    "available": true,
+    "checked": 1795204179,
+    "notice": "",
+    "observed": 1795204133,
+    "source": "https://store.steampowered.com/app/1551360/%E6%9E%81%E9%99%90%E7%AB%9E%E9%80%9F%E5%9C%B0%E5%B9%B3%E7%BA%BF_5/?snr=1_7_7_2300_150_80&cc=CN&l=schinese"
+  },
   "CN:app-1551980": {
     "available": true,
-    "observed": 1795119378
+    "observed": 1795204139
   },
   "CN:app-1562430": {
     "available": true,
@@ -1230,7 +1330,10 @@
   },
   "CN:app-1608070": {
     "available": true,
-    "observed": 1795119372
+    "checked": 1795204178,
+    "notice": "",
+    "observed": 1795204145,
+    "source": "https://store.steampowered.com/app/1608070/CRISIS_CORE_FINAL_FANTASY_VII_REUNION/?snr=1_7_7_2300_150_132&cc=CN&l=schinese"
   },
   "CN:app-1611600": {
     "available": true,
@@ -1262,7 +1365,7 @@
   },
   "CN:app-1627720": {
     "available": true,
-    "observed": 1795119361
+    "observed": 1795204121
   },
   "CN:app-1629520": {
     "available": true,
@@ -1292,7 +1395,7 @@
   },
   "CN:app-1643320": {
     "available": true,
-    "observed": 1793655188
+    "observed": 1795204133
   },
   "CN:app-1644320": {
     "available": true,
@@ -1309,16 +1412,23 @@
     "observed": 1795032837,
     "source": "https://store.steampowered.com/app/1649080/%E5%8F%8C%E7%82%B9%E6%A0%A1%E5%9B%AD/?snr=1_7_7_2300_150_163&cc=CN&l=schinese"
   },
+  "CN:app-1649240": {
+    "available": true,
+    "observed": 1795204133
+  },
   "CN:app-1659040": {
     "available": true,
     "checked": 1795032854,
     "notice": "",
-    "observed": 1795119366,
+    "observed": 1795204127,
     "source": "https://store.steampowered.com/app/1659040/HITMAN_World_of_Assassination/?snr=1_7_7_2300_150_34&cc=CN&l=schinese"
   },
   "CN:app-1659420": {
     "available": true,
-    "observed": 1795119378
+    "checked": 1795204178,
+    "notice": "",
+    "observed": 1795204116,
+    "source": "https://store.steampowered.com/app/1659420/UNCHARTED_%E7%9B%97%E8%B4%BC%E4%BC%A0%E5%A5%87%E5%90%88%E8%BE%91/?snr=1_7_7_2300_150_23&cc=CN&l=schinese"
   },
   "CN:app-1662160": {
     "available": true,
@@ -1357,7 +1467,7 @@
   },
   "CN:app-1676840": {
     "available": true,
-    "observed": 1795119383
+    "observed": 1795204145
   },
   "CN:app-1677110": {
     "available": true,
@@ -1393,7 +1503,7 @@
     "available": true,
     "checked": 1794948032,
     "notice": "",
-    "observed": 1795119366,
+    "observed": 1795204127,
     "source": "https://store.steampowered.com/app/1687950/%E5%A5%B3%E7%A5%9E%E5%BC%82%E9%97%BB%E5%BD%955%E7%9A%87%E5%AE%B6%E7%89%88/?snr=1_7_7_2300_150_17&cc=CN&l=schinese"
   },
   "CN:app-1689620": {
@@ -1404,7 +1514,7 @@
     "available": true,
     "checked": 1795119419,
     "notice": "",
-    "observed": 1795119383,
+    "observed": 1795204121,
     "source": "https://store.steampowered.com/app/1693980/%E6%AD%BB%E4%BA%A1%E7%A9%BA%E9%97%B4/?snr=1_7_7_2300_150_114&cc=CN&l=schinese"
   },
   "CN:app-1696770": {
@@ -1465,7 +1575,7 @@
     "available": true,
     "checked": 1795032854,
     "notice": "",
-    "observed": 1795119395,
+    "observed": 1795204163,
     "source": "https://store.steampowered.com/app/1761390/%E5%88%9D%E9%9F%B3%E6%9C%AA%E6%9D%A5_Project_DIVA_MEGA39s/?snr=1_7_7_2300_150_111&cc=CN&l=schinese"
   },
   "CN:app-1764110": {
@@ -1487,12 +1597,12 @@
     "available": true,
     "checked": 1794948033,
     "notice": "",
-    "observed": 1795119361,
+    "observed": 1795204116,
     "source": "https://store.steampowered.com/app/1771300/%E5%A4%A9%E5%9B%BD%E6%8B%AF%E6%95%912/?snr=1_7_7_2300_150_2&cc=CN&l=schinese"
   },
   "CN:app-1774580": {
     "available": true,
-    "observed": 1795119400
+    "observed": 1795204127
   },
   "CN:app-1777720": {
     "available": true,
@@ -1500,7 +1610,7 @@
   },
   "CN:app-1778820": {
     "available": true,
-    "observed": 1795119372
+    "observed": 1795204133
   },
   "CN:app-1787810": {
     "available": true,
@@ -1562,11 +1672,14 @@
   },
   "CN:app-1817190": {
     "available": true,
-    "observed": 1795119378
+    "checked": 1795204179,
+    "notice": "",
+    "observed": 1795204116,
+    "source": "https://store.steampowered.com/app/1817190/Marvels_SpiderMan_Miles_Morales/?snr=1_7_7_2300_150_25&cc=CN&l=schinese"
   },
   "CN:app-1817230": {
     "available": true,
-    "observed": 1795119383
+    "observed": 1795204151
   },
   "CN:app-1818280": {
     "available": true,
@@ -1605,6 +1718,14 @@
     "available": true,
     "observed": 1795119412
   },
+  "CN:app-1845910": {
+    "available": true,
+    "observed": 1795204127
+  },
+  "CN:app-1846380": {
+    "available": true,
+    "observed": 1795204133
+  },
   "CN:app-1850510": {
     "available": true,
     "observed": 1795119406
@@ -1613,7 +1734,7 @@
     "available": true,
     "checked": 1795119420,
     "notice": "",
-    "observed": 1795119389,
+    "observed": 1795204121,
     "source": "https://store.steampowered.com/app/1850570/DEATH_STRANDING_DIRECTORS_CUT/?snr=1_7_7_2300_150_131&cc=CN&l=schinese"
   },
   "CN:app-1853440": {
@@ -1644,7 +1765,7 @@
     "available": true,
     "checked": 1794948033,
     "notice": "",
-    "observed": 1795119389,
+    "observed": 1795204151,
     "source": "https://store.steampowered.com/app/1875830/%E7%9C%9F%E5%A5%B3%E7%A5%9E%E8%BD%AC%E7%94%9F_Vengeance/?snr=1_7_7_2300_150_60&cc=CN&l=schinese"
   },
   "CN:app-1876890": {
@@ -1672,7 +1793,7 @@
   },
   "CN:app-1888930": {
     "available": true,
-    "observed": 1795119366
+    "observed": 1795204116
   },
   "CN:app-1894430": {
     "available": true,
@@ -1680,7 +1801,10 @@
   },
   "CN:app-1895880": {
     "available": true,
-    "observed": 1795119395
+    "checked": 1795204179,
+    "notice": "",
+    "observed": 1795204121,
+    "source": "https://store.steampowered.com/app/1895880/%E7%91%9E%E5%A5%87%E4%B8%8E%E5%8F%AE%E5%BD%93_%E6%97%B6%E7%A9%BA%E8%B7%B3%E8%BD%AC/?snr=1_7_7_2300_150_39&cc=CN&l=schinese"
   },
   "CN:app-1898300": {
     "available": true,
@@ -1721,6 +1845,10 @@
   "CN:app-1934570": {
     "available": true,
     "observed": 1794160094
+  },
+  "CN:app-1934680": {
+    "available": true,
+    "observed": 1795204157
   },
   "CN:app-1937780": {
     "available": true,
@@ -1773,7 +1901,10 @@
   },
   "CN:app-1971650": {
     "available": true,
-    "observed": 1795119372
+    "checked": 1795204179,
+    "notice": "",
+    "observed": 1795204145,
+    "source": "https://store.steampowered.com/app/1971650/%E6%AD%A7%E8%B7%AF%E6%97%85%E4%BA%BA_II/?snr=1_7_7_2300_150_127&cc=CN&l=schinese"
   },
   "CN:app-1979320": {
     "available": true,
@@ -1805,6 +1936,10 @@
     "observed": 1794160058,
     "source": "https://store.steampowered.com/app/1989270/Slay_the_Princess_The_Pristine_Cut/?snr=1_7_7_2300_150_98&cc=CN&l=schinese"
   },
+  "CN:app-1990600": {
+    "available": true,
+    "observed": 1795204169
+  },
   "CN:app-1996710": {
     "available": true,
     "observed": 1794597929
@@ -1821,7 +1956,7 @@
     "available": true,
     "checked": 1794512597,
     "notice": "",
-    "observed": 1795119395,
+    "observed": 1795204151,
     "source": "https://store.steampowered.com/app/2004210/Euro_Truck_Simulator_2_West_Balkans/?snr=1_7_7_2300_150_42&cc=CN&l=schinese"
   },
   "CN:app-201870": {
@@ -1841,7 +1976,7 @@
   },
   "CN:app-2052410": {
     "available": true,
-    "observed": 1795119383
+    "observed": 1795204127
   },
   "CN:app-2052660": {
     "available": true,
@@ -1862,7 +1997,7 @@
     "available": true,
     "checked": 1794865775,
     "notice": "",
-    "observed": 1795119383,
+    "observed": 1795204145,
     "source": "https://store.steampowered.com/app/2058190/%E5%AE%A1%E5%88%A4%E4%B9%8B%E9%80%9D%E6%B9%AE%E7%81%AD%E7%9A%84%E8%AE%B0%E5%BF%86/?snr=1_7_7_2300_150_85&cc=CN&l=schinese"
   },
   "CN:app-2059190": {
@@ -1950,7 +2085,7 @@
     "available": true,
     "checked": 1794865775,
     "notice": "",
-    "observed": 1795119366,
+    "observed": 1795204139,
     "source": "https://store.steampowered.com/app/2072450/%E4%BA%BA%E4%B8%AD%E4%B9%8B%E9%BE%99%EF%BC%98/?snr=1_7_7_2300_150_44&cc=CN&l=schinese"
   },
   "CN:app-2073220": {
@@ -1959,7 +2094,7 @@
   },
   "CN:app-2075800": {
     "available": true,
-    "observed": 1795119366
+    "observed": 1795204116
   },
   "CN:app-2077770": {
     "available": true,
@@ -2038,7 +2173,7 @@
     "available": true,
     "checked": 1794768013,
     "notice": "",
-    "observed": 1795119383,
+    "observed": 1795204145,
     "source": "https://store.steampowered.com/app/2138710/Sifu/?snr=1_7_7_2300_150_30&cc=CN&l=schinese"
   },
   "CN:app-2138720": {
@@ -2080,7 +2215,7 @@
     "available": true,
     "checked": 1795032854,
     "notice": "",
-    "observed": 1795119366,
+    "observed": 1795204127,
     "source": "https://store.steampowered.com/app/2161700/%E5%A5%B3%E7%A5%9E%E5%BC%82%E9%97%BB%E5%BD%95%EF%BC%93_Reload/?snr=1_7_7_2300_150_23&cc=CN&l=schinese"
   },
   "CN:app-2162020": {
@@ -2108,7 +2243,7 @@
   },
   "CN:app-2172010": {
     "available": true,
-    "observed": 1795119400
+    "observed": 1795204127
   },
   "CN:app-2172460": {
     "available": true,
@@ -2139,7 +2274,7 @@
   },
   "CN:app-2185060": {
     "available": true,
-    "observed": 1795119378
+    "observed": 1795204139
   },
   "CN:app-2187190": {
     "available": true,
@@ -2168,21 +2303,21 @@
     "available": true,
     "checked": 1795032851,
     "notice": "",
-    "observed": 1795119366,
+    "observed": 1795204127,
     "source": "https://store.steampowered.com/app/219990/Grim_Dawn/?snr=1_7_7_2300_150_97&cc=CN&l=schinese"
   },
   "CN:app-220200": {
     "available": true,
     "checked": 1795119420,
     "notice": "",
-    "observed": 1795119412,
+    "observed": 1795204133,
     "source": "https://store.steampowered.com/app/220200/Kerbal_Space_Program/?snr=1_7_7_2300_150_226&cc=CN&l=schinese"
   },
   "CN:app-220240": {
     "available": true,
     "checked": 1795119420,
     "notice": "",
-    "observed": 1795119389,
+    "observed": 1795204157,
     "source": "https://store.steampowered.com/app/220240/Far_Cry_3/?snr=1_7_7_2300_150_130&cc=CN&l=schinese"
   },
   "CN:app-2205850": {
@@ -2206,7 +2341,7 @@
   },
   "CN:app-2215430": {
     "available": true,
-    "observed": 1795119361
+    "observed": 1795204116
   },
   "CN:app-2218190": {
     "available": true,
@@ -2257,7 +2392,7 @@
   },
   "CN:app-2231380": {
     "available": true,
-    "observed": 1795119372
+    "observed": 1795204133
   },
   "CN:app-2237360": {
     "available": true,
@@ -2271,7 +2406,7 @@
     "available": true,
     "checked": 1794512598,
     "notice": "",
-    "observed": 1795119395,
+    "observed": 1795204157,
     "source": "https://store.steampowered.com/app/2239150/Thronefall%E7%8E%8B%E6%9D%83%E9%99%A8%E8%90%BD/?snr=1_7_7_2300_150_19&cc=CN&l=schinese"
   },
   "CN:app-2239670": {
@@ -2285,6 +2420,10 @@
   "CN:app-2246340": {
     "available": true,
     "observed": 1793655182
+  },
+  "CN:app-2254450": {
+    "available": true,
+    "observed": 1795204163
   },
   "CN:app-2254740": {
     "available": true,
@@ -2307,13 +2446,13 @@
   },
   "CN:app-2272360": {
     "available": true,
-    "observed": 1795119361
+    "observed": 1795204116
   },
   "CN:app-227300": {
     "available": true,
     "checked": 1794948031,
     "notice": "",
-    "observed": 1795119361,
+    "observed": 1795204116,
     "source": "https://store.steampowered.com/app/227300/Euro_Truck_Simulator_2/?snr=1_7_7_2300_150_3&cc=CN&l=schinese"
   },
   "CN:app-227310": {
@@ -2325,7 +2464,11 @@
   },
   "CN:app-2273430": {
     "available": true,
-    "observed": 1795119383
+    "observed": 1795204151
+  },
+  "CN:app-2277560": {
+    "available": true,
+    "observed": 1795204145
   },
   "CN:app-2287330": {
     "available": true,
@@ -2339,7 +2482,7 @@
     "available": true,
     "checked": 1795032851,
     "notice": "",
-    "observed": 1795119366,
+    "observed": 1795204121,
     "source": "https://store.steampowered.com/app/2290180/%E6%9E%81%E9%99%90%E5%9B%BD%E5%BA%A6/?snr=1_7_7_2300_150_154&cc=CN&l=schinese"
   },
   "CN:app-2291060": {
@@ -2352,7 +2495,7 @@
   },
   "CN:app-2292800": {
     "available": true,
-    "observed": 1795119366
+    "observed": 1795204127
   },
   "CN:app-2297833": {
     "available": true,
@@ -2396,6 +2539,10 @@
     "available": true,
     "observed": 1793655240
   },
+  "CN:app-2311920": {
+    "available": true,
+    "observed": 1795204157
+  },
   "CN:app-2315050": {
     "available": true,
     "observed": 1793655200
@@ -2428,11 +2575,11 @@
   },
   "CN:app-2321960": {
     "available": true,
-    "observed": 1795119389
+    "observed": 1795204151
   },
   "CN:app-2322010": {
     "available": true,
-    "observed": 1795119366
+    "observed": 1795204116
   },
   "CN:app-2325832": {
     "available": true,
@@ -2457,6 +2604,10 @@
   "CN:app-2343380": {
     "available": true,
     "observed": 1795032850
+  },
+  "CN:app-2346420": {
+    "available": true,
+    "observed": 1795204176
   },
   "CN:app-2350790": {
     "available": true,
@@ -2484,7 +2635,7 @@
   },
   "CN:app-2369390": {
     "available": true,
-    "observed": 1795119372
+    "observed": 1795204133
   },
   "CN:app-2371910": {
     "available": true,
@@ -2515,6 +2666,10 @@
     "notice": "",
     "observed": 1794865766,
     "source": "https://store.steampowered.com/app/238090/Sniper_Elite_3/?snr=1_7_7_2300_150_160&cc=CN&l=schinese"
+  },
+  "CN:app-2381740": {
+    "available": true,
+    "observed": 1795204176
   },
   "CN:app-2384580": {
     "available": true,
@@ -2586,7 +2741,7 @@
   },
   "CN:app-2406770": {
     "available": true,
-    "observed": 1795119361
+    "observed": 1795204116
   },
   "CN:app-2410241": {
     "available": true,
@@ -2600,9 +2755,13 @@
     "available": true,
     "observed": 1795032849
   },
+  "CN:app-2415950": {
+    "available": true,
+    "observed": 1795204176
+  },
   "CN:app-2416450": {
     "available": true,
-    "observed": 1795119383
+    "observed": 1795204121
   },
   "CN:app-2419480": {
     "available": true,
@@ -2610,7 +2769,7 @@
   },
   "CN:app-2420110": {
     "available": true,
-    "observed": 1795119378
+    "observed": 1795204116
   },
   "CN:app-2423290": {
     "available": true,
@@ -2631,6 +2790,10 @@
   "CN:app-2427743": {
     "available": true,
     "observed": 1795032843
+  },
+  "CN:app-2428420": {
+    "available": true,
+    "observed": 1795204176
   },
   "CN:app-2429050": {
     "available": true,
@@ -2656,6 +2819,10 @@
     "available": true,
     "observed": 1795032849
   },
+  "CN:app-2437960": {
+    "available": true,
+    "observed": 1795204176
+  },
   "CN:app-2438800": {
     "available": true,
     "observed": 1794262050
@@ -2664,12 +2831,12 @@
     "available": true,
     "checked": 1795119420,
     "notice": "",
-    "observed": 1795119378,
+    "observed": 1795204121,
     "source": "https://store.steampowered.com/app/244210/%E7%A5%9E%E5%8A%9B%E7%A7%91%E8%8E%8E_Assetto_Corsa/?snr=1_7_7_2300_150_80&cc=CN&l=schinese"
   },
   "CN:app-2444750": {
     "available": true,
-    "observed": 1795119389
+    "observed": 1795204145
   },
   "CN:app-2444782": {
     "available": true,
@@ -2679,16 +2846,40 @@
     "available": true,
     "checked": 1794865777,
     "notice": "",
-    "observed": 1795119406,
+    "observed": 1795204169,
     "source": "https://store.steampowered.com/app/2447590/Call_to_Arms_Gates_of_Hell_Liberation/?snr=1_7_7_2300_150_118&cc=CN&l=schinese"
   },
   "CN:app-244850": {
     "available": true,
-    "observed": 1795119372
+    "observed": 1795204133
+  },
+  "CN:app-2449180": {
+    "available": true,
+    "observed": 1795204176
+  },
+  "CN:app-2449210": {
+    "available": true,
+    "observed": 1795204176
+  },
+  "CN:app-2449220": {
+    "available": true,
+    "observed": 1795204176
+  },
+  "CN:app-2449620": {
+    "available": true,
+    "observed": 1795204176
+  },
+  "CN:app-2450050": {
+    "available": true,
+    "observed": 1795204176
   },
   "CN:app-2450350": {
     "available": true,
     "observed": 1794678561
+  },
+  "CN:app-2450550": {
+    "available": true,
+    "observed": 1795204176
   },
   "CN:app-2450691": {
     "available": true,
@@ -2710,13 +2901,40 @@
     "available": true,
     "observed": 1794425131
   },
+  "CN:app-2450950": {
+    "available": true,
+    "observed": 1795204176
+  },
+  "CN:app-2452330": {
+    "available": true,
+    "observed": 1795204176
+  },
+  "CN:app-2452490": {
+    "available": true,
+    "observed": 1795204176
+  },
+  "CN:app-2452940": {
+    "available": true,
+    "observed": 1795204176
+  },
   "CN:app-2455640": {
     "available": true,
-    "observed": 1795119383
+    "checked": 1795204179,
+    "notice": "",
+    "observed": 1795204157,
+    "source": "https://store.steampowered.com/app/2455640/%E6%B5%AA%E6%BC%AB%E6%B2%99%E5%8A%A02_%E4%B8%83%E8%8B%B1%E9%9B%84%E7%9A%84%E5%A4%8D%E4%BB%87/?snr=1_7_7_2300_150_193&cc=CN&l=schinese"
   },
   "CN:app-2458980": {
     "available": true,
     "observed": 1794948012
+  },
+  "CN:app-2460980": {
+    "available": true,
+    "observed": 1795204176
+  },
+  "CN:app-2461010": {
+    "available": true,
+    "observed": 1795204176
   },
   "CN:app-2472940": {
     "available": true,
@@ -2724,10 +2942,10 @@
   },
   "CN:app-2475460": {
     "available": true,
-    "checked": 1794597931,
+    "checked": 1795204176,
     "notice": "",
-    "observed": 1795119389,
-    "source": "https://store.steampowered.com/app/2475460/SOS_OPS/?snr=1_7_7_2300_150_123&cc=CN&l=schinese"
+    "observed": 1795204145,
+    "source": "https://store.steampowered.com/app/2475460/SOS_OPS/?snr=1_7_7_2300_150_148&cc=CN&l=schinese"
   },
   "CN:app-2475490": {
     "available": true,
@@ -2759,9 +2977,13 @@
     "available": true,
     "observed": 1794425108
   },
+  "CN:app-2483190": {
+    "available": true,
+    "observed": 1795204116
+  },
   "CN:app-2483700": {
     "available": true,
-    "observed": 1795119412
+    "observed": 1795204169
   },
   "CN:app-2484210": {
     "available": true,
@@ -2769,11 +2991,11 @@
   },
   "CN:app-2486820": {
     "available": true,
-    "observed": 1795119372
+    "observed": 1795204127
   },
   "CN:app-2487190": {
     "available": true,
-    "observed": 1795119378
+    "observed": 1795204133
   },
   "CN:app-2490890": {
     "available": true,
@@ -2785,7 +3007,7 @@
   },
   "CN:app-2492040": {
     "available": true,
-    "observed": 1795119378
+    "observed": 1795204139
   },
   "CN:app-2497610": {
     "available": true,
@@ -2797,7 +3019,7 @@
   },
   "CN:app-2499860": {
     "available": true,
-    "observed": 1795119383
+    "observed": 1795204163
   },
   "CN:app-2500080": {
     "available": true,
@@ -2815,12 +3037,12 @@
     "available": true,
     "checked": 1794865778,
     "notice": "",
-    "observed": 1795119383,
+    "observed": 1795204139,
     "source": "https://store.steampowered.com/app/2513280/%E7%B4%A2%E5%B0%BC%E5%85%8B%E5%A4%8F%E7%89%B9_%E4%B8%96%E4%BB%A3%E9%87%8D%E5%90%AF/?snr=1_7_7_2300_150_98&cc=CN&l=schinese"
   },
   "CN:app-2515020": {
     "available": true,
-    "observed": 1795119361
+    "observed": 1795204127
   },
   "CN:app-251570": {
     "available": true,
@@ -2865,7 +3087,11 @@
   },
   "CN:app-2531310": {
     "available": true,
-    "observed": 1795119366
+    "observed": 1795204116
+  },
+  "CN:app-2537590": {
+    "available": true,
+    "observed": 1795204121
   },
   "CN:app-2542120": {
     "available": true,
@@ -2891,7 +3117,7 @@
   },
   "CN:app-2561580": {
     "available": true,
-    "observed": 1795119389
+    "observed": 1795204121
   },
   "CN:app-2562350": {
     "available": true,
@@ -2899,7 +3125,7 @@
   },
   "CN:app-2569760": {
     "available": true,
-    "observed": 1795119412
+    "observed": 1795204169
   },
   "CN:app-2578420": {
     "available": true,
@@ -2928,7 +3154,7 @@
     "available": true,
     "checked": 1794678582,
     "notice": "",
-    "observed": 1795119395,
+    "observed": 1795204157,
     "source": "https://store.steampowered.com/app/2604420/Euro_Truck_Simulator_2_Greece/?snr=1_7_7_2300_150_54&cc=CN&l=schinese"
   },
   "CN:app-2605500": {
@@ -2937,7 +3163,7 @@
   },
   "CN:app-2605790": {
     "available": true,
-    "observed": 1795119366
+    "observed": 1795204127
   },
   "CN:app-2608210": {
     "available": true,
@@ -2963,11 +3189,15 @@
   },
   "CN:app-2624870": {
     "available": true,
-    "observed": 1795119372
+    "observed": 1795204145
+  },
+  "CN:app-2627260": {
+    "available": true,
+    "observed": 1795204169
   },
   "CN:app-2638080": {
     "available": true,
-    "observed": 1795119378
+    "observed": 1795204139
   },
   "CN:app-2638160": {
     "available": true,
@@ -3002,7 +3232,7 @@
   },
   "CN:app-2651280": {
     "available": true,
-    "observed": 1795119366
+    "observed": 1795204116
   },
   "CN:app-2651960": {
     "available": true,
@@ -3012,7 +3242,7 @@
     "available": true,
     "checked": 1794512598,
     "notice": "",
-    "observed": 1795119406,
+    "observed": 1795204169,
     "source": "https://store.steampowered.com/app/2656010/Dead_by_Daylight_Chucky_Chapter/?snr=1_7_7_2300_150_85&cc=CN&l=schinese"
   },
   "CN:app-2656450": {
@@ -3066,6 +3296,10 @@
     "available": true,
     "observed": 1794339020
   },
+  "CN:app-2661300": {
+    "available": true,
+    "observed": 1795204139
+  },
   "CN:app-2662110": {
     "available": true,
     "observed": 1795032849
@@ -3101,8 +3335,12 @@
     "available": true,
     "checked": 1794512599,
     "notice": "",
-    "observed": 1795119383,
+    "observed": 1795204145,
     "source": "https://store.steampowered.com/app/2670630/Supermarket_Simulator/?snr=1_7_7_2300_150_79&cc=CN&l=schinese"
+  },
+  "CN:app-2671070": {
+    "available": true,
+    "observed": 1795204145
   },
   "CN:app-2671240": {
     "available": true,
@@ -3134,11 +3372,11 @@
   },
   "CN:app-2698940": {
     "available": true,
-    "observed": 1795119378
+    "observed": 1795204139
   },
   "CN:app-2699230": {
     "available": true,
-    "observed": 1795119383
+    "observed": 1795204151
   },
   "CN:app-2700340": {
     "available": true,
@@ -3160,7 +3398,7 @@
     "available": true,
     "checked": 1794948032,
     "notice": "",
-    "observed": 1795119361,
+    "observed": 1795204121,
     "source": "https://store.steampowered.com/app/270880/American_Truck_Simulator/?snr=1_7_7_2300_150_19&cc=CN&l=schinese"
   },
   "CN:app-2713000": {
@@ -3248,17 +3486,17 @@
   },
   "CN:app-2780810": {
     "available": true,
-    "observed": 1795119383
+    "observed": 1795204139
   },
   "CN:app-2781660": {
     "available": true,
-    "observed": 1795119378
+    "observed": 1795204133
   },
   "CN:app-2784470": {
     "available": true,
     "checked": 1794512599,
     "notice": "",
-    "observed": 1795119372,
+    "observed": 1795204133,
     "source": "https://store.steampowered.com/app/2784470/%E4%B9%9D%E7%8E%8B_9_Kings/?snr=1_7_7_2300_150_80&cc=CN&l=schinese"
   },
   "CN:app-2794590": {
@@ -3272,6 +3510,10 @@
   "CN:app-2804930": {
     "available": true,
     "observed": 1795119418
+  },
+  "CN:app-2806050": {
+    "available": true,
+    "observed": 1795204163
   },
   "CN:app-2806540": {
     "available": true,
@@ -3288,6 +3530,10 @@
   "CN:app-2815070": {
     "available": true,
     "observed": 1794073116
+  },
+  "CN:app-2815290": {
+    "available": true,
+    "observed": 1795204169
   },
   "CN:app-2817390": {
     "available": true,
@@ -3334,7 +3580,7 @@
   },
   "CN:app-2840770": {
     "available": true,
-    "observed": 1795119361
+    "observed": 1795204121
   },
   "CN:app-2841650": {
     "available": true,
@@ -3342,7 +3588,7 @@
   },
   "CN:app-2842040": {
     "available": true,
-    "observed": 1795119361
+    "observed": 1795204121
   },
   "CN:app-2845440": {
     "available": true,
@@ -3354,7 +3600,7 @@
   },
   "CN:app-2849080": {
     "available": true,
-    "observed": 1795119400
+    "observed": 1795204163
   },
   "CN:app-2850110": {
     "available": true,
@@ -3389,7 +3635,7 @@
   },
   "CN:app-2868840": {
     "available": true,
-    "observed": 1795119361
+    "observed": 1795204116
   },
   "CN:app-287290": {
     "available": true,
@@ -3434,7 +3680,7 @@
     "available": true,
     "checked": 1795119419,
     "notice": "",
-    "observed": 1795119400,
+    "observed": 1795204127,
     "source": "https://store.steampowered.com/app/289070/Sid_Meiers_Civilization_VI/?snr=1_7_7_2300_150_186&cc=CN&l=schinese"
   },
   "CN:app-2891710": {
@@ -3443,7 +3689,7 @@
   },
   "CN:app-2893570": {
     "available": true,
-    "observed": 1795119378
+    "observed": 1795204151
   },
   "CN:app-2897670": {
     "available": true,
@@ -3476,7 +3722,7 @@
   },
   "CN:app-2909400": {
     "available": true,
-    "observed": 1795119361
+    "observed": 1795204116
   },
   "CN:app-2914280": {
     "available": true,
@@ -3498,12 +3744,12 @@
     "available": true,
     "checked": 1794948032,
     "notice": "",
-    "observed": 1795119372,
+    "observed": 1795204139,
     "source": "https://store.steampowered.com/app/292730/Call_of_Duty_Infinite_Warfare/?snr=1_7_7_2300_150_175&cc=CN&l=schinese"
   },
   "CN:app-2928600": {
     "available": true,
-    "observed": 1795119406
+    "observed": 1795204169
   },
   "CN:app-2928690": {
     "available": true,
@@ -3583,7 +3829,7 @@
     "available": true,
     "checked": 1794948031,
     "notice": "",
-    "observed": 1795119389,
+    "observed": 1795204151,
     "source": "https://store.steampowered.com/app/298110/Far_Cry_4/?snr=1_7_7_2300_150_106&cc=CN&l=schinese"
   },
   "CN:app-2983480": {
@@ -3592,7 +3838,7 @@
   },
   "CN:app-2988580": {
     "available": true,
-    "observed": 1795119378
+    "observed": 1795204139
   },
   "CN:app-2991310": {
     "available": true,
@@ -3636,13 +3882,21 @@
     "observed": 1794262032,
     "source": "https://store.steampowered.com/app/3008740/%E6%9E%97%E9%97%B4%E6%9A%96%E5%B7%A2_Winter_Burrow/?snr=1_7_7_2300_150_208&cc=CN&l=schinese"
   },
+  "CN:app-3010850": {
+    "available": true,
+    "observed": 1795204127
+  },
   "CN:app-3012580": {
     "available": true,
     "observed": 1794865759
   },
+  "CN:app-3014080": {
+    "available": true,
+    "observed": 1795204169
+  },
   "CN:app-3014320": {
     "available": true,
-    "observed": 1795119372
+    "observed": 1795204139
   },
   "CN:app-3021100": {
     "available": true,
@@ -3685,7 +3939,7 @@
     "available": true,
     "checked": 1794339027,
     "notice": "",
-    "observed": 1795119400,
+    "observed": 1795204157,
     "source": "https://store.steampowered.com/app/304212/Euro_Truck_Simulator_2_Scandinavia/?snr=1_7_7_2300_150_80&cc=CN&l=schinese"
   },
   "CN:app-304214": {
@@ -3705,7 +3959,7 @@
   },
   "CN:app-304390": {
     "available": true,
-    "observed": 1795119383
+    "observed": 1795204145
   },
   "CN:app-3047790": {
     "available": true,
@@ -3725,7 +3979,7 @@
   },
   "CN:app-3059520": {
     "available": true,
-    "observed": 1795119372
+    "observed": 1795204116
   },
   "CN:app-3061260": {
     "available": true,
@@ -3735,7 +3989,7 @@
     "available": true,
     "checked": 1794865778,
     "notice": "",
-    "observed": 1795119395,
+    "observed": 1795204163,
     "source": "https://store.steampowered.com/app/3061810/%E4%BA%BA%E4%B8%AD%E4%B9%8B%E9%BE%99%EF%BC%98%E5%A4%96%E4%BC%A0_Pirates_in_Hawaii/?snr=1_7_7_2300_150_119&cc=CN&l=schinese"
   },
   "CN:app-3064440": {
@@ -3744,7 +3998,7 @@
   },
   "CN:app-3065800": {
     "available": true,
-    "observed": 1795119383
+    "observed": 1795204145
   },
   "CN:app-306890": {
     "available": true,
@@ -3769,13 +4023,21 @@
     "available": true,
     "observed": 1794948029
   },
+  "CN:app-3097300": {
+    "available": true,
+    "observed": 1795204151
+  },
   "CN:app-3111880": {
     "available": true,
     "observed": 1794262044
   },
   "CN:app-311210": {
     "available": true,
-    "observed": 1795119361
+    "observed": 1795204121
+  },
+  "CN:app-3115160": {
+    "available": true,
+    "observed": 1795204157
   },
   "CN:app-3115220": {
     "available": true,
@@ -3800,6 +4062,10 @@
   "CN:app-3123410": {
     "available": true,
     "observed": 1795032843
+  },
+  "CN:app-3124340": {
+    "available": true,
+    "observed": 1795204145
   },
   "CN:app-3124540": {
     "available": true,
@@ -3868,6 +4134,10 @@
     "available": true,
     "observed": 1794597929
   },
+  "CN:app-3172660": {
+    "available": true,
+    "observed": 1795204157
+  },
   "CN:app-3177710": {
     "available": true,
     "observed": 1794678561
@@ -3893,11 +4163,11 @@
   },
   "CN:app-3186490": {
     "available": true,
-    "observed": 1795119389
+    "observed": 1795204151
   },
   "CN:app-3186540": {
     "available": true,
-    "observed": 1795119378
+    "observed": 1795204139
   },
   "CN:app-3189340": {
     "available": true,
@@ -3906,6 +4176,10 @@
   "CN:app-3194870": {
     "available": true,
     "observed": 1793820868
+  },
+  "CN:app-3199780": {
+    "available": true,
+    "observed": 1795204157
   },
   "CN:app-3201030": {
     "available": true,
@@ -4011,7 +4285,7 @@
   },
   "CN:app-3280350": {
     "available": true,
-    "observed": 1795119366
+    "observed": 1795204116
   },
   "CN:app-3282300": {
     "available": true,
@@ -4040,9 +4314,13 @@
     "available": true,
     "observed": 1794865773
   },
+  "CN:app-3314060": {
+    "available": true,
+    "observed": 1795204169
+  },
   "CN:app-3314070": {
     "available": true,
-    "observed": 1795119412
+    "observed": 1795204139
   },
   "CN:app-3314790": {
     "available": true,
@@ -4051,9 +4329,13 @@
     "observed": 1795032831,
     "source": "https://store.steampowered.com/app/3314790/%E5%9B%9B%E5%8F%B6%E8%8D%89%E6%B7%B1%E6%B8%8A_CLOVERPIT/?snr=1_7_7_2300_150_97&cc=CN&l=schinese"
   },
+  "CN:app-3315530": {
+    "available": true,
+    "observed": 1795204145
+  },
   "CN:app-3321460": {
     "available": true,
-    "observed": 1795119361
+    "observed": 1795204116
   },
   "CN:app-3322630": {
     "available": true,
@@ -4143,6 +4425,10 @@
   "CN:app-3375990": {
     "available": true,
     "observed": 1794262038
+  },
+  "CN:app-3378960": {
+    "available": true,
+    "observed": 1795204139
   },
   "CN:app-3393090": {
     "available": true,
@@ -4278,7 +4564,7 @@
   },
   "CN:app-3483510": {
     "available": true,
-    "observed": 1795119383
+    "observed": 1795204151
   },
   "CN:app-3486960": {
     "available": true,
@@ -4286,7 +4572,7 @@
   },
   "CN:app-3489700": {
     "available": true,
-    "observed": 1795119372
+    "observed": 1795204116
   },
   "CN:app-3494880": {
     "available": true,
@@ -4371,6 +4657,10 @@
     "available": true,
     "observed": 1794339008
   },
+  "CN:app-3548690": {
+    "available": true,
+    "observed": 1795204169
+  },
   "CN:app-3556530": {
     "available": true,
     "observed": 1793907848
@@ -4435,12 +4725,12 @@
     "available": true,
     "checked": 1794865776,
     "notice": "",
-    "observed": 1795119395,
+    "observed": 1795204163,
     "source": "https://store.steampowered.com/app/362890/Black_Mesa/?snr=1_7_7_2300_150_62&cc=CN&l=schinese"
   },
   "CN:app-3629430": {
     "available": true,
-    "observed": 1795119372
+    "observed": 1795204133
   },
   "CN:app-3636770": {
     "available": true,
@@ -4452,11 +4742,15 @@
   },
   "CN:app-364360": {
     "available": true,
-    "observed": 1795119383
+    "observed": 1795204145
   },
   "CN:app-3645890": {
     "available": true,
     "observed": 1793655211
+  },
+  "CN:app-3654560": {
+    "available": true,
+    "observed": 1795204145
   },
   "CN:app-3656800": {
     "available": true,
@@ -4482,7 +4776,7 @@
     "available": true,
     "checked": 1794678580,
     "notice": "",
-    "observed": 1795119383,
+    "observed": 1795204139,
     "source": "https://store.steampowered.com/app/3681010/%E4%BB%81%E7%8E%8B%EF%BC%93/?snr=1_7_7_2300_150_104&cc=CN&l=schinese"
   },
   "CN:app-368260": {
@@ -4520,7 +4814,7 @@
   },
   "CN:app-3690030": {
     "available": true,
-    "observed": 1795119378
+    "observed": 1795204157
   },
   "CN:app-3690980": {
     "available": true,
@@ -4528,7 +4822,7 @@
   },
   "CN:app-3691330": {
     "available": true,
-    "observed": 1795119383
+    "observed": 1795204145
   },
   "CN:app-3699590": {
     "available": true,
@@ -4568,7 +4862,7 @@
   },
   "CN:app-3724300": {
     "available": true,
-    "observed": 1795119378
+    "observed": 1795204163
   },
   "CN:app-3726080": {
     "available": true,
@@ -4588,7 +4882,7 @@
   },
   "CN:app-3739580": {
     "available": true,
-    "observed": 1795119378
+    "observed": 1795204151
   },
   "CN:app-3745310": {
     "available": true,
@@ -4621,7 +4915,7 @@
   },
   "CN:app-3755860": {
     "available": true,
-    "observed": 1795119406
+    "observed": 1795204169
   },
   "CN:app-3756930": {
     "available": true,
@@ -4664,7 +4958,7 @@
   },
   "CN:app-3787240": {
     "available": true,
-    "observed": 1795119400
+    "observed": 1795204133
   },
   "CN:app-3787500": {
     "available": true,
@@ -4674,7 +4968,7 @@
     "available": true,
     "checked": 1794865774,
     "notice": "",
-    "observed": 1795119372,
+    "observed": 1795204133,
     "source": "https://store.steampowered.com/app/379430/Kingdom_Come_Deliverance/?snr=1_7_7_2300_150_56&cc=CN&l=schinese"
   },
   "CN:app-3796570": {
@@ -4747,7 +5041,7 @@
   },
   "CN:app-3810510": {
     "available": true,
-    "observed": 1795119400
+    "observed": 1795204163
   },
   "CN:app-381210": {
     "available": true,
@@ -4759,7 +5053,7 @@
   },
   "CN:app-3816120": {
     "available": true,
-    "observed": 1795119406
+    "observed": 1795204169
   },
   "CN:app-3817530": {
     "available": true,
@@ -4819,11 +5113,11 @@
   },
   "CN:app-3855540": {
     "available": true,
-    "observed": 1795119406
+    "observed": 1795204169
   },
   "CN:app-386940": {
     "available": true,
-    "observed": 1795119412
+    "observed": 1795204163
   },
   "CN:app-386970": {
     "available": true,
@@ -4924,7 +5218,7 @@
   },
   "CN:app-3917090": {
     "available": true,
-    "observed": 1795119378
+    "observed": 1795204139
   },
   "CN:app-392160": {
     "available": true,
@@ -4943,11 +5237,11 @@
   },
   "CN:app-393080": {
     "available": true,
-    "observed": 1795119378
+    "observed": 1795204145
   },
   "CN:app-3934270": {
     "available": true,
-    "observed": 1795119389
+    "observed": 1795204157
   },
   "CN:app-3935560": {
     "available": true,
@@ -4959,11 +5253,18 @@
   },
   "CN:app-3937550": {
     "available": true,
-    "observed": 1795119395
+    "observed": 1795204157
   },
   "CN:app-3943730": {
     "available": true,
     "observed": 1794768011
+  },
+  "CN:app-394510": {
+    "available": true,
+    "checked": 1795204177,
+    "notice": "",
+    "observed": 1795204139,
+    "source": "https://store.steampowered.com/app/394510/HELLDIVERS_Dive_Harder_Edition/?snr=1_7_7_2300_150_123&cc=CN&l=schinese"
   },
   "CN:app-3946950": {
     "available": true,
@@ -5006,10 +5307,10 @@
   },
   "CN:app-397540": {
     "available": true,
-    "checked": 1794262058,
+    "checked": 1795204177,
     "notice": "",
-    "observed": 1794767956,
-    "source": "https://store.steampowered.com/app/397540/%E6%97%A0%E4%B8%BB%E4%B9%8B%E5%9C%B03/?snr=1_7_7_2300_150_35&cc=CN&l=schinese"
+    "observed": 1795204163,
+    "source": "https://store.steampowered.com/app/397540/%E6%97%A0%E4%B8%BB%E4%B9%8B%E5%9C%B03/?snr=1_7_7_2300_150_219&cc=CN&l=schinese"
   },
   "CN:app-3976890": {
     "available": true,
@@ -5046,7 +5347,7 @@
     "available": true,
     "checked": 1794865775,
     "notice": "",
-    "observed": 1795119366,
+    "observed": 1795204127,
     "source": "https://store.steampowered.com/app/400750/Call_to_Arms_Gates_of_Hell_Ostfront/?snr=1_7_7_2300_150_25&cc=CN&l=schinese"
   },
   "CN:app-4008660": {
@@ -5067,7 +5368,7 @@
   },
   "CN:app-4018330": {
     "available": true,
-    "observed": 1795119366
+    "observed": 1795204133
   },
   "CN:app-4038930": {
     "available": true,
@@ -5075,11 +5376,11 @@
   },
   "CN:app-4045480": {
     "available": true,
-    "observed": 1795119395
+    "observed": 1795204157
   },
   "CN:app-4066520": {
     "available": true,
-    "observed": 1795119378
+    "observed": 1795204145
   },
   "CN:app-40700": {
     "available": true,
@@ -5092,9 +5393,13 @@
     "available": true,
     "observed": 1794767997
   },
+  "CN:app-4072240": {
+    "available": true,
+    "observed": 1795204163
+  },
   "CN:app-4080220": {
     "available": true,
-    "observed": 1795119361
+    "observed": 1795204116
   },
   "CN:app-4082900": {
     "available": true,
@@ -5147,11 +5452,15 @@
     "observed": 1794768003,
     "source": "https://store.steampowered.com/app/410900/Forts/?snr=1_7_7_2300_150_250&cc=CN&l=schinese"
   },
+  "CN:app-4113940": {
+    "available": true,
+    "observed": 1795204145
+  },
   "CN:app-412020": {
     "available": true,
     "checked": 1795119419,
     "notice": "",
-    "observed": 1795119389,
+    "observed": 1795204127,
     "source": "https://store.steampowered.com/app/412020/%E5%9C%B0%E9%93%81%E7%A6%BB%E4%B9%A1/?snr=1_7_7_2300_150_148&cc=CN&l=schinese"
   },
   "CN:app-412830": {
@@ -5185,6 +5494,10 @@
     "available": true,
     "observed": 1793594839
   },
+  "CN:app-4148930": {
+    "available": true,
+    "observed": 1795204163
+  },
   "CN:app-4157990": {
     "available": true,
     "observed": 1794948012
@@ -5206,7 +5519,7 @@
   },
   "CN:app-4171850": {
     "available": true,
-    "observed": 1795119372
+    "observed": 1795204133
   },
   "CN:app-4176000": {
     "available": true,
@@ -5247,7 +5560,7 @@
     "available": true,
     "checked": 1794597933,
     "notice": "",
-    "observed": 1795119395,
+    "observed": 1795204163,
     "source": "https://store.steampowered.com/app/4209920/%E4%B8%8D%E9%97%AE%E5%87%A1%E5%B0%98/?snr=1_7_7_2300_150_168&cc=CN&l=schinese"
   },
   "CN:app-4210580": {
@@ -5335,7 +5648,7 @@
   },
   "CN:app-4259190": {
     "available": true,
-    "observed": 1795119389
+    "observed": 1795204151
   },
   "CN:app-4265280": {
     "available": true,
@@ -5426,6 +5739,10 @@
     "available": true,
     "observed": 1793991996
   },
+  "CN:app-4339280": {
+    "available": true,
+    "observed": 1795204169
+  },
   "CN:app-4339680": {
     "available": true,
     "observed": 1793820862
@@ -5503,7 +5820,7 @@
   },
   "CN:app-4384550": {
     "available": true,
-    "observed": 1795119372
+    "observed": 1795204133
   },
   "CN:app-4390080": {
     "available": true,
@@ -5563,7 +5880,7 @@
   },
   "CN:app-4444800": {
     "available": true,
-    "observed": 1795119389
+    "observed": 1795204151
   },
   "CN:app-4447640": {
     "available": true,
@@ -5583,7 +5900,7 @@
   },
   "CN:app-4459590": {
     "available": true,
-    "observed": 1795119361
+    "observed": 1795204121
   },
   "CN:app-4463520": {
     "available": true,
@@ -5601,7 +5918,7 @@
     "available": true,
     "checked": 1795032851,
     "notice": "注意: Purchases made in this region will only receive the Russian and Simplified Chinese languages.",
-    "observed": 1795119372,
+    "observed": 1795204133,
     "source": "https://store.steampowered.com/app/447040/WatchDogs_2/?snr=1_7_7_2300_150_170&cc=CN&l=schinese"
   },
   "CN:app-4476270": {
@@ -5618,7 +5935,7 @@
   },
   "CN:app-4493130": {
     "available": true,
-    "observed": 1795119389
+    "observed": 1795204139
   },
   "CN:app-4494930": {
     "available": true,
@@ -5670,7 +5987,7 @@
   },
   "CN:app-4521650": {
     "available": true,
-    "observed": 1795119389
+    "observed": 1795204151
   },
   "CN:app-4521700": {
     "available": true,
@@ -5786,7 +6103,7 @@
     "available": true,
     "checked": 1795119420,
     "notice": "",
-    "observed": 1795119372,
+    "observed": 1795204121,
     "source": "https://store.steampowered.com/app/457140/%E7%BC%BA%E6%B0%A7/?snr=1_7_7_2300_150_75&cc=CN&l=schinese"
   },
   "CN:app-4572120": {
@@ -5799,7 +6116,7 @@
   },
   "CN:app-4576490": {
     "available": true,
-    "observed": 1795119366
+    "observed": 1795204121
   },
   "CN:app-458750": {
     "available": true,
@@ -5848,7 +6165,7 @@
     "available": true,
     "checked": 1794948031,
     "notice": "Purchases made in this region will only receive the Russian, simplified Chinese and English (Audio only) languages.",
-    "observed": 1795119383,
+    "observed": 1795204145,
     "source": "https://store.steampowered.com/app/460930/%E5%B9%BD%E7%81%B5%E8%A1%8C%E5%8A%A8%E8%8D%92%E9%87%8E/?snr=1_7_7_2300_150_74&cc=CN&l=schinese"
   },
   "CN:app-4611240": {
@@ -5873,7 +6190,7 @@
   },
   "CN:app-4618570": {
     "available": true,
-    "observed": 1795119361
+    "observed": 1795204121
   },
   "CN:app-4621810": {
     "available": true,
@@ -5925,7 +6242,7 @@
   },
   "CN:app-4661070": {
     "available": true,
-    "observed": 1795119406
+    "observed": 1795204169
   },
   "CN:app-4662090": {
     "available": true,
@@ -5958,6 +6275,10 @@
   "CN:app-469600": {
     "available": true,
     "observed": 1794767962
+  },
+  "CN:app-4697880": {
+    "available": true,
+    "observed": 1795204133
   },
   "CN:app-4707700": {
     "available": true,
@@ -6030,7 +6351,7 @@
   },
   "CN:app-476600": {
     "available": true,
-    "observed": 1795119366
+    "observed": 1795204121
   },
   "CN:app-4767130": {
     "available": true,
@@ -6125,7 +6446,7 @@
   },
   "CN:app-4815320": {
     "available": true,
-    "observed": 1795119400
+    "observed": 1795204157
   },
   "CN:app-4817910": {
     "available": true,
@@ -6325,7 +6646,7 @@
   },
   "CN:app-4928450": {
     "available": true,
-    "observed": 1795119366
+    "observed": 1795204151
   },
   "CN:app-493340": {
     "available": true,
@@ -6399,7 +6720,7 @@
   },
   "CN:app-499170": {
     "available": true,
-    "observed": 1795119372
+    "observed": 1795204133
   },
   "CN:app-4992070": {
     "available": true,
@@ -6461,7 +6782,7 @@
   },
   "CN:app-5035380": {
     "available": true,
-    "observed": 1795119389
+    "observed": 1795204157
   },
   "CN:app-5052860": {
     "available": true,
@@ -6481,11 +6802,11 @@
   },
   "CN:app-5064340": {
     "available": true,
-    "observed": 1795119395
+    "observed": 1795204157
   },
   "CN:app-5066010": {
     "available": true,
-    "observed": 1795119366
+    "observed": 1795204127
   },
   "CN:app-5072430": {
     "available": true,
@@ -6606,7 +6927,7 @@
     "available": true,
     "checked": 1794512599,
     "notice": "",
-    "observed": 1795119361,
+    "observed": 1795204121,
     "source": "https://store.steampowered.com/app/5175310/%E6%88%91%E5%B8%A6%E8%BF%87%E7%9A%84%E6%9C%80%E5%B7%AE%E4%B8%80%E5%B1%8A/?snr=1_7_7_2300_150_10&cc=CN&l=schinese"
   },
   "CN:app-5181040": {
@@ -6627,7 +6948,7 @@
   },
   "CN:app-5185750": {
     "available": true,
-    "observed": 1795119395
+    "observed": 1795204157
   },
   "CN:app-5185890": {
     "available": true,
@@ -6647,11 +6968,11 @@
   },
   "CN:app-5196330": {
     "available": true,
-    "observed": 1795119400
+    "observed": 1795204145
   },
   "CN:app-5200620": {
     "available": true,
-    "observed": 1795119372
+    "observed": 1795204127
   },
   "CN:app-5203450": {
     "available": true,
@@ -6716,7 +7037,7 @@
     "available": true,
     "checked": 1795032854,
     "notice": "",
-    "observed": 1795119361,
+    "observed": 1795204127,
     "source": "https://store.steampowered.com/app/524220/NieRAutomata/?snr=1_7_7_2300_150_130&cc=CN&l=schinese"
   },
   "CN:app-524390": {
@@ -6774,7 +7095,7 @@
     "available": true,
     "checked": 1794425140,
     "notice": "",
-    "observed": 1795119406,
+    "observed": 1795204169,
     "source": "https://store.steampowered.com/app/531130/Euro_Truck_Simulator_2_Vive_la_France/?snr=1_7_7_2300_150_72&cc=CN&l=schinese"
   },
   "CN:app-531131": {
@@ -6869,7 +7190,7 @@
   },
   "CN:app-5378110": {
     "available": true,
-    "observed": 1795119366
+    "observed": 1795204133
   },
   "CN:app-538500": {
     "available": true,
@@ -6992,7 +7313,7 @@
   },
   "CN:app-552520": {
     "available": true,
-    "observed": 1795119366
+    "observed": 1795204127
   },
   "CN:app-553420": {
     "available": true,
@@ -7010,13 +7331,13 @@
   },
   "CN:app-553850": {
     "available": true,
-    "observed": 1795119361
+    "observed": 1795204116
   },
   "CN:app-558244": {
     "available": true,
     "checked": 1794425140,
     "notice": "",
-    "observed": 1795119412,
+    "observed": 1795204169,
     "source": "https://store.steampowered.com/app/558244/Euro_Truck_Simulator_2_Italia/?snr=1_7_7_2300_150_74&cc=CN&l=schinese"
   },
   "CN:app-558245": {
@@ -7045,7 +7366,7 @@
     "available": true,
     "checked": 1794948031,
     "notice": "",
-    "observed": 1795119395,
+    "observed": 1795204157,
     "source": "https://store.steampowered.com/app/567640/%E6%96%B0%E6%9E%AA%E5%BC%B9%E8%BE%A9%E9%A9%B3V3_%E5%A4%A7%E5%AE%B6%E8%87%AA%E7%9B%B8%E6%AE%8B%E6%9D%80%E7%9A%84%E6%96%B0%E5%AD%A6%E6%9C%9F/?snr=1_7_7_2300_150_141&cc=CN&l=schinese"
   },
   "CN:app-568220": {
@@ -7142,18 +7463,18 @@
     "available": true,
     "checked": 1794865776,
     "notice": "",
-    "observed": 1795119378,
+    "observed": 1795204133,
     "source": "https://store.steampowered.com/app/594570/%E5%85%A8%E9%9D%A2%E6%88%98%E4%BA%89%E6%88%98%E9%94%A42/?snr=1_7_7_2300_150_57&cc=CN&l=schinese"
   },
   "CN:app-594650": {
     "available": true,
-    "observed": 1793594831
+    "observed": 1795204139
   },
   "CN:app-595520": {
     "available": true,
     "checked": 1795119421,
     "notice": "",
-    "observed": 1795119383,
+    "observed": 1795204157,
     "source": "https://store.steampowered.com/app/595520/FINAL_FANTASY_XII_THE_ZODIAC_AGE/?snr=1_7_7_2300_150_124&cc=CN&l=schinese"
   },
   "CN:app-597170": {
@@ -7268,7 +7589,7 @@
     "available": true,
     "checked": 1795119421,
     "notice": "",
-    "observed": 1795119372,
+    "observed": 1795204139,
     "source": "https://store.steampowered.com/app/637650/FINAL_FANTASY_XV_WINDOWS_EDITION/?snr=1_7_7_2300_150_65&cc=CN&l=schinese"
   },
   "CN:app-640820": {
@@ -7292,7 +7613,7 @@
   },
   "CN:app-669330": {
     "available": true,
-    "observed": 1795032813
+    "observed": 1795204169
   },
   "CN:app-675260": {
     "available": true,
@@ -7457,7 +7778,7 @@
     "available": true,
     "checked": 1794865778,
     "notice": "",
-    "observed": 1795119389,
+    "observed": 1795204151,
     "source": "https://store.steampowered.com/app/779340/%E5%85%A8%E9%9D%A2%E6%88%98%E4%BA%89%E4%B8%89%E5%9B%BD/?snr=1_7_7_2300_150_121&cc=CN&l=schinese"
   },
   "CN:app-780310": {
@@ -7482,7 +7803,7 @@
     "available": true,
     "checked": 1795119419,
     "notice": "",
-    "observed": 1795119383,
+    "observed": 1795204121,
     "source": "https://store.steampowered.com/app/805550/%E7%A5%9E%E5%8A%9B%E7%A7%91%E8%8E%8E%E7%AB%9E%E9%80%9F_Assetto_Corsa_Competizione/?snr=1_7_7_2300_150_122&cc=CN&l=schinese"
   },
   "CN:app-811890": {
@@ -7499,6 +7820,10 @@
   "CN:app-813230": {
     "available": true,
     "observed": 1794512588
+  },
+  "CN:app-813780": {
+    "available": true,
+    "observed": 1795204127
   },
   "CN:app-815370": {
     "available": true,
@@ -7556,7 +7881,7 @@
     "available": true,
     "checked": 1794865778,
     "notice": "",
-    "observed": 1795119361,
+    "observed": 1795204121,
     "source": "https://store.steampowered.com/app/850190/%E5%B1%B1%E7%BE%8A%E6%A8%A1%E6%8B%9F%E5%99%A83/?snr=1_7_7_2300_150_48&cc=CN&l=schinese"
   },
   "CN:app-851850": {
@@ -7597,6 +7922,10 @@
   "CN:app-886920": {
     "available": true,
     "observed": 1794597929
+  },
+  "CN:app-887570": {
+    "available": true,
+    "observed": 1795204169
   },
   "CN:app-891730": {
     "available": true,
@@ -7650,26 +7979,26 @@
     "available": true,
     "checked": 1795032852,
     "notice": "",
-    "observed": 1795119366,
+    "observed": 1795204133,
     "source": "https://store.steampowered.com/app/916440/%E7%BA%AA%E5%85%831800/?snr=1_7_7_2300_150_107&cc=CN&l=schinese"
   },
   "CN:app-921570": {
     "available": true,
     "checked": 1795119421,
     "notice": "",
-    "observed": 1795119378,
+    "observed": 1795204145,
     "source": "https://store.steampowered.com/app/921570/%E6%AD%A7%E8%B7%AF%E6%97%85%E4%BA%BA/?snr=1_7_7_2300_150_79&cc=CN&l=schinese"
   },
   "CN:app-925580": {
     "available": true,
     "checked": 1794425141,
     "notice": "",
-    "observed": 1795119406,
+    "observed": 1795204169,
     "source": "https://store.steampowered.com/app/925580/Euro_Truck_Simulator_2_Beyond_the_Baltic_Sea/?snr=1_7_7_2300_150_68&cc=CN&l=schinese"
   },
   "CN:app-934700": {
     "available": true,
-    "observed": 1793594839
+    "observed": 1795204139
   },
   "CN:app-936790": {
     "available": true,
@@ -7702,6 +8031,13 @@
     "observed": 1794160052,
     "source": "https://store.steampowered.com/app/960170/DJMAX_RESPECT_V/?snr=1_7_7_2300_150_39&cc=CN&l=schinese"
   },
+  "CN:app-962130": {
+    "available": true,
+    "checked": 1795204178,
+    "notice": "",
+    "observed": 1795204151,
+    "source": "https://store.steampowered.com/app/962130/Grounded/?snr=1_7_7_2300_150_162&cc=CN&l=schinese"
+  },
   "CN:app-965680": {
     "available": true,
     "observed": 1793907842
@@ -7719,6 +8055,13 @@
     "notice": "",
     "observed": 1794512570,
     "source": "https://store.steampowered.com/app/973230/We_Who_Are_About_To_Die/?snr=1_7_7_2300_150_163&cc=CN&l=schinese"
+  },
+  "CN:app-976730": {
+    "available": true,
+    "checked": 1795204177,
+    "notice": "",
+    "observed": 1795204151,
+    "source": "https://store.steampowered.com/app/976730/Halo_The_Master_Chief_Collection/?snr=1_7_7_2300_150_155&cc=CN&l=schinese"
   },
   "CN:app-979070": {
     "available": true,
